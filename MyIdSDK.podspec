@@ -11,6 +11,6 @@ Pod::Spec.new do |spec|
   spec.license = { :type => 'Commercial', :text => 'See www.myid.uz' }
   spec.author             = { "Uzinfocom" => "..." }
   spec.swift_version      = "5.8"
-  spec.source            = { :http => 'https://github.com/javokhirsavriev/myid-ios-sdk/releases/download/1.0.0/MyIdSDK.xcframework.zip' }
+  spec.source            = { :git => "https://github.com/javokhirsavriev/myid-ios-sdk.git", :tag => spec.version }
   spec.ios.vendored_frameworks = 'MyIdSDK.xcframework'
 end
