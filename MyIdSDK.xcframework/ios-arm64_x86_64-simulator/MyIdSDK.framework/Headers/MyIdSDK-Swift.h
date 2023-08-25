@@ -408,6 +408,7 @@ SWIFT_CLASS("_TtC7MyIdSDK10MyIdResult")
 
 
 
+
 #endif
 #if defined(__cplusplus)
 #endif
@@ -823,6 +824,7 @@ SWIFT_CLASS("_TtC7MyIdSDK10MyIdResult")
 @property (nonatomic, copy) NSString * _Nullable comparisonValue;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 

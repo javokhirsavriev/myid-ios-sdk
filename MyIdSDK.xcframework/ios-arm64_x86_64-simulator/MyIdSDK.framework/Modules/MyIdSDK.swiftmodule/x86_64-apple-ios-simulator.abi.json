@@ -4402,6 +4402,13 @@
       },
       {
         "kind": "Import",
+        "name": "DeviceKit",
+        "printedName": "DeviceKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -5112,6 +5119,16 @@
             "usr": "s:SY",
             "mangledName": "$sSY"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -7128,118 +7145,174 @@
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
       "offset": 223,
-      "length": 31,
-      "value": "\"https:\/\/faced.track.uz\/api\/v1\""
+      "length": 27,
+      "value": "\"https:\/\/devmyid.uz\/api\/v1\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
-      "offset": 449,
+      "offset": 445,
       "length": 35,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
-      "offset": 462,
+      "offset": 458,
       "length": 1,
       "value": "\"\/oauth2\/authorization\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
-      "offset": 544,
+      "offset": 540,
       "length": 61,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
-      "offset": 557,
+      "offset": 553,
       "length": 1,
       "value": "\"\/authentication\/sdk-authentication-request-task\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
-      "offset": 671,
+      "offset": 667,
       "length": 63,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
-      "offset": 684,
+      "offset": 680,
       "length": 1,
       "value": "\"\/authentication\/sdk-authentication-request-status\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
-      "offset": 793,
+      "offset": 789,
       "length": 38,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
-      "offset": 806,
+      "offset": 802,
       "length": 1,
       "value": "\"\/oauth2\/authorize-client\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
       "kind": "StringLiteral",
-      "offset": 639,
+      "offset": 467,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
       "kind": "StringLiteral",
-      "offset": 708,
+      "offset": 536,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
       "kind": "StringLiteral",
-      "offset": 789,
+      "offset": 617,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 1853,
+      "offset": 687,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 2514,
+      "offset": 755,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 2799,
+      "offset": 842,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
+      "kind": "StringLiteral",
+      "offset": 1182,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
+      "kind": "StringLiteral",
+      "offset": 1251,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
+      "kind": "StringLiteral",
+      "offset": 1332,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1399,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1483,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1577,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2052,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 3706,
+      "offset": 3281,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 4026,
+      "offset": 4537,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/MyIdClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5559,
       "length": 4,
       "value": "true"
     },
@@ -8702,63 +8775,63 @@
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "FloatLiteral",
-      "offset": 793,
+      "offset": 798,
       "length": 4,
       "value": "15.0"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "FloatLiteral",
-      "offset": 828,
+      "offset": 833,
       "length": 4,
       "value": "20.0"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "FloatLiteral",
-      "offset": 861,
+      "offset": 866,
       "length": 4,
       "value": "15.0"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
-      "offset": 899,
+      "offset": 904,
       "length": 64,
       "value": "\"myid_mobile_sdk_(dev)-38StMOL1VGK2s1uvlQsfaz93GOrELSXuqhuAgWmr\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
-      "offset": 997,
+      "offset": 1002,
       "length": 58,
       "value": "\"myid_mobile_sdk-92SnsJQhWBmajM3rvsUqmMJxikhTykqOHXN2caHC\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "BooleanLiteral",
-      "offset": 1087,
+      "offset": 1092,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "BooleanLiteral",
-      "offset": 1120,
+      "offset": 1125,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "BooleanLiteral",
-      "offset": 1217,
+      "offset": 1222,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
-      "offset": 1252,
+      "offset": 1257,
       "length": 2,
       "value": "\"\""
     },
@@ -11165,43 +11238,36 @@
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/IdentificationViewModel.swift",
-      "kind": "FloatLiteral",
-      "offset": 1542,
-      "length": 3,
-      "value": "1.0"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/IdentificationViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1573,
+      "offset": 1528,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/IdentificationViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1658,
-      "length": 40,
-      "value": "\"data:image\/jpeg;base64,\""
+      "offset": 1613,
+      "length": 39,
+      "value": "\"data:image\/png;base64,\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/IdentificationViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1697,
+      "offset": 1651,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/IdentificationViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4763,
+      "offset": 4717,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/IdentificationViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4796,
+      "offset": 4750,
       "length": 5,
       "value": "false"
     },
@@ -11215,245 +11281,252 @@
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 335,
+      "offset": 352,
       "length": 11,
       "value": "\"client_id\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 618,
+      "offset": 635,
       "length": 11,
       "value": "\"oauth2_id\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 967,
+      "offset": 984,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 990,
+      "offset": 1007,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 1083,
+      "offset": 1100,
       "length": 10,
       "value": "\"sdk_hash\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 1243,
+      "offset": 1260,
       "length": 11,
       "value": "\"pass_data\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 1406,
+      "offset": 1423,
       "length": 7,
       "value": "\"pinfl\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 1641,
+      "offset": 1658,
       "length": 12,
       "value": "\"birth_date\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 1722,
+      "offset": 1739,
       "length": 17,
       "value": "\"agreed_on_terms\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 1781,
+      "offset": 1798,
       "length": 11,
       "value": "\"client_id\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 1907,
+      "offset": 1924,
       "length": 11,
       "value": "\"threshold\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 1962,
+      "offset": 1979,
       "length": 13,
       "value": "\"need_update\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2014,
+      "offset": 2031,
       "length": 11,
       "value": "\"oauth2_id\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2049,
+      "offset": 2066,
       "length": 19,
       "value": "\"photo_from_camera\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2071,
+      "offset": 2088,
       "length": 7,
       "value": "\"front\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2102,
+      "offset": 2119,
       "length": 8,
       "value": "\"device\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2130,
+      "offset": 2147,
       "length": 6,
       "value": "\"uuid\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2173,
+      "offset": 2190,
       "length": 10,
       "value": "\"platform\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2185,
+      "offset": 2202,
       "length": 5,
       "value": "\"iOS\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2208,
+      "offset": 2225,
       "length": 8,
       "value": "\"device\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2240,
+      "offset": 2257,
       "length": 7,
       "value": "\"model\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2249,
-      "length": 73,
+      "offset": 2266,
+      "length": 85,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2283,
-      "length": 3,
-      "value": "\" iOS \""
+      "offset": 2284,
+      "length": 1,
+      "value": "\", \""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2321,
+      "offset": 2316,
+      "length": 1,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 2350,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2344,
+      "offset": 2373,
       "length": 12,
       "value": "\"isEmulator\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "BooleanLiteral",
-      "offset": 2358,
+      "offset": 2387,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2385,
+      "offset": 2414,
       "length": 14,
       "value": "\"manufacturer\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2444,
+      "offset": 2473,
       "length": 12,
       "value": "\"sdkVersion\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2561,
+      "offset": 2590,
       "length": 13,
       "value": "\"is_resident\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2688,
+      "offset": 2717,
       "length": 2,
       "value": "36"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 2712,
+      "offset": 2741,
       "length": 13,
       "value": "\"external_id\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 3598,
+      "offset": 3627,
       "length": 8,
       "value": "\"job_id\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "FloatLiteral",
-      "offset": 3778,
+      "offset": 3807,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 4306,
+      "offset": 4335,
       "length": 6,
       "value": "\"code\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 4362,
+      "offset": 4391,
       "length": 11,
       "value": "\"oauth2_id\""
     },
@@ -12043,7 +12116,7 @@
       "kind": "StringLiteral",
       "offset": 196,
       "length": 7,
-      "value": "\"2.1.1\""
+      "value": "\"2.2.1\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Core\/Constants.swift",
@@ -12541,6 +12614,20 @@
       "offset": 166,
       "length": 2,
       "value": "2"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Core\/Extensions\/UIImage.swift",
+      "kind": "BooleanLiteral",
+      "offset": 154,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Core\/Extensions\/UIImage.swift",
+      "kind": "BooleanLiteral",
+      "offset": 254,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Resources\/Icons.swift",
@@ -13700,392 +13787,392 @@
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 3225,
+      "offset": 3297,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "StringLiteral",
-      "offset": 3576,
+      "offset": 3648,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "StringLiteral",
-      "offset": 3636,
+      "offset": 3708,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 3988,
+      "offset": 4060,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 5706,
+      "offset": 5778,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 6524,
+      "offset": 6596,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 7007,
+      "offset": 7079,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 7439,
+      "offset": 7511,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 7447,
+      "offset": 7519,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "StringLiteral",
-      "offset": 7879,
+      "offset": 7951,
       "length": 3,
       "value": "\"#\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 8078,
+      "offset": 8150,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 8365,
+      "offset": 8437,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 8614,
+      "offset": 8686,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 8826,
+      "offset": 8898,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 8834,
+      "offset": 8906,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 9287,
+      "offset": 9359,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 9322,
+      "offset": 9394,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 9701,
+      "offset": 9773,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "StringLiteral",
-      "offset": 10250,
+      "offset": 10322,
       "length": 15,
       "value": "\"([A-Z0-9a-z])\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "StringLiteral",
-      "offset": 10310,
+      "offset": 10382,
       "length": 17,
       "value": "\"SELF MATCHES %@\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 10368,
+      "offset": 10440,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "StringLiteral",
-      "offset": 10543,
+      "offset": 10615,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "StringLiteral",
-      "offset": 10611,
+      "offset": 10683,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "StringLiteral",
-      "offset": 10680,
+      "offset": 10752,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 10823,
+      "offset": 10895,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 10871,
+      "offset": 10943,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "Dictionary",
-      "offset": 12570,
+      "offset": 12642,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 12751,
+      "offset": 12823,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 13067,
+      "offset": 13139,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 13270,
+      "offset": 13342,
       "length": 2,
       "value": "36"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 13697,
+      "offset": 13769,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 14077,
+      "offset": 14149,
       "length": 2,
       "value": "28"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 14200,
+      "offset": 14272,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 14586,
+      "offset": 14658,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 14718,
+      "offset": 14790,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 15095,
+      "offset": 15167,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 15417,
+      "offset": 15489,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 15620,
+      "offset": 15692,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 15913,
+      "offset": 15985,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 16213,
+      "offset": 16285,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 16228,
+      "offset": 16300,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 16354,
+      "offset": 16426,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 16392,
+      "offset": 16464,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 16589,
+      "offset": 16661,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 16604,
+      "offset": 16676,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 16777,
+      "offset": 16849,
       "length": 2,
       "value": "18"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 17335,
+      "offset": 17407,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 17412,
+      "offset": 17484,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 18327,
+      "offset": 18399,
       "length": 2,
       "value": "36"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 18426,
+      "offset": 18498,
       "length": 3,
       "value": "-36"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 18632,
+      "offset": 18704,
       "length": 3,
       "value": "240"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 18699,
+      "offset": 18771,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 19014,
+      "offset": 19086,
       "length": 3,
       "value": "160"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 19087,
+      "offset": 19159,
       "length": 2,
       "value": "40"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 19878,
+      "offset": 19950,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Auth\/MyIdAuthScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 20250,
+      "offset": 20322,
       "length": 4,
       "value": "true"
     },
@@ -14246,147 +14333,147 @@
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "FloatLiteral",
-      "offset": 1700,
+      "offset": 1780,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "FloatLiteral",
-      "offset": 1906,
+      "offset": 1986,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "StringLiteral",
-      "offset": 2654,
+      "offset": 2734,
       "length": 42,
       "value": "\"UIDeviceOrientationDidChangeNotification\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 4202,
+      "offset": 4282,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 4563,
+      "offset": 4643,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 4607,
+      "offset": 4687,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 4793,
+      "offset": 4873,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 4822,
+      "offset": 4902,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 5428,
+      "offset": 5508,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 5885,
+      "offset": 5965,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 6048,
+      "offset": 6128,
       "length": 3,
       "value": "180"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 6119,
+      "offset": 6199,
       "length": 2,
       "value": "45"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 6289,
+      "offset": 6369,
       "length": 3,
       "value": "-20"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 6629,
+      "offset": 6709,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 6634,
+      "offset": 6714,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 6704,
+      "offset": 6784,
       "length": 2,
       "value": "90"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 7320,
+      "offset": 7400,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 7388,
+      "offset": 7468,
       "length": 2,
       "value": "40"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 7457,
+      "offset": 7537,
       "length": 2,
       "value": "40"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 7586,
+      "offset": 7666,
       "length": 3,
       "value": "160"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/myid-sdk\/ios\/MyIdSDK\/Presentation\/Face detection\/MyIdOnlyFaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 7659,
+      "offset": 7739,
       "length": 2,
       "value": "40"
     },
