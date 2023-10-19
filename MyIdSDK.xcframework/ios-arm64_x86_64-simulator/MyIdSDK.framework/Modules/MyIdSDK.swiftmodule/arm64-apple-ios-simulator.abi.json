@@ -40524,161 +40524,161 @@
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "StringLiteral",
-      "offset": 967,
+      "offset": 935,
       "length": 16,
       "value": "\"encrypted_data\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "IntegerLiteral",
-      "offset": 1240,
+      "offset": 1208,
       "length": 3,
       "value": "120"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "IntegerLiteral",
-      "offset": 1646,
+      "offset": 1614,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "IntegerLiteral",
-      "offset": 1652,
+      "offset": 1620,
       "length": 3,
       "value": "299"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "StringLiteral",
-      "offset": 4323,
+      "offset": 4202,
       "length": 10,
       "value": "\"location\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "Dictionary",
-      "offset": 5997,
+      "offset": 5876,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "StringLiteral",
-      "offset": 6017,
+      "offset": 5896,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "StringLiteral",
-      "offset": 6036,
+      "offset": 5915,
       "length": 42,
       "value": "\"Bearer \""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "StringLiteral",
-      "offset": 6077,
+      "offset": 5956,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "StringLiteral",
-      "offset": 6095,
+      "offset": 5974,
       "length": 18,
       "value": "\"Content-Language\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "Array",
-      "offset": 6426,
+      "offset": 6305,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "StringLiteral",
-      "offset": 7173,
+      "offset": 7052,
       "length": 8,
       "value": "\"detail\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "StringLiteral",
-      "offset": 7363,
+      "offset": 7242,
       "length": 5,
       "value": "\"msg\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "StringLiteral",
-      "offset": 7587,
+      "offset": 7466,
       "length": 7,
       "value": "\"error\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "Array",
-      "offset": 8597,
+      "offset": 8476,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "StringLiteral",
-      "offset": 8658,
+      "offset": 8537,
       "length": 5,
       "value": "\"ttl\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "IntegerLiteral",
-      "offset": 8678,
+      "offset": 8557,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "IntegerLiteral",
-      "offset": 8712,
+      "offset": 8591,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "Array",
-      "offset": 9317,
+      "offset": 9196,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "BooleanLiteral",
-      "offset": 9364,
+      "offset": 9243,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "Array",
-      "offset": 9512,
+      "offset": 9391,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "BooleanLiteral",
-      "offset": 9551,
+      "offset": 9430,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "BooleanLiteral",
-      "offset": 9613,
+      "offset": 9492,
       "length": 5,
       "value": "false"
     },
