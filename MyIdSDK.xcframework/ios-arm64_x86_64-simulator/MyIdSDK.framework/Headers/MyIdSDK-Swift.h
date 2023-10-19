@@ -335,6 +335,8 @@ enum MyIdResolution : NSInteger;
 SWIFT_CLASS("_TtC7MyIdSDK10MyIdConfig")
 @interface MyIdConfig : NSObject
 @property (nonatomic, copy) NSString * _Nullable clientId;
+@property (nonatomic, copy) NSString * _Nullable clientHash;
+@property (nonatomic, copy) NSString * _Nullable clientHashId;
 @property (nonatomic, copy) NSString * _Nullable passportData;
 @property (nonatomic, copy) NSString * _Nullable dateOfBirth;
 @property (nonatomic, copy) NSString * _Nullable sdkHash;
@@ -403,6 +405,13 @@ SWIFT_CLASS("_TtC7MyIdSDK10MyIdResult")
 @property (nonatomic, strong) UIImage * _Nullable image;
 @property (nonatomic, copy) NSString * _Nullable code;
 @property (nonatomic, copy) NSString * _Nullable comparisonValue;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+SWIFT_CLASS("_TtC7MyIdSDK13RSAKeyFactory")
+@interface RSAKeyFactory : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -754,6 +763,8 @@ enum MyIdResolution : NSInteger;
 SWIFT_CLASS("_TtC7MyIdSDK10MyIdConfig")
 @interface MyIdConfig : NSObject
 @property (nonatomic, copy) NSString * _Nullable clientId;
+@property (nonatomic, copy) NSString * _Nullable clientHash;
+@property (nonatomic, copy) NSString * _Nullable clientHashId;
 @property (nonatomic, copy) NSString * _Nullable passportData;
 @property (nonatomic, copy) NSString * _Nullable dateOfBirth;
 @property (nonatomic, copy) NSString * _Nullable sdkHash;
@@ -822,6 +833,13 @@ SWIFT_CLASS("_TtC7MyIdSDK10MyIdResult")
 @property (nonatomic, strong) UIImage * _Nullable image;
 @property (nonatomic, copy) NSString * _Nullable code;
 @property (nonatomic, copy) NSString * _Nullable comparisonValue;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+SWIFT_CLASS("_TtC7MyIdSDK13RSAKeyFactory")
+@interface RSAKeyFactory : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
   spec.name               = "MyIdSDK"
-  spec.version            = "2.2.1"
-  spec.platform = :ios, '11.0'
-  spec.ios.deployment_target = '11.0'
+  spec.version            = "2.2.2"
+  spec.platform = :ios, '11.1'
+  spec.ios.deployment_target = '11.1'
   spec.summary            = "MyID Framework"
   spec.description        = "MyID Framework for iOS"
   spec.homepage           = "https://gitlab.myid.uz/myid-public-code/myid-sample-ios"
