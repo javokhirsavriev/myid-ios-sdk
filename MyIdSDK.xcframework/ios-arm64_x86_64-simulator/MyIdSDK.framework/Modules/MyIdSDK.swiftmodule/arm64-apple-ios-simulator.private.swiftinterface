@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
-// swift-module-flags: -target arm64-apple-ios11.1-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MyIdSDK
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MyIdSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import CoreImage.CIFilterBuiltins
@@ -19,32 +19,118 @@ import UIKit
 import Vision
 import _Concurrency
 import _StringProcessing
-public protocol CommonHeaderParameterSpace {
-  var jku: Foundation.URL? { get set }
-  var jwk: Swift.String? { get set }
-  var jwkTyped: (any MyIdSDK.JWK)? { get set }
-  var kid: Swift.String? { get set }
-  var x5u: Foundation.URL? { get set }
-  var x5c: [Swift.String]? { get set }
-  var x5t: Swift.String? { get set }
-  var x5tS256: Swift.String? { get set }
-  var typ: Swift.String? { get set }
-  var cty: Swift.String? { get set }
-  var crit: [Swift.String]? { get set }
+public protocol DataConvertible {
+  init?(_ data: Foundation.Data)
+  func data() -> Foundation.Data
 }
 public struct Payload : MyIdSDK.DataConvertible {
   public init(_ payload: Foundation.Data)
   public func data() -> Foundation.Data
 }
-extension Swift.String : Swift.Error {
+public protocol Message {
+  var data: Foundation.Data { get }
+  var base64String: Swift.String { get }
+  init(data: Foundation.Data)
+  init(base64String: Swift.String) throws
 }
-extension Security.SecKey : MyIdSDK.ExpressibleAsECPublicKeyComponents {
-  public static func representing(ecPublicKeyComponents components: MyIdSDK.ECPublicKeyComponents) throws -> Self
-  public func ecPublicKeyComponents() throws -> MyIdSDK.ECPublicKeyComponents
+extension MyIdSDK.Message {
+  public var base64String: Swift.String {
+    get
+  }
 }
-@objc public enum MyIdCameraShape : Swift.Int {
-  case ELLIPSE = 0
-  case CIRCLE
+extension Foundation.Data : MyIdSDK.ExpressibleAsRSAPublicKeyComponents {
+  public static func representing(rsaPublicKeyComponents components: MyIdSDK.RSAPublicKeyComponents) throws -> Foundation.Data
+  public func rsaPublicKeyComponents() throws -> MyIdSDK.RSAPublicKeyComponents
+}
+public class RSASignature {
+  public enum DigestType {
+    case sha1
+    case sha224
+    case sha256
+    case sha384
+    case sha512
+    public static func == (a: MyIdSDK.RSASignature.DigestType, b: MyIdSDK.RSASignature.DigestType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let data: Foundation.Data
+  public init(data: Foundation.Data)
+  convenience public init(base64Encoded base64String: Swift.String) throws
+  public var base64String: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public enum JOSESwiftError : Swift.Error {
+  case signingFailed(description: Swift.String)
+  case verifyingFailed(description: Swift.String)
+  case signatureInvalid
+  case encryptingFailed(description: Swift.String)
+  case decryptingFailed(description: Swift.String)
+  case wrongDataEncoding(data: Foundation.Data)
+  case invalidCompactSerializationComponentCount(count: Swift.Int)
+  case componentNotValidBase64URL(component: Swift.String)
+  case componentCouldNotBeInitializedFromData(data: Foundation.Data)
+  case couldNotConstructJWK
+  case modulusNotBase64URLUIntEncoded
+  case exponentNotBase64URLUIntEncoded
+  case privateExponentNotBase64URLUIntEncoded
+  case symmetricKeyNotBase64URLEncoded
+  case xNotBase64URLUIntEncoded
+  case yNotBase64URLUIntEncoded
+  case privateKeyNotBase64URLUIntEncoded
+  case invalidCurveType
+  case compressedCurvePointsUnsupported
+  case invalidCurvePointOctetLength
+  case localAuthenticationFailed(errorCode: Swift.Int)
+  case compressionFailed
+  case decompressionFailed
+  case compressionAlgorithmNotSupported
+  case rawDataMustBeGreaterThanZero
+  case compressedDataMustBeGreaterThanZero
+  case thumbprintSerialization
+}
+extension Foundation.Data : MyIdSDK.ExpressibleAsSymmetricKeyComponents {
+  public static func representing(symmetricKeyComponents components: MyIdSDK.SymmetricKeyComponents) throws -> Foundation.Data
+  public func symmetricKeyComponents() throws -> MyIdSDK.SymmetricKeyComponents
+}
+public typealias SymmetricKeyComponents = (Foundation.Data)
+public protocol ExpressibleAsSymmetricKeyComponents {
+  static func representing(symmetricKeyComponents components: MyIdSDK.SymmetricKeyComponents) throws -> Self
+  func symmetricKeyComponents() throws -> MyIdSDK.SymmetricKeyComponents
+}
+public struct SymmetricKey : MyIdSDK.JWK {
+  public let keyType: MyIdSDK.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
+    get
+  }
+  public let key: Swift.String
+  public init(key: Foundation.Data, additionalParameters parameters: [Swift.String : Swift.String] = [:])
+  public init(key: any MyIdSDK.ExpressibleAsSymmetricKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : MyIdSDK.ExpressibleAsSymmetricKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: MyIdSDK.JWKThumbprintAlgorithm = .SHA256) throws -> MyIdSDK.SymmetricKey
+}
+@_inheritsConvenienceInitializers @objc public class MyIdGenerator : ObjectiveC.NSObject {
+  @objc public class func hash(payload: Swift.String, clientHash: Swift.String, clientHashId: Swift.String) -> Swift.String?
+  @objc public class func device() -> Swift.String
+  @objc public class func deviceModel() -> Swift.String?
+  @objc public class func deviceName() -> Swift.String?
+  @objc public class func systemName() -> Swift.String?
+  @objc public class func systemVersion() -> Swift.String?
+  @objc public class func isPhone() -> Swift.Bool
+  @objc public class func isPad() -> Swift.Bool
+  @objc public class func isSimulator() -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum MyIdBuildMode : Swift.Int {
+  case DEBUG = 0
+  case PRODUCTION
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -58,61 +144,107 @@ public enum SecureRandomError : Swift.Error {
 public struct SecureRandom {
   public static func generate(count: Swift.Int) throws -> Foundation.Data
 }
-public struct JWE {
-  public let header: MyIdSDK.JWEHeader
-  public let encryptedKey: Foundation.Data
-  public let initializationVector: Foundation.Data
-  public let ciphertext: Foundation.Data
-  public let authenticationTag: Foundation.Data
-  public var compactSerializedString: Swift.String {
+public enum JWKParameter : Swift.String, Swift.CodingKey {
+  case keyType
+  case keyUse
+  case keyOperations
+  case algorithm
+  case keyIdentifier
+  case X509URL
+  case X509CertificateChain
+  case X509CertificateSHA1Thumbprint
+  case X509CertificateSHA256Thumbprint
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
     get
   }
-  public var compactSerializedData: Foundation.Data {
+  public var rawValue: Swift.String {
     get
   }
-  public init<KeyType>(header: MyIdSDK.JWEHeader, payload: MyIdSDK.Payload, encrypter: MyIdSDK.Encrypter<KeyType>) throws
-  public init(compactSerialization: Swift.String) throws
-  public init(compactSerialization: Foundation.Data) throws
-  @available(*, deprecated, message: "Use `decrypt(using decrypter:)` instead")
-  public func decrypt<KeyType>(with key: KeyType) throws -> MyIdSDK.Payload
-  public func decrypt(using decrypter: MyIdSDK.Decrypter) throws -> MyIdSDK.Payload
-}
-extension MyIdSDK.JWE : MyIdSDK.CompactSerializable {
-  public func serialize(to serializer: inout any MyIdSDK.CompactSerializer)
-}
-extension MyIdSDK.JWE : MyIdSDK.CompactDeserializable {
-  public static var componentCount: Swift.Int {
-    get
-  }
-  public init(from deserializer: any MyIdSDK.CompactDeserializer) throws
-}
-extension MyIdSDK.JWK {
-  public subscript(parameter: Swift.String) -> Swift.String? {
+  public var stringValue: Swift.String {
     get
   }
 }
-extension MyIdSDK.JWK {
-  public func jsonString() -> Swift.String?
-  public func jsonData() -> Foundation.Data?
-}
-public protocol Message {
-  var data: Foundation.Data { get }
-  var base64String: Swift.String { get }
-  init(data: Foundation.Data)
-  init(base64String: Swift.String) throws
-}
-extension MyIdSDK.Message {
-  public var base64String: Swift.String {
+public enum RSAParameter : Swift.String, Swift.CodingKey {
+  case modulus
+  case exponent
+  case privateExponent
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
     get
   }
 }
-extension Security.SecKey : MyIdSDK.ExpressibleAsRSAPublicKeyComponents {
-  public static func representing(rsaPublicKeyComponents components: MyIdSDK.RSAPublicKeyComponents) throws -> Self
-  public func rsaPublicKeyComponents() throws -> MyIdSDK.RSAPublicKeyComponents
+public enum SymmetricKeyParameter : Swift.String, Swift.CodingKey {
+  case key
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
 }
-@_inheritsConvenienceInitializers @objc public class MyIdOrganizationDetails : ObjectiveC.NSObject {
-  @objc public var phoneNumber: Swift.String?
-  @objc public var logo: UIKit.UIImage?
+public enum ECParameter : Swift.String, Swift.CodingKey {
+  case curve
+  case x
+  case y
+  case privateKey
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+}
+public protocol CompactSerializable {
+  func serialize(to serializer: inout any MyIdSDK.CompactSerializer)
+}
+public protocol CompactSerializer {
+  var components: [any MyIdSDK.DataConvertible] { get }
+  mutating func serialize<T>(_ object: T) where T : MyIdSDK.DataConvertible
+}
+public struct JOSESerializer {
+  public func serialize<T>(compact object: T) -> Swift.String where T : MyIdSDK.CompactSerializable
+}
+public enum SwiftyCryptoRSAKeySize : Swift.Int {
+  case RSAKey64
+  case RSAKey128
+  case RSAKey256
+  case RSAKey512
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class RSAKeyFactory : ObjectiveC.NSObject {
+  public static let shared: MyIdSDK.RSAKeyFactory
+  public func generateKeyPair(keySize: MyIdSDK.SwiftyCryptoRSAKeySize) -> MyIdSDK.RSAKeyPairs?
   @objc override dynamic public init()
   @objc deinit
 }
@@ -121,54 +253,84 @@ extension Security.SecKey : MyIdSDK.ExpressibleAsRSAPublicKeyComponents {
   @objc func onError(exception: MyIdSDK.MyIdException)
   @objc func onUserExited()
 }
-public typealias ECPublicKeyComponents = (crv: Swift.String, x: Foundation.Data, y: Foundation.Data)
-public typealias ECPrivateKeyComponents = (crv: Swift.String, x: Foundation.Data, y: Foundation.Data, d: Foundation.Data)
-public protocol ExpressibleAsECPublicKeyComponents {
-  static func representing(ecPublicKeyComponents components: MyIdSDK.ECPublicKeyComponents) throws -> Self
-  func ecPublicKeyComponents() throws -> MyIdSDK.ECPublicKeyComponents
+public struct Decrypter {
+  public init?<KeyType>(keyManagementAlgorithm: MyIdSDK.KeyManagementAlgorithm, contentEncryptionAlgorithm: MyIdSDK.ContentEncryptionAlgorithm, decryptionKey: KeyType)
 }
-public protocol ExpressibleAsECPrivateKeyComponents {
-  static func representing(ecPrivateKeyComponents components: MyIdSDK.ECPrivateKeyComponents) throws -> Self
-  func ecPrivateKeyComponents() throws -> MyIdSDK.ECPrivateKeyComponents
+extension MyIdSDK.Decrypter {
+  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:decryptionKey:)` instead")
+  public init?<KeyType>(keyDecryptionAlgorithm: MyIdSDK.AsymmetricKeyAlgorithm, decryptionKey key: KeyType, contentDecryptionAlgorithm: MyIdSDK.SymmetricKeyAlgorithm)
+  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:decryptionKey:)` instead")
+  public init?<KeyType>(keyDecryptionAlgorithm: MyIdSDK.AsymmetricKeyAlgorithm, keyDecryptionKey kdk: KeyType, contentDecryptionAlgorithm: MyIdSDK.SymmetricKeyAlgorithm)
 }
-public struct ECPublicKey : MyIdSDK.JWK {
-  public let keyType: MyIdSDK.JWKKeyType
-  public let parameters: [Swift.String : Swift.String]
-  public var requiredParameters: [Swift.String : Swift.String] {
-    get
-  }
-  public let crv: MyIdSDK.ECCurveType
-  public let x: Swift.String
-  public let y: Swift.String
-  public init(crv: MyIdSDK.ECCurveType, x: Swift.String, y: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:])
-  public init(publicKey: any MyIdSDK.ExpressibleAsECPublicKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
-  public init(data: Foundation.Data) throws
-  public func converted<T>(to type: T.Type) throws -> T where T : MyIdSDK.ExpressibleAsECPublicKeyComponents
-  @available(iOS 11.0, *)
-  public func withThumbprintAsKeyId(algorithm: MyIdSDK.JWKThumbprintAlgorithm = .SHA256) throws -> MyIdSDK.ECPublicKey
+@available(*, deprecated, message: "This type will be removed with the next major release.")
+public struct DecryptionContext {
 }
-public struct ECPrivateKey : MyIdSDK.JWK {
-  public let keyType: MyIdSDK.JWKKeyType
-  public let parameters: [Swift.String : Swift.String]
-  public var requiredParameters: [Swift.String : Swift.String] {
-    get
-  }
-  public let crv: MyIdSDK.ECCurveType
-  public let x: Swift.String
-  public let y: Swift.String
-  public let privateKey: Swift.String
-  public init(crv: Swift.String, x: Swift.String, y: Swift.String, privateKey: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
-  public init(privateKey: any MyIdSDK.ExpressibleAsECPrivateKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
-  public init(data: Foundation.Data) throws
-  public func converted<T>(to type: T.Type) throws -> T where T : MyIdSDK.ExpressibleAsECPrivateKeyComponents
-  @available(iOS 11.0, *)
-  public func withThumbprintAsKeyId(algorithm: MyIdSDK.JWKThumbprintAlgorithm = .SHA256) throws -> MyIdSDK.ECPrivateKey
+@available(*, deprecated, message: "This type will be removed with the next major release.")
+public struct SymmetricDecryptionContext {
 }
-public typealias ECKeyPair = MyIdSDK.ECPrivateKey
-@objc public enum MyIdDocumentType : Swift.Int {
-  case ID_CARD = 0
-  case PASSPORT
-  case DRIVER_LICENSE
+@_inheritsConvenienceInitializers @objc public class MyIdConfig : ObjectiveC.NSObject {
+  @objc public var clientId: Swift.String?
+  @objc public var clientHash: Swift.String?
+  @objc public var clientHashId: Swift.String?
+  @objc public var passportData: Swift.String?
+  @objc public var dateOfBirth: Swift.String?
+  @objc public var sdkHash: Swift.String?
+  @objc public var externalId: Swift.String?
+  @objc public var threshold: Swift.Float
+  @objc public var buildMode: MyIdSDK.MyIdBuildMode
+  @objc public var entryType: MyIdSDK.MyIdEntryType
+  @objc public var residency: MyIdSDK.MyIdResidency
+  @objc public var locale: MyIdSDK.MyIdLocale
+  @objc public var cameraShape: MyIdSDK.MyIdCameraShape
+  @objc public var resolution: MyIdSDK.MyIdResolution
+  @objc public var organizationDetails: MyIdSDK.MyIdOrganizationDetails?
+  @objc public var appearance: MyIdSDK.MyIdAppearance?
+  @objc public var withPhoto: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MyIdSDK.RSAPublicKey : Swift.Encodable {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension MyIdSDK.RSAPublicKey : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension MyIdSDK.RSAPrivateKey : Swift.Encodable {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension MyIdSDK.RSAPrivateKey : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension Foundation.Data : MyIdSDK.ExpressibleAsECPublicKeyComponents {
+  public static func representing(ecPublicKeyComponents components: MyIdSDK.ECPublicKeyComponents) throws -> Foundation.Data
+  public func ecPublicKeyComponents() throws -> MyIdSDK.ECPublicKeyComponents
+}
+public protocol CompactDeserializable {
+  static var componentCount: Swift.Int { get }
+  init(from deserializer: any MyIdSDK.CompactDeserializer) throws
+}
+public protocol CompactDeserializer {
+  func deserialize<T>(_ type: T.Type, at index: Swift.Int) throws -> T where T : MyIdSDK.DataConvertible
+}
+public struct JOSEDeserializer {
+  public init()
+  public func deserialize<T>(_ type: T.Type, fromCompactSerialization compactSerialization: Swift.String) throws -> T where T : MyIdSDK.CompactDeserializable
+}
+public enum ComponentCompactSerializedIndex {
+}
+extension Foundation.Data : MyIdSDK.ExpressibleAsECPrivateKeyComponents {
+  public static func representing(ecPrivateKeyComponents components: MyIdSDK.ECPrivateKeyComponents) throws -> Foundation.Data
+  public func ecPrivateKeyComponents() throws -> MyIdSDK.ECPrivateKeyComponents
+}
+@_inheritsConvenienceInitializers @objc public class MyIdException : ObjectiveC.NSObject {
+  @objc public var message: Swift.String?
+  @objc public var code: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum MyIdResolution : Swift.Int {
+  case RESOLUTION_480 = 0
+  case RESOLUTION_720
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -185,9 +347,58 @@ extension Foundation.Data : MyIdSDK.DataConvertible {
   public init(_ data: Foundation.Data)
   public func data() -> Foundation.Data
 }
-extension Security.SecKey : MyIdSDK.ExpressibleAsECPrivateKeyComponents {
-  public static func representing(ecPrivateKeyComponents components: MyIdSDK.ECPrivateKeyComponents) throws -> Self
-  public func ecPrivateKeyComponents() throws -> MyIdSDK.ECPrivateKeyComponents
+public typealias RSAPublicKeyComponents = (modulus: Foundation.Data, exponent: Foundation.Data)
+public typealias RSAPrivateKeyComponents = (modulus: Foundation.Data, exponent: Foundation.Data, privateExponent: Foundation.Data)
+public protocol ExpressibleAsRSAPublicKeyComponents {
+  static func representing(rsaPublicKeyComponents components: MyIdSDK.RSAPublicKeyComponents) throws -> Self
+  func rsaPublicKeyComponents() throws -> MyIdSDK.RSAPublicKeyComponents
+}
+public protocol ExpressibleAsRSAPrivateKeyComponents {
+  static func representing(rsaPrivateKeyComponents components: MyIdSDK.RSAPrivateKeyComponents) throws -> Self
+  func rsaPrivateKeyComponents() throws -> MyIdSDK.RSAPrivateKeyComponents
+}
+public struct RSAPublicKey : MyIdSDK.JWK {
+  public let keyType: MyIdSDK.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
+    get
+  }
+  public let modulus: Swift.String
+  public let exponent: Swift.String
+  public init(modulus: Swift.String, exponent: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:])
+  public init(publicKey: any MyIdSDK.ExpressibleAsRSAPublicKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : MyIdSDK.ExpressibleAsRSAPublicKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: MyIdSDK.JWKThumbprintAlgorithm = .SHA256) throws -> MyIdSDK.RSAPublicKey
+}
+public struct RSAPrivateKey : MyIdSDK.JWK {
+  public let keyType: MyIdSDK.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
+    get
+  }
+  public let modulus: Swift.String
+  public let exponent: Swift.String
+  public let privateExponent: Swift.String
+  public init(modulus: Swift.String, exponent: Swift.String, privateExponent: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:])
+  public init(privateKey: any MyIdSDK.ExpressibleAsRSAPrivateKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : MyIdSDK.ExpressibleAsRSAPrivateKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: MyIdSDK.JWKThumbprintAlgorithm = .SHA256) throws -> MyIdSDK.RSAPrivateKey
+}
+public typealias RSAKeyPair = MyIdSDK.RSAPrivateKey
+@objc public enum MyIdCameraShape : Swift.Int {
+  case ELLIPSE = 0
+  case CIRCLE
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Swift.String : Swift.Error {
 }
 extension MyIdSDK.SymmetricKey : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -195,13 +406,61 @@ extension MyIdSDK.SymmetricKey : Swift.Encodable {
 extension MyIdSDK.SymmetricKey : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc public enum MyIdLocale : Swift.Int {
-  case RU = 0
-  case EN
-  case UZ
+public class RSAMessage : MyIdSDK.Message {
+  public var data: Foundation.Data
+  public var base64String: Swift.String
+  required public init(data: Foundation.Data)
+  required convenience public init(base64String: Swift.String) throws
+  public func sign(signingKey: MyIdSDK.RSAKey, digestType: MyIdSDK.RSASignature.DigestType) throws -> MyIdSDK.RSASignature
+  public func verify(verifyKey: MyIdSDK.RSAKey, signature: MyIdSDK.RSASignature, digestType: MyIdSDK.RSASignature.DigestType) throws -> Swift.Bool
+  @objc deinit
+}
+extension Security.SecKey : MyIdSDK.ExpressibleAsECPublicKeyComponents {
+  public static func representing(ecPublicKeyComponents components: MyIdSDK.ECPublicKeyComponents) throws -> Self
+  public func ecPublicKeyComponents() throws -> MyIdSDK.ECPublicKeyComponents
+}
+@objc public enum MyIdResidency : Swift.Int {
+  case USER_DEFINED = 0
+  case RESIDENT
+  case NON_RESIDENT
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol CommonHeaderParameterSpace {
+  var jku: Foundation.URL? { get set }
+  var jwk: Swift.String? { get set }
+  var jwkTyped: (any MyIdSDK.JWK)? { get set }
+  var kid: Swift.String? { get set }
+  var x5u: Foundation.URL? { get set }
+  var x5c: [Swift.String]? { get set }
+  var x5t: Swift.String? { get set }
+  var x5tS256: Swift.String? { get set }
+  var typ: Swift.String? { get set }
+  var cty: Swift.String? { get set }
+  var crit: [Swift.String]? { get set }
+}
+public enum ECCurveType : Swift.String, Swift.Codable {
+  case P256
+  case P384
+  case P521
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ECCompression : Swift.UInt8 {
+  case CompressedYEven
+  case CompressedYOdd
+  case Uncompressed
+  case HybridYEven
+  case HybridYOdd
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
     get
   }
 }
@@ -282,54 +541,53 @@ extension MyIdSDK.JWEHeader {
   @available(*, deprecated, message: "Use `init(keyManagementAlgorithm:contentEncryptionAlgorithm` instead")
   public init(algorithm: MyIdSDK.AsymmetricKeyAlgorithm, encryptionAlgorithm: MyIdSDK.SymmetricKeyAlgorithm)
 }
-public class RSAMessage : MyIdSDK.Message {
-  public var data: Foundation.Data
-  public var base64String: Swift.String
-  required public init(data: Foundation.Data)
-  required convenience public init(base64String: Swift.String) throws
-  public func sign(signingKey: MyIdSDK.RSAKey, digestType: MyIdSDK.RSASignature.DigestType) throws -> MyIdSDK.RSASignature
-  public func verify(verifyKey: MyIdSDK.RSAKey, signature: MyIdSDK.RSASignature, digestType: MyIdSDK.RSASignature.DigestType) throws -> Swift.Bool
-  @objc deinit
+public struct Encrypter<KeyType> {
+  public init?(keyManagementAlgorithm: MyIdSDK.KeyManagementAlgorithm, contentEncryptionAlgorithm: MyIdSDK.ContentEncryptionAlgorithm, encryptionKey: KeyType)
 }
-@_inheritsConvenienceInitializers @objc public class MyIdConfig : ObjectiveC.NSObject {
-  @objc public var clientId: Swift.String?
-  @objc public var clientHash: Swift.String?
-  @objc public var clientHashId: Swift.String?
-  @objc public var passportData: Swift.String?
-  @objc public var dateOfBirth: Swift.String?
-  @objc public var sdkHash: Swift.String?
-  @objc public var externalId: Swift.String?
-  @objc public var threshold: Swift.Float
-  @objc public var buildMode: MyIdSDK.MyIdBuildMode
-  @objc public var entryType: MyIdSDK.MyIdEntryType
-  @objc public var residency: MyIdSDK.MyIdResidency
-  @objc public var locale: MyIdSDK.MyIdLocale
-  @objc public var cameraShape: MyIdSDK.MyIdCameraShape
-  @objc public var resolution: MyIdSDK.MyIdResolution
-  @objc public var organizationDetails: MyIdSDK.MyIdOrganizationDetails?
-  @objc public var appearance: MyIdSDK.MyIdAppearance?
-  @objc public var withPhoto: Swift.Bool
-  @objc override dynamic public init()
-  @objc deinit
+extension MyIdSDK.Encrypter {
+  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:encryptionKey:)` instead")
+  public init?(keyEncryptionAlgorithm: MyIdSDK.AsymmetricKeyAlgorithm, encryptionKey key: KeyType, contentEncyptionAlgorithm: MyIdSDK.SymmetricKeyAlgorithm)
+  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:encryptionKey:)` instead")
+  public init?(keyEncryptionAlgorithm: MyIdSDK.AsymmetricKeyAlgorithm, keyEncryptionKey kek: KeyType, contentEncyptionAlgorithm: MyIdSDK.SymmetricKeyAlgorithm)
 }
-public typealias SymmetricKeyComponents = (Foundation.Data)
-public protocol ExpressibleAsSymmetricKeyComponents {
-  static func representing(symmetricKeyComponents components: MyIdSDK.SymmetricKeyComponents) throws -> Self
-  func symmetricKeyComponents() throws -> MyIdSDK.SymmetricKeyComponents
+@available(*, deprecated, message: "This type will be removed with the next major release.")
+public struct EncryptionContext {
 }
-public struct SymmetricKey : MyIdSDK.JWK {
-  public let keyType: MyIdSDK.JWKKeyType
-  public let parameters: [Swift.String : Swift.String]
-  public var requiredParameters: [Swift.String : Swift.String] {
+@available(*, deprecated, message: "This type will be removed with the next major release.")
+public struct SymmetricEncryptionContext {
+}
+public struct JWS {
+  public let header: MyIdSDK.JWSHeader
+  public let payload: MyIdSDK.Payload
+  public let signature: Foundation.Data
+  public var compactSerializedString: Swift.String {
     get
   }
-  public let key: Swift.String
-  public init(key: Foundation.Data, additionalParameters parameters: [Swift.String : Swift.String] = [:])
-  public init(key: any MyIdSDK.ExpressibleAsSymmetricKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
-  public init(data: Foundation.Data) throws
-  public func converted<T>(to type: T.Type) throws -> T where T : MyIdSDK.ExpressibleAsSymmetricKeyComponents
-  @available(iOS 11.0, *)
-  public func withThumbprintAsKeyId(algorithm: MyIdSDK.JWKThumbprintAlgorithm = .SHA256) throws -> MyIdSDK.SymmetricKey
+  public var compactSerializedData: Foundation.Data {
+    get
+  }
+  public init<KeyType>(header: MyIdSDK.JWSHeader, payload: MyIdSDK.Payload, signer: MyIdSDK.Signer<KeyType>) throws
+  public init(compactSerialization: Swift.String) throws
+  public init(compactSerialization: Foundation.Data) throws
+  @available(*, deprecated, message: "Use `isValid(for verifier:)` instead")
+  public func isValid<KeyType>(for publicKey: KeyType) -> Swift.Bool
+  @available(*, deprecated, message: "Use `validate(using verifier:)` instead")
+  public func validate<KeyType>(with publicKey: KeyType) throws -> MyIdSDK.JWS
+  public func validate(using verifier: MyIdSDK.Verifier) throws -> MyIdSDK.JWS
+  public func isValid(for verifier: MyIdSDK.Verifier) -> Swift.Bool
+}
+extension MyIdSDK.JWS : MyIdSDK.CompactSerializable {
+  public func serialize(to serializer: inout any MyIdSDK.CompactSerializer)
+}
+extension MyIdSDK.JWS : MyIdSDK.CompactDeserializable {
+  public static var componentCount: Swift.Int {
+    get
+  }
+  public init(from deserializer: any MyIdSDK.CompactDeserializer) throws
+}
+extension Security.SecKey : MyIdSDK.ExpressibleAsECPrivateKeyComponents {
+  public static func representing(ecPrivateKeyComponents components: MyIdSDK.ECPrivateKeyComponents) throws -> Self
+  public func ecPrivateKeyComponents() throws -> MyIdSDK.ECPrivateKeyComponents
 }
 public enum SignatureAlgorithm : Swift.String {
   case HS256
@@ -411,45 +669,24 @@ public enum CompressionAlgorithm : Swift.String {
 public typealias AsymmetricKeyAlgorithm = MyIdSDK.KeyManagementAlgorithm
 @available(*, deprecated, message: "Use `ContentEncryptionAlgorithm` instead")
 public typealias SymmetricKeyAlgorithm = MyIdSDK.ContentEncryptionAlgorithm
-public struct Signer<KeyType> {
-  public init?(signingAlgorithm: MyIdSDK.SignatureAlgorithm, key: KeyType)
-}
-extension MyIdSDK.Signer {
-  @available(*, deprecated, message: "Use `init?(signingAlgorithm: SignatureAlgorithm, key: KeyType)` instead")
-  public init?(signingAlgorithm: MyIdSDK.SignatureAlgorithm, privateKey: KeyType)
-}
-public enum JWKKeyType : Swift.String, Swift.Codable {
-  case RSA
-  case OCT
-  case EC
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+@objc public enum MyIdEntryType : Swift.Int {
+  case AUTH = 0
+  case FACE
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
     get
   }
 }
-public protocol JWK : Swift.Decodable, Swift.Encodable {
-  var keyType: MyIdSDK.JWKKeyType { get }
-  var parameters: [Swift.String : Swift.String] { get }
-  var requiredParameters: [Swift.String : Swift.String] { get }
-  subscript(parameter: Swift.String) -> Swift.String? { get }
-  init(data: Foundation.Data) throws
-  func jsonString() -> Swift.String?
-  func jsonData() -> Foundation.Data?
-  @available(iOS 11.0, *)
-  func thumbprint(algorithm: MyIdSDK.JWKThumbprintAlgorithm) throws -> Swift.String
-  @available(iOS 11.0, *)
-  func withThumbprintAsKeyId(algorithm: MyIdSDK.JWKThumbprintAlgorithm) throws -> Self
+extension Security.SecKey : MyIdSDK.ExpressibleAsRSAPublicKeyComponents {
+  public static func representing(rsaPublicKeyComponents components: MyIdSDK.RSAPublicKeyComponents) throws -> Self
+  public func rsaPublicKeyComponents() throws -> MyIdSDK.RSAPublicKeyComponents
 }
-extension MyIdSDK.JWK {
-  @available(iOS 11.0, *)
-  public func thumbprint(algorithm: MyIdSDK.JWKThumbprintAlgorithm = .SHA256) throws -> Swift.String
+extension MyIdSDK.JWKSet : Swift.Encodable {
+  public func encode(to encoder: any Swift.Encoder) throws
 }
-@_inheritsConvenienceInitializers @objc public class MyIdException : ObjectiveC.NSObject {
-  @objc public var message: Swift.String?
-  @objc public var code: Swift.String?
-  @objc override dynamic public init()
-  @objc deinit
+extension MyIdSDK.JWKSet : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum SwiftyCryptoError : Swift.Error {
   case invalidBase64String
@@ -465,56 +702,6 @@ public enum SwiftyCryptoError : Swift.Error {
   case signatureCreateFailed(status: Darwin.OSStatus)
   case signatureVerifyFailed(status: Darwin.OSStatus)
   case keyRepresentationFailed(error: CoreFoundation.CFError?)
-}
-public struct JWS {
-  public let header: MyIdSDK.JWSHeader
-  public let payload: MyIdSDK.Payload
-  public let signature: Foundation.Data
-  public var compactSerializedString: Swift.String {
-    get
-  }
-  public var compactSerializedData: Foundation.Data {
-    get
-  }
-  public init<KeyType>(header: MyIdSDK.JWSHeader, payload: MyIdSDK.Payload, signer: MyIdSDK.Signer<KeyType>) throws
-  public init(compactSerialization: Swift.String) throws
-  public init(compactSerialization: Foundation.Data) throws
-  @available(*, deprecated, message: "Use `isValid(for verifier:)` instead")
-  public func isValid<KeyType>(for publicKey: KeyType) -> Swift.Bool
-  @available(*, deprecated, message: "Use `validate(using verifier:)` instead")
-  public func validate<KeyType>(with publicKey: KeyType) throws -> MyIdSDK.JWS
-  public func validate(using verifier: MyIdSDK.Verifier) throws -> MyIdSDK.JWS
-  public func isValid(for verifier: MyIdSDK.Verifier) -> Swift.Bool
-}
-extension MyIdSDK.JWS : MyIdSDK.CompactSerializable {
-  public func serialize(to serializer: inout any MyIdSDK.CompactSerializer)
-}
-extension MyIdSDK.JWS : MyIdSDK.CompactDeserializable {
-  public static var componentCount: Swift.Int {
-    get
-  }
-  public init(from deserializer: any MyIdSDK.CompactDeserializer) throws
-}
-extension Foundation.Data : MyIdSDK.ExpressibleAsSymmetricKeyComponents {
-  public static func representing(symmetricKeyComponents components: MyIdSDK.SymmetricKeyComponents) throws -> Foundation.Data
-  public func symmetricKeyComponents() throws -> MyIdSDK.SymmetricKeyComponents
-}
-@objc public enum MyIdResidency : Swift.Int {
-  case USER_DEFINED = 0
-  case RESIDENT
-  case NON_RESIDENT
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@_inheritsConvenienceInitializers @objc public class MyIdResult : ObjectiveC.NSObject {
-  @objc public var image: UIKit.UIImage?
-  @objc public var code: Swift.String?
-  @objc public var comparisonValue: Swift.String?
-  @objc override dynamic public init()
-  @objc deinit
 }
 public struct JWSHeader {
   public init(algorithm: MyIdSDK.SignatureAlgorithm)
@@ -571,145 +758,164 @@ extension MyIdSDK.JWSHeader : MyIdSDK.CommonHeaderParameterSpace {
     set
   }
 }
-@objc public enum MyIdResolution : Swift.Int {
-  case RESOLUTION_480 = 0
-  case RESOLUTION_720
+extension MyIdSDK.ECPublicKey : Swift.Encodable {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension MyIdSDK.ECPublicKey : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension MyIdSDK.ECPrivateKey : Swift.Encodable {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension MyIdSDK.ECPrivateKey : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class MyIdOrganizationDetails : ObjectiveC.NSObject {
+  @objc public var phoneNumber: Swift.String?
+  @objc public var logo: UIKit.UIImage?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum MyIdDocumentType : Swift.Int {
+  case ID_CARD = 0
+  case PASSPORT
+  case DRIVER_LICENSE
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
-@objc public enum MyIdEntryType : Swift.Int {
-  case AUTH = 0
-  case FACE
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+extension MyIdSDK.JWK {
+  public subscript(parameter: Swift.String) -> Swift.String? {
     get
   }
 }
-extension Foundation.Data : MyIdSDK.ExpressibleAsECPublicKeyComponents {
-  public static func representing(ecPublicKeyComponents components: MyIdSDK.ECPublicKeyComponents) throws -> Foundation.Data
-  public func ecPublicKeyComponents() throws -> MyIdSDK.ECPublicKeyComponents
+extension MyIdSDK.JWK {
+  public func jsonString() -> Swift.String?
+  public func jsonData() -> Foundation.Data?
+}
+public struct JWE {
+  public let header: MyIdSDK.JWEHeader
+  public let encryptedKey: Foundation.Data
+  public let initializationVector: Foundation.Data
+  public let ciphertext: Foundation.Data
+  public let authenticationTag: Foundation.Data
+  public var compactSerializedString: Swift.String {
+    get
+  }
+  public var compactSerializedData: Foundation.Data {
+    get
+  }
+  public init<KeyType>(header: MyIdSDK.JWEHeader, payload: MyIdSDK.Payload, encrypter: MyIdSDK.Encrypter<KeyType>) throws
+  public init(compactSerialization: Swift.String) throws
+  public init(compactSerialization: Foundation.Data) throws
+  @available(*, deprecated, message: "Use `decrypt(using decrypter:)` instead")
+  public func decrypt<KeyType>(with key: KeyType) throws -> MyIdSDK.Payload
+  public func decrypt(using decrypter: MyIdSDK.Decrypter) throws -> MyIdSDK.Payload
+}
+extension MyIdSDK.JWE : MyIdSDK.CompactSerializable {
+  public func serialize(to serializer: inout any MyIdSDK.CompactSerializer)
+}
+extension MyIdSDK.JWE : MyIdSDK.CompactDeserializable {
+  public static var componentCount: Swift.Int {
+    get
+  }
+  public init(from deserializer: any MyIdSDK.CompactDeserializer) throws
 }
 @_inheritsConvenienceInitializers @objc public class MyIdClient : ObjectiveC.NSObject {
   @objc public class func start(withConfig config: MyIdSDK.MyIdConfig, withDelegate delegate: any MyIdSDK.MyIdClientDelegate)
   @objc override dynamic public init()
   @objc deinit
 }
-public class RSASignature {
-  public enum DigestType {
-    case sha1
-    case sha224
-    case sha256
-    case sha384
-    case sha512
-    public static func == (a: MyIdSDK.RSASignature.DigestType, b: MyIdSDK.RSASignature.DigestType) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  final public let data: Foundation.Data
-  public init(data: Foundation.Data)
-  convenience public init(base64Encoded base64String: Swift.String) throws
-  public var base64String: Swift.String {
+public enum RSAKeyType {
+  case PUBLIC
+  case PRIVATE
+  public static func == (a: MyIdSDK.RSAKeyType, b: MyIdSDK.RSAKeyType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
     get
   }
+}
+public struct RSAKeyPairs {
+  public var privateKey: MyIdSDK.RSAKey
+  public var publicKey: MyIdSDK.RSAKey
+}
+public class RSAKey {
+  public var key: Security.SecKey
+  public var keyBase64String: Swift.String
+  public var data: Foundation.Data?
+  public var keyType: MyIdSDK.RSAKeyType!
+  public init(key: Security.SecKey, keyBase64String: Swift.String, keyType: MyIdSDK.RSAKeyType)
+  public init(base64String: Swift.String, keyType: MyIdSDK.RSAKeyType) throws
+  public static func base64StringWithoutPrefixAndSuffix(pemString: Swift.String) throws -> Swift.String
+  public func pemString() throws -> Swift.String
+  public func format(keyData: Foundation.Data, keyType: MyIdSDK.RSAKeyType) -> Swift.String
   @objc deinit
 }
-public enum ECCurveType : Swift.String, Swift.Codable {
-  case P256
-  case P384
-  case P521
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
+@_inheritsConvenienceInitializers @objc public class MyIdAppearance : ObjectiveC.NSObject {
+  @objc public var primaryColor: UIKit.UIColor?
+  @objc public var secondaryColor: UIKit.UIColor?
+  @objc public var errorColor: UIKit.UIColor?
+  @objc public var primaryButtonColor: UIKit.UIColor?
+  @objc public var primaryButtonColorDisabled: UIKit.UIColor?
+  @objc public var primaryButtonTextColor: UIKit.UIColor?
+  @objc public var primaryButtonTextColorDisabled: UIKit.UIColor?
+  @objc public var buttonCornerRadius: Swift.Float
+  @objc override dynamic public init()
+  @objc deinit
 }
-public enum ECCompression : Swift.UInt8 {
-  case CompressedYEven
-  case CompressedYOdd
-  case Uncompressed
-  case HybridYEven
-  case HybridYOdd
-  public init?(rawValue: Swift.UInt8)
-  public typealias RawValue = Swift.UInt8
-  public var rawValue: Swift.UInt8 {
-    get
-  }
+@_inheritsConvenienceInitializers @objc public class MyIdResult : ObjectiveC.NSObject {
+  @objc public var image: UIKit.UIImage?
+  @objc public var code: Swift.String?
+  @objc public var comparisonValue: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
 }
-extension MyIdSDK.JWKSet : Swift.Encodable {
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-extension MyIdSDK.JWKSet : Swift.Decodable {
-  public init(from decoder: any Swift.Decoder) throws
-}
-extension Foundation.Data : MyIdSDK.ExpressibleAsECPrivateKeyComponents {
-  public static func representing(ecPrivateKeyComponents components: MyIdSDK.ECPrivateKeyComponents) throws -> Foundation.Data
-  public func ecPrivateKeyComponents() throws -> MyIdSDK.ECPrivateKeyComponents
-}
-public enum SwiftyCryptoRSAKeySize : Swift.Int {
-  case RSAKey64
-  case RSAKey128
-  case RSAKey256
-  case RSAKey512
+@objc public enum MyIdLocale : Swift.Int {
+  case RU = 0
+  case EN
+  case UZ
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers public class RSAKeyFactory : ObjectiveC.NSObject {
-  public static let shared: MyIdSDK.RSAKeyFactory
-  public func generateKeyPair(keySize: MyIdSDK.SwiftyCryptoRSAKeySize) -> MyIdSDK.RSAKeyPairs?
-  @objc override dynamic public init()
-  @objc deinit
+public struct Verifier {
+  public init?<KeyType>(verifyingAlgorithm: MyIdSDK.SignatureAlgorithm, key: KeyType)
 }
-public typealias RSAPublicKeyComponents = (modulus: Foundation.Data, exponent: Foundation.Data)
-public typealias RSAPrivateKeyComponents = (modulus: Foundation.Data, exponent: Foundation.Data, privateExponent: Foundation.Data)
-public protocol ExpressibleAsRSAPublicKeyComponents {
-  static func representing(rsaPublicKeyComponents components: MyIdSDK.RSAPublicKeyComponents) throws -> Self
-  func rsaPublicKeyComponents() throws -> MyIdSDK.RSAPublicKeyComponents
+extension MyIdSDK.Verifier {
+  @available(*, deprecated, message: "Use `init?(verifyingAlgorithm: SignatureAlgorithm, key: KeyType)` instead")
+  public init?<KeyType>(verifyingAlgorithm: MyIdSDK.SignatureAlgorithm, publicKey: KeyType)
 }
-public protocol ExpressibleAsRSAPrivateKeyComponents {
-  static func representing(rsaPrivateKeyComponents components: MyIdSDK.RSAPrivateKeyComponents) throws -> Self
-  func rsaPrivateKeyComponents() throws -> MyIdSDK.RSAPrivateKeyComponents
-}
-public struct RSAPublicKey : MyIdSDK.JWK {
-  public let keyType: MyIdSDK.JWKKeyType
-  public let parameters: [Swift.String : Swift.String]
-  public var requiredParameters: [Swift.String : Swift.String] {
+public enum JWKKeyType : Swift.String, Swift.Codable {
+  case RSA
+  case OCT
+  case EC
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
     get
   }
-  public let modulus: Swift.String
-  public let exponent: Swift.String
-  public init(modulus: Swift.String, exponent: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:])
-  public init(publicKey: any MyIdSDK.ExpressibleAsRSAPublicKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
-  public init(data: Foundation.Data) throws
-  public func converted<T>(to type: T.Type) throws -> T where T : MyIdSDK.ExpressibleAsRSAPublicKeyComponents
-  @available(iOS 11.0, *)
-  public func withThumbprintAsKeyId(algorithm: MyIdSDK.JWKThumbprintAlgorithm = .SHA256) throws -> MyIdSDK.RSAPublicKey
 }
-public struct RSAPrivateKey : MyIdSDK.JWK {
-  public let keyType: MyIdSDK.JWKKeyType
-  public let parameters: [Swift.String : Swift.String]
-  public var requiredParameters: [Swift.String : Swift.String] {
-    get
-  }
-  public let modulus: Swift.String
-  public let exponent: Swift.String
-  public let privateExponent: Swift.String
-  public init(modulus: Swift.String, exponent: Swift.String, privateExponent: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:])
-  public init(privateKey: any MyIdSDK.ExpressibleAsRSAPrivateKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
-  public init(data: Foundation.Data) throws
-  public func converted<T>(to type: T.Type) throws -> T where T : MyIdSDK.ExpressibleAsRSAPrivateKeyComponents
+public protocol JWK : Swift.Decodable, Swift.Encodable {
+  var keyType: MyIdSDK.JWKKeyType { get }
+  var parameters: [Swift.String : Swift.String] { get }
+  var requiredParameters: [Swift.String : Swift.String] { get }
+  subscript(parameter: Swift.String) -> Swift.String? { get }
+  init(data: Foundation.Data) throws
+  func jsonString() -> Swift.String?
+  func jsonData() -> Foundation.Data?
   @available(iOS 11.0, *)
-  public func withThumbprintAsKeyId(algorithm: MyIdSDK.JWKThumbprintAlgorithm = .SHA256) throws -> MyIdSDK.RSAPrivateKey
+  func thumbprint(algorithm: MyIdSDK.JWKThumbprintAlgorithm) throws -> Swift.String
+  @available(iOS 11.0, *)
+  func withThumbprintAsKeyId(algorithm: MyIdSDK.JWKThumbprintAlgorithm) throws -> Self
 }
-public typealias RSAKeyPair = MyIdSDK.RSAPrivateKey
+extension MyIdSDK.JWK {
+  @available(iOS 11.0, *)
+  public func thumbprint(algorithm: MyIdSDK.JWKThumbprintAlgorithm = .SHA256) throws -> Swift.String
+}
 public struct JWKSet {
   public let keys: [any MyIdSDK.JWK]
   public init(keys: [any MyIdSDK.JWK])
@@ -740,304 +946,59 @@ extension MyIdSDK.JWKSet : Swift.ExpressibleByArrayLiteral {
   public typealias ArrayLiteralElement = MyIdSDK.JWKSet.Element
   public init(arrayLiteral elements: MyIdSDK.JWKSet.ArrayLiteralElement...)
 }
-extension MyIdSDK.RSAPublicKey : Swift.Encodable {
-  public func encode(to encoder: any Swift.Encoder) throws
+public typealias ECPublicKeyComponents = (crv: Swift.String, x: Foundation.Data, y: Foundation.Data)
+public typealias ECPrivateKeyComponents = (crv: Swift.String, x: Foundation.Data, y: Foundation.Data, d: Foundation.Data)
+public protocol ExpressibleAsECPublicKeyComponents {
+  static func representing(ecPublicKeyComponents components: MyIdSDK.ECPublicKeyComponents) throws -> Self
+  func ecPublicKeyComponents() throws -> MyIdSDK.ECPublicKeyComponents
 }
-extension MyIdSDK.RSAPublicKey : Swift.Decodable {
-  public init(from decoder: any Swift.Decoder) throws
+public protocol ExpressibleAsECPrivateKeyComponents {
+  static func representing(ecPrivateKeyComponents components: MyIdSDK.ECPrivateKeyComponents) throws -> Self
+  func ecPrivateKeyComponents() throws -> MyIdSDK.ECPrivateKeyComponents
 }
-extension MyIdSDK.RSAPrivateKey : Swift.Encodable {
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-extension MyIdSDK.RSAPrivateKey : Swift.Decodable {
-  public init(from decoder: any Swift.Decoder) throws
-}
-public protocol CompactSerializable {
-  func serialize(to serializer: inout any MyIdSDK.CompactSerializer)
-}
-public protocol CompactSerializer {
-  var components: [any MyIdSDK.DataConvertible] { get }
-  mutating func serialize<T>(_ object: T) where T : MyIdSDK.DataConvertible
-}
-public struct JOSESerializer {
-  public func serialize<T>(compact object: T) -> Swift.String where T : MyIdSDK.CompactSerializable
-}
-@_inheritsConvenienceInitializers @objc public class MyIdAppearance : ObjectiveC.NSObject {
-  @objc public var primaryColor: UIKit.UIColor?
-  @objc public var secondaryColor: UIKit.UIColor?
-  @objc public var errorColor: UIKit.UIColor?
-  @objc public var primaryButtonColor: UIKit.UIColor?
-  @objc public var primaryButtonColorDisabled: UIKit.UIColor?
-  @objc public var primaryButtonTextColor: UIKit.UIColor?
-  @objc public var primaryButtonTextColorDisabled: UIKit.UIColor?
-  @objc public var buttonCornerRadius: Swift.Float
-  @objc override dynamic public init()
-  @objc deinit
-}
-public enum RSAKeyType {
-  case PUBLIC
-  case PRIVATE
-  public static func == (a: MyIdSDK.RSAKeyType, b: MyIdSDK.RSAKeyType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+public struct ECPublicKey : MyIdSDK.JWK {
+  public let keyType: MyIdSDK.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
     get
   }
+  public let crv: MyIdSDK.ECCurveType
+  public let x: Swift.String
+  public let y: Swift.String
+  public init(crv: MyIdSDK.ECCurveType, x: Swift.String, y: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:])
+  public init(publicKey: any MyIdSDK.ExpressibleAsECPublicKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : MyIdSDK.ExpressibleAsECPublicKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: MyIdSDK.JWKThumbprintAlgorithm = .SHA256) throws -> MyIdSDK.ECPublicKey
 }
-public struct RSAKeyPairs {
-  public var privateKey: MyIdSDK.RSAKey
-  public var publicKey: MyIdSDK.RSAKey
-}
-public class RSAKey {
-  public var key: Security.SecKey
-  public var keyBase64String: Swift.String
-  public var data: Foundation.Data?
-  public var keyType: MyIdSDK.RSAKeyType!
-  public init(key: Security.SecKey, keyBase64String: Swift.String, keyType: MyIdSDK.RSAKeyType)
-  public init(base64String: Swift.String, keyType: MyIdSDK.RSAKeyType) throws
-  public static func base64StringWithoutPrefixAndSuffix(pemString: Swift.String) throws -> Swift.String
-  public func pemString() throws -> Swift.String
-  public func format(keyData: Foundation.Data, keyType: MyIdSDK.RSAKeyType) -> Swift.String
-  @objc deinit
-}
-public struct Decrypter {
-  public init?<KeyType>(keyManagementAlgorithm: MyIdSDK.KeyManagementAlgorithm, contentEncryptionAlgorithm: MyIdSDK.ContentEncryptionAlgorithm, decryptionKey: KeyType)
-}
-extension MyIdSDK.Decrypter {
-  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:decryptionKey:)` instead")
-  public init?<KeyType>(keyDecryptionAlgorithm: MyIdSDK.AsymmetricKeyAlgorithm, decryptionKey key: KeyType, contentDecryptionAlgorithm: MyIdSDK.SymmetricKeyAlgorithm)
-  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:decryptionKey:)` instead")
-  public init?<KeyType>(keyDecryptionAlgorithm: MyIdSDK.AsymmetricKeyAlgorithm, keyDecryptionKey kdk: KeyType, contentDecryptionAlgorithm: MyIdSDK.SymmetricKeyAlgorithm)
-}
-@available(*, deprecated, message: "This type will be removed with the next major release.")
-public struct DecryptionContext {
-}
-@available(*, deprecated, message: "This type will be removed with the next major release.")
-public struct SymmetricDecryptionContext {
-}
-extension Foundation.Data : MyIdSDK.ExpressibleAsRSAPublicKeyComponents {
-  public static func representing(rsaPublicKeyComponents components: MyIdSDK.RSAPublicKeyComponents) throws -> Foundation.Data
-  public func rsaPublicKeyComponents() throws -> MyIdSDK.RSAPublicKeyComponents
-}
-@objc public enum MyIdBuildMode : Swift.Int {
-  case DEBUG = 0
-  case PRODUCTION
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+public struct ECPrivateKey : MyIdSDK.JWK {
+  public let keyType: MyIdSDK.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
     get
   }
+  public let crv: MyIdSDK.ECCurveType
+  public let x: Swift.String
+  public let y: Swift.String
+  public let privateKey: Swift.String
+  public init(crv: Swift.String, x: Swift.String, y: Swift.String, privateKey: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(privateKey: any MyIdSDK.ExpressibleAsECPrivateKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : MyIdSDK.ExpressibleAsECPrivateKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: MyIdSDK.JWKThumbprintAlgorithm = .SHA256) throws -> MyIdSDK.ECPrivateKey
 }
-public protocol CompactDeserializable {
-  static var componentCount: Swift.Int { get }
-  init(from deserializer: any MyIdSDK.CompactDeserializer) throws
+public typealias ECKeyPair = MyIdSDK.ECPrivateKey
+public struct Signer<KeyType> {
+  public init?(signingAlgorithm: MyIdSDK.SignatureAlgorithm, key: KeyType)
 }
-public protocol CompactDeserializer {
-  func deserialize<T>(_ type: T.Type, at index: Swift.Int) throws -> T where T : MyIdSDK.DataConvertible
+extension MyIdSDK.Signer {
+  @available(*, deprecated, message: "Use `init?(signingAlgorithm: SignatureAlgorithm, key: KeyType)` instead")
+  public init?(signingAlgorithm: MyIdSDK.SignatureAlgorithm, privateKey: KeyType)
 }
-public struct JOSEDeserializer {
-  public init()
-  public func deserialize<T>(_ type: T.Type, fromCompactSerialization compactSerialization: Swift.String) throws -> T where T : MyIdSDK.CompactDeserializable
-}
-public enum ComponentCompactSerializedIndex {
-}
-public struct Encrypter<KeyType> {
-  public init?(keyManagementAlgorithm: MyIdSDK.KeyManagementAlgorithm, contentEncryptionAlgorithm: MyIdSDK.ContentEncryptionAlgorithm, encryptionKey: KeyType)
-}
-extension MyIdSDK.Encrypter {
-  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:encryptionKey:)` instead")
-  public init?(keyEncryptionAlgorithm: MyIdSDK.AsymmetricKeyAlgorithm, encryptionKey key: KeyType, contentEncyptionAlgorithm: MyIdSDK.SymmetricKeyAlgorithm)
-  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:encryptionKey:)` instead")
-  public init?(keyEncryptionAlgorithm: MyIdSDK.AsymmetricKeyAlgorithm, keyEncryptionKey kek: KeyType, contentEncyptionAlgorithm: MyIdSDK.SymmetricKeyAlgorithm)
-}
-@available(*, deprecated, message: "This type will be removed with the next major release.")
-public struct EncryptionContext {
-}
-@available(*, deprecated, message: "This type will be removed with the next major release.")
-public struct SymmetricEncryptionContext {
-}
-public protocol DataConvertible {
-  init?(_ data: Foundation.Data)
-  func data() -> Foundation.Data
-}
-public struct Verifier {
-  public init?<KeyType>(verifyingAlgorithm: MyIdSDK.SignatureAlgorithm, key: KeyType)
-}
-extension MyIdSDK.Verifier {
-  @available(*, deprecated, message: "Use `init?(verifyingAlgorithm: SignatureAlgorithm, key: KeyType)` instead")
-  public init?<KeyType>(verifyingAlgorithm: MyIdSDK.SignatureAlgorithm, publicKey: KeyType)
-}
-extension MyIdSDK.ECPublicKey : Swift.Encodable {
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-extension MyIdSDK.ECPublicKey : Swift.Decodable {
-  public init(from decoder: any Swift.Decoder) throws
-}
-extension MyIdSDK.ECPrivateKey : Swift.Encodable {
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-extension MyIdSDK.ECPrivateKey : Swift.Decodable {
-  public init(from decoder: any Swift.Decoder) throws
-}
-public enum JWKParameter : Swift.String, Swift.CodingKey {
-  case keyType
-  case keyUse
-  case keyOperations
-  case algorithm
-  case keyIdentifier
-  case X509URL
-  case X509CertificateChain
-  case X509CertificateSHA1Thumbprint
-  case X509CertificateSHA256Thumbprint
-  public init?(stringValue: Swift.String)
-  public init?(intValue: Swift.Int)
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var intValue: Swift.Int? {
-    get
-  }
-  public var rawValue: Swift.String {
-    get
-  }
-  public var stringValue: Swift.String {
-    get
-  }
-}
-public enum RSAParameter : Swift.String, Swift.CodingKey {
-  case modulus
-  case exponent
-  case privateExponent
-  public init?(rawValue: Swift.String)
-  public init?(stringValue: Swift.String)
-  public init?(intValue: Swift.Int)
-  public typealias RawValue = Swift.String
-  public var intValue: Swift.Int? {
-    get
-  }
-  public var rawValue: Swift.String {
-    get
-  }
-  public var stringValue: Swift.String {
-    get
-  }
-}
-public enum SymmetricKeyParameter : Swift.String, Swift.CodingKey {
-  case key
-  public init?(rawValue: Swift.String)
-  public init?(stringValue: Swift.String)
-  public init?(intValue: Swift.Int)
-  public typealias RawValue = Swift.String
-  public var intValue: Swift.Int? {
-    get
-  }
-  public var rawValue: Swift.String {
-    get
-  }
-  public var stringValue: Swift.String {
-    get
-  }
-}
-public enum ECParameter : Swift.String, Swift.CodingKey {
-  case curve
-  case x
-  case y
-  case privateKey
-  public init?(rawValue: Swift.String)
-  public init?(stringValue: Swift.String)
-  public init?(intValue: Swift.Int)
-  public typealias RawValue = Swift.String
-  public var intValue: Swift.Int? {
-    get
-  }
-  public var rawValue: Swift.String {
-    get
-  }
-  public var stringValue: Swift.String {
-    get
-  }
-}
-public enum JOSESwiftError : Swift.Error {
-  case signingFailed(description: Swift.String)
-  case verifyingFailed(description: Swift.String)
-  case signatureInvalid
-  case encryptingFailed(description: Swift.String)
-  case decryptingFailed(description: Swift.String)
-  case wrongDataEncoding(data: Foundation.Data)
-  case invalidCompactSerializationComponentCount(count: Swift.Int)
-  case componentNotValidBase64URL(component: Swift.String)
-  case componentCouldNotBeInitializedFromData(data: Foundation.Data)
-  case couldNotConstructJWK
-  case modulusNotBase64URLUIntEncoded
-  case exponentNotBase64URLUIntEncoded
-  case privateExponentNotBase64URLUIntEncoded
-  case symmetricKeyNotBase64URLEncoded
-  case xNotBase64URLUIntEncoded
-  case yNotBase64URLUIntEncoded
-  case privateKeyNotBase64URLUIntEncoded
-  case invalidCurveType
-  case compressedCurvePointsUnsupported
-  case invalidCurvePointOctetLength
-  case localAuthenticationFailed(errorCode: Swift.Int)
-  case compressionFailed
-  case decompressionFailed
-  case compressionAlgorithmNotSupported
-  case rawDataMustBeGreaterThanZero
-  case compressedDataMustBeGreaterThanZero
-  case thumbprintSerialization
-}
-extension MyIdSDK.KeyManagementAlgorithm : Swift.Equatable {}
-extension MyIdSDK.KeyManagementAlgorithm : Swift.Hashable {}
-extension MyIdSDK.KeyManagementAlgorithm : Swift.RawRepresentable {}
-extension MyIdSDK.JWKThumbprintAlgorithm : Swift.Equatable {}
-extension MyIdSDK.JWKThumbprintAlgorithm : Swift.Hashable {}
-extension MyIdSDK.JWKThumbprintAlgorithm : Swift.RawRepresentable {}
-extension MyIdSDK.MyIdCameraShape : Swift.Equatable {}
-extension MyIdSDK.MyIdCameraShape : Swift.Hashable {}
-extension MyIdSDK.MyIdCameraShape : Swift.RawRepresentable {}
-extension MyIdSDK.MyIdDocumentType : Swift.Equatable {}
-extension MyIdSDK.MyIdDocumentType : Swift.Hashable {}
-extension MyIdSDK.MyIdDocumentType : Swift.RawRepresentable {}
-extension MyIdSDK.MyIdLocale : Swift.Equatable {}
-extension MyIdSDK.MyIdLocale : Swift.Hashable {}
-extension MyIdSDK.MyIdLocale : Swift.RawRepresentable {}
-extension MyIdSDK.JWEHeader : MyIdSDK.DataConvertible {}
-extension MyIdSDK.SignatureAlgorithm : Swift.Equatable {}
-extension MyIdSDK.SignatureAlgorithm : Swift.Hashable {}
-extension MyIdSDK.SignatureAlgorithm : Swift.RawRepresentable {}
-extension MyIdSDK.ContentEncryptionAlgorithm : Swift.Equatable {}
-extension MyIdSDK.ContentEncryptionAlgorithm : Swift.Hashable {}
-extension MyIdSDK.ContentEncryptionAlgorithm : Swift.RawRepresentable {}
-extension MyIdSDK.HMACAlgorithm : Swift.Equatable {}
-extension MyIdSDK.HMACAlgorithm : Swift.Hashable {}
-extension MyIdSDK.HMACAlgorithm : Swift.RawRepresentable {}
-extension MyIdSDK.CompressionAlgorithm : Swift.Equatable {}
-extension MyIdSDK.CompressionAlgorithm : Swift.Hashable {}
-extension MyIdSDK.CompressionAlgorithm : Swift.RawRepresentable {}
-extension MyIdSDK.JWKKeyType : Swift.Equatable {}
-extension MyIdSDK.JWKKeyType : Swift.Hashable {}
-extension MyIdSDK.JWKKeyType : Swift.RawRepresentable {}
-extension MyIdSDK.MyIdResidency : Swift.Equatable {}
-extension MyIdSDK.MyIdResidency : Swift.Hashable {}
-extension MyIdSDK.MyIdResidency : Swift.RawRepresentable {}
-extension MyIdSDK.JWSHeader : MyIdSDK.DataConvertible {}
-extension MyIdSDK.MyIdResolution : Swift.Equatable {}
-extension MyIdSDK.MyIdResolution : Swift.Hashable {}
-extension MyIdSDK.MyIdResolution : Swift.RawRepresentable {}
-extension MyIdSDK.MyIdEntryType : Swift.Equatable {}
-extension MyIdSDK.MyIdEntryType : Swift.Hashable {}
-extension MyIdSDK.MyIdEntryType : Swift.RawRepresentable {}
 extension MyIdSDK.RSASignature.DigestType : Swift.Equatable {}
 extension MyIdSDK.RSASignature.DigestType : Swift.Hashable {}
-extension MyIdSDK.ECCurveType : Swift.Equatable {}
-extension MyIdSDK.ECCurveType : Swift.Hashable {}
-extension MyIdSDK.ECCurveType : Swift.RawRepresentable {}
-extension MyIdSDK.ECCompression : Swift.Equatable {}
-extension MyIdSDK.ECCompression : Swift.Hashable {}
-extension MyIdSDK.ECCompression : Swift.RawRepresentable {}
-extension MyIdSDK.SwiftyCryptoRSAKeySize : Swift.Equatable {}
-extension MyIdSDK.SwiftyCryptoRSAKeySize : Swift.Hashable {}
-extension MyIdSDK.SwiftyCryptoRSAKeySize : Swift.RawRepresentable {}
-extension MyIdSDK.RSAKeyType : Swift.Equatable {}
-extension MyIdSDK.RSAKeyType : Swift.Hashable {}
 extension MyIdSDK.MyIdBuildMode : Swift.Equatable {}
 extension MyIdSDK.MyIdBuildMode : Swift.Hashable {}
 extension MyIdSDK.MyIdBuildMode : Swift.RawRepresentable {}
@@ -1053,3 +1014,55 @@ extension MyIdSDK.SymmetricKeyParameter : Swift.RawRepresentable {}
 extension MyIdSDK.ECParameter : Swift.Equatable {}
 extension MyIdSDK.ECParameter : Swift.Hashable {}
 extension MyIdSDK.ECParameter : Swift.RawRepresentable {}
+extension MyIdSDK.SwiftyCryptoRSAKeySize : Swift.Equatable {}
+extension MyIdSDK.SwiftyCryptoRSAKeySize : Swift.Hashable {}
+extension MyIdSDK.SwiftyCryptoRSAKeySize : Swift.RawRepresentable {}
+extension MyIdSDK.JWKThumbprintAlgorithm : Swift.Equatable {}
+extension MyIdSDK.JWKThumbprintAlgorithm : Swift.Hashable {}
+extension MyIdSDK.JWKThumbprintAlgorithm : Swift.RawRepresentable {}
+extension MyIdSDK.ContentEncryptionAlgorithm : Swift.Equatable {}
+extension MyIdSDK.ContentEncryptionAlgorithm : Swift.Hashable {}
+extension MyIdSDK.ContentEncryptionAlgorithm : Swift.RawRepresentable {}
+extension MyIdSDK.KeyManagementAlgorithm : Swift.Equatable {}
+extension MyIdSDK.KeyManagementAlgorithm : Swift.Hashable {}
+extension MyIdSDK.KeyManagementAlgorithm : Swift.RawRepresentable {}
+extension MyIdSDK.MyIdResolution : Swift.Equatable {}
+extension MyIdSDK.MyIdResolution : Swift.Hashable {}
+extension MyIdSDK.MyIdResolution : Swift.RawRepresentable {}
+extension MyIdSDK.MyIdCameraShape : Swift.Equatable {}
+extension MyIdSDK.MyIdCameraShape : Swift.Hashable {}
+extension MyIdSDK.MyIdCameraShape : Swift.RawRepresentable {}
+extension MyIdSDK.MyIdResidency : Swift.Equatable {}
+extension MyIdSDK.MyIdResidency : Swift.Hashable {}
+extension MyIdSDK.MyIdResidency : Swift.RawRepresentable {}
+extension MyIdSDK.ECCurveType : Swift.Equatable {}
+extension MyIdSDK.ECCurveType : Swift.Hashable {}
+extension MyIdSDK.ECCurveType : Swift.RawRepresentable {}
+extension MyIdSDK.SignatureAlgorithm : Swift.Equatable {}
+extension MyIdSDK.SignatureAlgorithm : Swift.Hashable {}
+extension MyIdSDK.SignatureAlgorithm : Swift.RawRepresentable {}
+extension MyIdSDK.ECCompression : Swift.Equatable {}
+extension MyIdSDK.ECCompression : Swift.Hashable {}
+extension MyIdSDK.ECCompression : Swift.RawRepresentable {}
+extension MyIdSDK.JWEHeader : MyIdSDK.DataConvertible {}
+extension MyIdSDK.HMACAlgorithm : Swift.Equatable {}
+extension MyIdSDK.HMACAlgorithm : Swift.Hashable {}
+extension MyIdSDK.HMACAlgorithm : Swift.RawRepresentable {}
+extension MyIdSDK.CompressionAlgorithm : Swift.Equatable {}
+extension MyIdSDK.CompressionAlgorithm : Swift.Hashable {}
+extension MyIdSDK.CompressionAlgorithm : Swift.RawRepresentable {}
+extension MyIdSDK.MyIdEntryType : Swift.Equatable {}
+extension MyIdSDK.MyIdEntryType : Swift.Hashable {}
+extension MyIdSDK.MyIdEntryType : Swift.RawRepresentable {}
+extension MyIdSDK.JWSHeader : MyIdSDK.DataConvertible {}
+extension MyIdSDK.MyIdDocumentType : Swift.Equatable {}
+extension MyIdSDK.MyIdDocumentType : Swift.Hashable {}
+extension MyIdSDK.MyIdDocumentType : Swift.RawRepresentable {}
+extension MyIdSDK.RSAKeyType : Swift.Equatable {}
+extension MyIdSDK.RSAKeyType : Swift.Hashable {}
+extension MyIdSDK.MyIdLocale : Swift.Equatable {}
+extension MyIdSDK.MyIdLocale : Swift.Hashable {}
+extension MyIdSDK.MyIdLocale : Swift.RawRepresentable {}
+extension MyIdSDK.JWKKeyType : Swift.Equatable {}
+extension MyIdSDK.JWKKeyType : Swift.Hashable {}
+extension MyIdSDK.JWKKeyType : Swift.RawRepresentable {}

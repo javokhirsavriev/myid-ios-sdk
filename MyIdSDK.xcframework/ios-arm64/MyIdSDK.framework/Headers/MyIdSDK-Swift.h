@@ -373,6 +373,21 @@ SWIFT_CLASS("_TtC7MyIdSDK13MyIdException")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC7MyIdSDK13MyIdGenerator")
+@interface MyIdGenerator : NSObject
++ (NSString * _Nullable)hashWithPayload:(NSString * _Nonnull)payload clientHash:(NSString * _Nonnull)clientHash clientHashId:(NSString * _Nonnull)clientHashId SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nonnull)device SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)deviceModel SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)deviceName SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)systemName SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)systemVersion SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)isPhone SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)isPad SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)isSimulator SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 typedef SWIFT_ENUM(NSInteger, MyIdLocale, open) {
   MyIdLocaleRU = 0,
   MyIdLocaleEN = 1,
