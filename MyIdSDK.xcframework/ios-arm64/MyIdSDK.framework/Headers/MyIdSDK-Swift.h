@@ -286,7 +286,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_CLASS("_TtC7MyIdSDK14MyIdAppearance")
 @interface MyIdAppearance : NSObject
 @property (nonatomic, strong) UIColor * _Nullable primaryColor;
-@property (nonatomic, strong) UIColor * _Nullable secondaryColor;
 @property (nonatomic, strong) UIColor * _Nullable errorColor;
 @property (nonatomic, strong) UIColor * _Nullable primaryButtonColor;
 @property (nonatomic, strong) UIColor * _Nullable primaryButtonColorDisabled;
@@ -301,6 +300,11 @@ typedef SWIFT_ENUM(NSInteger, MyIdBuildMode, open) {
   MyIdBuildModePRODUCTION = 1,
 };
 
+typedef SWIFT_ENUM(NSInteger, MyIdCameraSelector, open) {
+  MyIdCameraSelectorFRONT = 0,
+  MyIdCameraSelectorBACK = 1,
+};
+
 typedef SWIFT_ENUM(NSInteger, MyIdCameraShape, open) {
   MyIdCameraShapeELLIPSE = 0,
   MyIdCameraShapeCIRCLE = 1,
@@ -308,10 +312,12 @@ typedef SWIFT_ENUM(NSInteger, MyIdCameraShape, open) {
 
 @class MyIdConfig;
 @protocol MyIdClientDelegate;
+@class UIViewController;
 
 SWIFT_CLASS("_TtC7MyIdSDK10MyIdClient")
 @interface MyIdClient : NSObject
 + (void)startWithConfig:(MyIdConfig * _Nonnull)config withDelegate:(id <MyIdClientDelegate> _Nonnull)delegate;
++ (UIViewController * _Nonnull)runWithConfig:(MyIdConfig * _Nonnull)config withDelegate:(id <MyIdClientDelegate> _Nonnull)delegate SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -330,6 +336,7 @@ enum MyIdEntryType : NSInteger;
 enum MyIdResidency : NSInteger;
 enum MyIdLocale : NSInteger;
 enum MyIdResolution : NSInteger;
+enum MyIdPresentationStyle : NSInteger;
 @class MyIdOrganizationDetails;
 
 SWIFT_CLASS("_TtC7MyIdSDK10MyIdConfig")
@@ -339,6 +346,7 @@ SWIFT_CLASS("_TtC7MyIdSDK10MyIdConfig")
 @property (nonatomic, copy) NSString * _Nullable clientHashId;
 @property (nonatomic, copy) NSString * _Nullable passportData;
 @property (nonatomic, copy) NSString * _Nullable dateOfBirth;
+@property (nonatomic) NSInteger minAge;
 @property (nonatomic, copy) NSString * _Nullable sdkHash;
 @property (nonatomic, copy) NSString * _Nullable externalId;
 @property (nonatomic) float threshold;
@@ -348,6 +356,8 @@ SWIFT_CLASS("_TtC7MyIdSDK10MyIdConfig")
 @property (nonatomic) enum MyIdLocale locale;
 @property (nonatomic) enum MyIdCameraShape cameraShape;
 @property (nonatomic) enum MyIdResolution resolution;
+@property (nonatomic) enum MyIdCameraSelector cameraSelector;
+@property (nonatomic) enum MyIdPresentationStyle presentationStyle;
 @property (nonatomic, strong) MyIdOrganizationDetails * _Nullable organizationDetails;
 @property (nonatomic, strong) MyIdAppearance * _Nullable appearance;
 @property (nonatomic) BOOL withPhoto;
@@ -403,6 +413,11 @@ SWIFT_CLASS("_TtC7MyIdSDK23MyIdOrganizationDetails")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+typedef SWIFT_ENUM(NSInteger, MyIdPresentationStyle, open) {
+  MyIdPresentationStyleFULL = 0,
+  MyIdPresentationStyleSHEET = 1,
+};
+
 typedef SWIFT_ENUM(NSInteger, MyIdResidency, open) {
   MyIdResidencyUSER_DEFINED = 0,
   MyIdResidencyRESIDENT = 1,
@@ -424,11 +439,20 @@ SWIFT_CLASS("_TtC7MyIdSDK10MyIdResult")
 @end
 
 
-
-SWIFT_CLASS("_TtC7MyIdSDK13RSAKeyFactory")
-@interface RSAKeyFactory : NSObject
+SWIFT_CLASS("_TtC7MyIdSDK13MyIdViewModel") SWIFT_AVAILABILITY(ios,introduced=13.0)
+@interface MyIdViewModel : NSObject
+- (void)startMyIdWithClientId:(NSString * _Nonnull)clientId clientHash:(NSString * _Nonnull)clientHash clientHashId:(NSString * _Nonnull)clientHashId passportData:(NSString * _Nullable)passportData dateOfBirth:(NSString * _Nullable)dateOfBirth minAge:(NSInteger)minAge sdkHash:(NSString * _Nullable)sdkHash externalId:(NSString * _Nullable)externalId threshold:(float)threshold buildMode:(enum MyIdBuildMode)buildMode entryType:(enum MyIdEntryType)entryType residency:(enum MyIdResidency)residency locale:(enum MyIdLocale)locale cameraShape:(enum MyIdCameraShape)cameraShape resolution:(enum MyIdResolution)resolution cameraSelector:(enum MyIdCameraSelector)cameraSelector presentationStyle:(enum MyIdPresentationStyle)presentationStyle organizationDetails:(MyIdOrganizationDetails * _Nullable)organizationDetails appearance:(MyIdAppearance * _Nullable)appearance withPhoto:(BOOL)withPhoto;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
+SWIFT_AVAILABILITY(ios,introduced=13.0)
+@interface MyIdViewModel (SWIFT_EXTENSION(MyIdSDK)) <MyIdClientDelegate>
+- (void)onSuccessWithResult:(MyIdResult * _Nonnull)result;
+- (void)onErrorWithException:(MyIdException * _Nonnull)exception;
+- (void)onUserExited;
+@end
+
 
 
 
