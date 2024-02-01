@@ -16522,13 +16522,13 @@
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
       "kind": "FloatLiteral",
       "offset": 535,
-      "length": 3,
-      "value": "0.5"
+      "length": 4,
+      "value": "0.55"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 1353,
+      "offset": 1354,
       "length": 5,
       "value": "false"
     },
@@ -16810,7 +16810,7 @@
       "kind": "StringLiteral",
       "offset": 184,
       "length": 7,
-      "value": "\"2.2.6\""
+      "value": "\"2.2.7\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Core\/Constants.swift",
