@@ -16810,7 +16810,7 @@
       "kind": "StringLiteral",
       "offset": 184,
       "length": 7,
-      "value": "\"2.2.7\""
+      "value": "\"2.2.8\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Core\/Constants.swift",
@@ -20231,168 +20231,168 @@
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "Array",
-      "offset": 5052,
+      "offset": 5048,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 5319,
+      "offset": 5315,
       "length": 30,
       "value": "\"zip_\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 5344,
+      "offset": 5340,
       "length": 1,
       "value": "\".zip\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 5559,
+      "offset": 5555,
       "length": 12,
       "value": "\"image.jpeg\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 5658,
+      "offset": 5654,
       "length": 12,
       "value": "\"depth.json\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 6129,
+      "offset": 6125,
       "length": 6,
       "value": "\"file\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 6187,
+      "offset": 6183,
       "length": 31,
       "value": "\"file_\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 6213,
+      "offset": 6209,
       "length": 1,
       "value": "\".zip\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 6270,
+      "offset": 6266,
       "length": 17,
       "value": "\"application\/zip\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 6457,
+      "offset": 6453,
       "length": 8,
       "value": "\"job_id\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 7026,
+      "offset": 7022,
       "length": 15,
       "value": "\"Zip not found\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 7156,
+      "offset": 7152,
       "length": 25,
       "value": "\"Zip directory not found\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 7402,
+      "offset": 7398,
       "length": 21,
       "value": "\"Signature not found\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 7502,
+      "offset": 7498,
       "length": 17,
       "value": "\"Image not found\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 7893,
+      "offset": 7889,
       "length": 8,
       "value": "\"job_id\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 7912,
+      "offset": 7908,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "FloatLiteral",
-      "offset": 8119,
+      "offset": 8115,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 8647,
+      "offset": 8643,
       "length": 6,
       "value": "\"code\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 8703,
+      "offset": 8699,
       "length": 11,
       "value": "\"oauth2_id\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "Dictionary",
-      "offset": 8911,
+      "offset": 8907,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 8931,
+      "offset": 8927,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 8950,
+      "offset": 8946,
       "length": 42,
       "value": "\"Bearer \""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 8991,
+      "offset": 8987,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/javokhir\/My files (Don't touch)\/Development\/AIIG\/MyID\/MyID SDK\/ios\/MyID\/sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
-      "offset": 9009,
+      "offset": 9005,
       "length": 18,
       "value": "\"Content-Language\""
     },
