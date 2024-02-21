@@ -18,11 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		RhDVGm32qtu4Kl6fsgXVvTfe4cg=
+		o+zrN/6kx2alW9CNBk5zBUWfASU=
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		Mlc91NOVCqtQlCx4WuQ6m3qAHro=
+		zVQYZoBi3TkyBPtqFgzk+ZZwtD8=
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		DPXoYty1HR2VzTKdLrWDjQnk+b8=
+		Ir/ePYlLQqxtWA0FsmDVwZMxugk=
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		Mlc91NOVCqtQlCx4WuQ6m3qAHro=
+		zVQYZoBi3TkyBPtqFgzk+ZZwtD8=
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		12fjrmozf+EybGW2K/BkzNn3G1g=
+		SQXLjCa+xh48Gs92VshEMHJ0d2Y=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -92,7 +92,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jTCnLnJAvlUly8qPiWq2gCR0zoFDuue4EbDe/RYS7Rc=
+			IFw7D0bkzXj9FJRQ/tHt7UpF9rtlTwWK3GMyiHN4i9U=
 			</data>
 		</dict>
 		<key>Modules/MyIdSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -120,14 +120,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ldywipSPgGtk4Jd+TlC2PWCHckGlAgMQt641M9vi0+E=
+			MLBD6lslSJNIUonRm0rQGOEdPyLk2mip6yhVJr2Mx5Q=
 			</data>
 		</dict>
 		<key>Modules/MyIdSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jTCnLnJAvlUly8qPiWq2gCR0zoFDuue4EbDe/RYS7Rc=
+			IFw7D0bkzXj9FJRQ/tHt7UpF9rtlTwWK3GMyiHN4i9U=
 			</data>
 		</dict>
 		<key>Modules/MyIdSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -155,7 +155,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2ififtw4jq8MCwNf/q3uBE/FIKAvTu99QF50CvkddCU=
+			t4k3vlsOxaaOSe9Dsg1doV7q4PGqxsVoAs0ZX/TlHr8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
