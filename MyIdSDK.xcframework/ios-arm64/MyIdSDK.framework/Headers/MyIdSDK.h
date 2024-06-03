@@ -2,7 +2,7 @@
 //  MyIdSDK.h
 //  MyIdSDK
 //
-//  Created by Javokhir Savriev on 13/04/24.
+//  Created by Javokhir Savriev
 //
 
 #import <Foundation/Foundation.h>
