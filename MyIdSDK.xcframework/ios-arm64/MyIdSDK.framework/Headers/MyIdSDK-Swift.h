@@ -378,6 +378,7 @@ SWIFT_CLASS("_TtC7MyIdSDK10MyIdConfig")
 @property (nonatomic, strong) MyIdOrganizationDetails * _Nullable organizationDetails;
 @property (nonatomic, strong) MyIdAppearance * _Nullable appearance;
 @property (nonatomic) BOOL withPhoto;
+@property (nonatomic) float distance;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -454,21 +455,6 @@ SWIFT_CLASS("_TtC7MyIdSDK10MyIdResult")
 @property (nonatomic, copy) NSString * _Nullable code;
 @property (nonatomic, copy) NSString * _Nullable comparisonValue;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC7MyIdSDK13MyIdViewModel") SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface MyIdViewModel : NSObject
-- (void)startMyIdWithClientId:(NSString * _Nonnull)clientId clientHash:(NSString * _Nonnull)clientHash clientHashId:(NSString * _Nonnull)clientHashId passportData:(NSString * _Nullable)passportData dateOfBirth:(NSString * _Nullable)dateOfBirth minAge:(NSInteger)minAge sdkHash:(NSString * _Nullable)sdkHash externalId:(NSString * _Nullable)externalId threshold:(float)threshold buildMode:(enum MyIdBuildMode)buildMode entryType:(enum MyIdEntryType)entryType residency:(enum MyIdResidency)residency locale:(enum MyIdLocale)locale cameraShape:(enum MyIdCameraShape)cameraShape resolution:(enum MyIdResolution)resolution cameraSelector:(enum MyIdCameraSelector)cameraSelector presentationStyle:(enum MyIdPresentationStyle)presentationStyle organizationDetails:(MyIdOrganizationDetails * _Nullable)organizationDetails appearance:(MyIdAppearance * _Nullable)appearance withPhoto:(BOOL)withPhoto;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface MyIdViewModel (SWIFT_EXTENSION(MyIdSDK)) <MyIdClientDelegate>
-- (void)onSuccessWithResult:(MyIdResult * _Nonnull)result;
-- (void)onErrorWithException:(MyIdException * _Nonnull)exception;
-- (void)onUserExited;
 @end
 
 

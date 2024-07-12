@@ -58,6 +58,7 @@ import _SwiftConcurrencyShims
   @objc public var organizationDetails: MyIdSDK.MyIdOrganizationDetails?
   @objc public var appearance: MyIdSDK.MyIdAppearance?
   @objc public var withPhoto: Swift.Bool
+  @objc public var distance: Swift.Float
   @objc override dynamic public init()
   @objc deinit
 }
@@ -88,19 +89,6 @@ import _SwiftConcurrencyShims
   public var rawValue: Swift.Int {
     get
   }
-}
-@_inheritsConvenienceInitializers @available(iOS 13.0, *)
-@objc public class MyIdViewModel : ObjectiveC.NSObject, Combine.ObservableObject {
-  @objc public func startMyId(clientId: Swift.String, clientHash: Swift.String, clientHashId: Swift.String, passportData: Swift.String? = nil, dateOfBirth: Swift.String? = nil, minAge: Swift.Int = 16, sdkHash: Swift.String? = nil, externalId: Swift.String? = nil, threshold: Swift.Float = 0.5, buildMode: MyIdSDK.MyIdBuildMode = MyIdBuildMode.PRODUCTION, entryType: MyIdSDK.MyIdEntryType = MyIdEntryType.AUTH, residency: MyIdSDK.MyIdResidency = MyIdResidency.RESIDENT, locale: MyIdSDK.MyIdLocale = MyIdLocale.RU, cameraShape: MyIdSDK.MyIdCameraShape = MyIdCameraShape.CIRCLE, resolution: MyIdSDK.MyIdResolution = MyIdResolution.RESOLUTION_480, cameraSelector: MyIdSDK.MyIdCameraSelector = MyIdCameraSelector.FRONT, presentationStyle: MyIdSDK.MyIdPresentationStyle = MyIdPresentationStyle.FULL, organizationDetails: MyIdSDK.MyIdOrganizationDetails? = nil, appearance: MyIdSDK.MyIdAppearance? = nil, withPhoto: Swift.Bool = false)
-  @objc override dynamic public init()
-  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
-  @objc deinit
-}
-@available(iOS 13.0, *)
-@objc extension MyIdSDK.MyIdViewModel : MyIdSDK.MyIdClientDelegate {
-  @objc dynamic public func onSuccess(result: MyIdSDK.MyIdResult)
-  @objc dynamic public func onError(exception: MyIdSDK.MyIdException)
-  @objc dynamic public func onUserExited()
 }
 @objc public enum MyIdResolution : Swift.Int {
   case RESOLUTION_480 = 0

@@ -2735,6 +2735,99 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "distance",
+            "printedName": "distance",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(py)distance",
+            "mangledName": "$s7MyIdSDK0aB6ConfigC8distanceSfvp",
+            "moduleName": "MyIdSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)distance",
+                "mangledName": "$s7MyIdSDK0aB6ConfigC8distanceSfvg",
+                "moduleName": "MyIdSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)setDistance:",
+                "mangledName": "$s7MyIdSDK0aB6ConfigC8distanceSfvs",
+                "moduleName": "MyIdSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MyIdSDK0aB6ConfigC8distanceSfvM",
+                "mangledName": "$s7MyIdSDK0aB6ConfigC8distanceSfvM",
+                "moduleName": "MyIdSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -4163,442 +4256,6 @@
             ],
             "usr": "s:SY",
             "mangledName": "$sSY"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "MyIdViewModel",
-        "printedName": "MyIdViewModel",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "startMyId",
-            "printedName": "startMyId(clientId:clientHash:clientHashId:passportData:dateOfBirth:minAge:sdkHash:externalId:threshold:buildMode:entryType:residency:locale:cameraShape:resolution:cameraSelector:presentationStyle:organizationDetails:appearance:withPhoto:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "hasDefaultArg": true,
-                "usr": "s:Si"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Float",
-                "printedName": "Swift.Float",
-                "hasDefaultArg": true,
-                "usr": "s:Sf"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MyIdBuildMode",
-                "printedName": "MyIdSDK.MyIdBuildMode",
-                "hasDefaultArg": true,
-                "usr": "c:@M@MyIdSDK@E@MyIdBuildMode"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MyIdEntryType",
-                "printedName": "MyIdSDK.MyIdEntryType",
-                "hasDefaultArg": true,
-                "usr": "c:@M@MyIdSDK@E@MyIdEntryType"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MyIdResidency",
-                "printedName": "MyIdSDK.MyIdResidency",
-                "hasDefaultArg": true,
-                "usr": "c:@M@MyIdSDK@E@MyIdResidency"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MyIdLocale",
-                "printedName": "MyIdSDK.MyIdLocale",
-                "hasDefaultArg": true,
-                "usr": "c:@M@MyIdSDK@E@MyIdLocale"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MyIdCameraShape",
-                "printedName": "MyIdSDK.MyIdCameraShape",
-                "hasDefaultArg": true,
-                "usr": "c:@M@MyIdSDK@E@MyIdCameraShape"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MyIdResolution",
-                "printedName": "MyIdSDK.MyIdResolution",
-                "hasDefaultArg": true,
-                "usr": "c:@M@MyIdSDK@E@MyIdResolution"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MyIdCameraSelector",
-                "printedName": "MyIdSDK.MyIdCameraSelector",
-                "hasDefaultArg": true,
-                "usr": "c:@M@MyIdSDK@E@MyIdCameraSelector"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MyIdPresentationStyle",
-                "printedName": "MyIdSDK.MyIdPresentationStyle",
-                "hasDefaultArg": true,
-                "usr": "c:@M@MyIdSDK@E@MyIdPresentationStyle"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "MyIdSDK.MyIdOrganizationDetails?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MyIdOrganizationDetails",
-                    "printedName": "MyIdSDK.MyIdOrganizationDetails",
-                    "usr": "c:@M@MyIdSDK@objc(cs)MyIdOrganizationDetails"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "MyIdSDK.MyIdAppearance?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MyIdAppearance",
-                    "printedName": "MyIdSDK.MyIdAppearance",
-                    "usr": "c:@M@MyIdSDK@objc(cs)MyIdAppearance"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@MyIdSDK@objc(cs)MyIdViewModel(im)startMyIdWithClientId:clientHash:clientHashId:passportData:dateOfBirth:minAge:sdkHash:externalId:threshold:buildMode:entryType:residency:locale:cameraShape:resolution:cameraSelector:presentationStyle:organizationDetails:appearance:withPhoto:",
-            "mangledName": "$s7MyIdSDK0aB9ViewModelC05startaB006clientB00G4Hash0ghB012passportData11dateOfBirth6minAge03sdkH008externalB09threshold9buildMode9entryType9residency6locale11cameraShape10resolution0Y8Selector17presentationStyle19organizationDetails10appearance9withPhotoySS_S3SSgAYSiA2YSfAA0ab5BuildT0OAA0ab5EntryV0OAA0aB9ResidencyOAA0aB6LocaleOAA0ab6CameraZ0OAA0aB10ResolutionOAA0aB14CameraSelectorOAA0aB17PresentationStyleOAA0aB19OrganizationDetailsCSgAA0aB10AppearanceCSgSbtF",
-            "moduleName": "MyIdSDK",
-            "objc_name": "startMyIdWithClientId:clientHash:clientHashId:passportData:dateOfBirth:minAge:sdkHash:externalId:threshold:buildMode:entryType:residency:locale:cameraShape:resolution:cameraSelector:presentationStyle:organizationDetails:appearance:withPhoto:",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MyIdViewModel",
-                "printedName": "MyIdSDK.MyIdViewModel",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdViewModel"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@MyIdSDK@objc(cs)MyIdViewModel(im)init",
-            "mangledName": "$s7MyIdSDK0aB9ViewModelCACycfc",
-            "moduleName": "MyIdSDK",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "onSuccess",
-            "printedName": "onSuccess(result:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MyIdResult",
-                "printedName": "MyIdSDK.MyIdResult",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdResult"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@MyIdSDK@objc(cs)MyIdViewModel(im)onSuccessWithResult:",
-            "mangledName": "$s7MyIdSDK0aB9ViewModelC9onSuccess6resultyAA0aB6ResultC_tF",
-            "moduleName": "MyIdSDK",
-            "objc_name": "onSuccessWithResult:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "onError",
-            "printedName": "onError(exception:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MyIdException",
-                "printedName": "MyIdSDK.MyIdException",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdException"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@MyIdSDK@objc(cs)MyIdViewModel(im)onErrorWithException:",
-            "mangledName": "$s7MyIdSDK0aB9ViewModelC7onError9exceptionyAA0aB9ExceptionC_tF",
-            "moduleName": "MyIdSDK",
-            "objc_name": "onErrorWithException:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "onUserExited",
-            "printedName": "onUserExited()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@MyIdSDK@objc(cs)MyIdViewModel(im)onUserExited",
-            "mangledName": "$s7MyIdSDK0aB9ViewModelC12onUserExitedyyF",
-            "moduleName": "MyIdSDK",
-            "objc_name": "onUserExited",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@MyIdSDK@objc(cs)MyIdViewModel",
-        "mangledName": "$s7MyIdSDK0aB9ViewModelC",
-        "moduleName": "MyIdSDK",
-        "intro_iOS": "13.0",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC",
-          "Available"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "ObservableObject",
-            "printedName": "ObservableObject",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "ObjectWillChangePublisher",
-                "printedName": "ObjectWillChangePublisher",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ObservableObjectPublisher",
-                    "printedName": "Combine.ObservableObjectPublisher",
-                    "usr": "s:7Combine25ObservableObjectPublisherC"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7Combine16ObservableObjectP",
-            "mangledName": "$s7Combine16ObservableObjectP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "MyIdClientDelegate",
-            "printedName": "MyIdClientDelegate",
-            "usr": "c:@M@MyIdSDK@objc(pl)MyIdClientDelegate",
-            "mangledName": "$s7MyIdSDK0aB14ClientDelegateP"
           }
         ]
       },
@@ -10268,6 +9925,13 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
+      "kind": "FloatLiteral",
+      "offset": 1404,
+      "length": 4,
+      "value": "0.60"
+    },
+    {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Core\/Jose\/RSAKeyCodable.swift",
       "kind": "StringLiteral",
       "offset": 2222,
@@ -10298,42 +9962,42 @@
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdOptions.swift",
       "kind": "BooleanLiteral",
-      "offset": 1307,
+      "offset": 1348,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdOptions.swift",
       "kind": "StringLiteral",
-      "offset": 4243,
+      "offset": 3216,
       "length": 4,
       "value": "\"ru\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdOptions.swift",
       "kind": "StringLiteral",
-      "offset": 4273,
+      "offset": 3246,
       "length": 4,
       "value": "\"en\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdOptions.swift",
       "kind": "StringLiteral",
-      "offset": 4303,
+      "offset": 3276,
       "length": 4,
       "value": "\"uz\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdOptions.swift",
       "kind": "StringLiteral",
-      "offset": 4333,
+      "offset": 3306,
       "length": 4,
       "value": "\"ky\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdOptions.swift",
       "kind": "StringLiteral",
-      "offset": 4539,
+      "offset": 3512,
       "length": 5,
       "value": "\"102\""
     },
@@ -16143,161 +15807,154 @@
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "FloatLiteral",
-      "offset": 16133,
+      "offset": 16164,
       "length": 4,
-      "value": "0.55"
+      "value": "0.05"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "FloatLiteral",
-      "offset": 16140,
-      "length": 3,
-      "value": "0.6"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
-      "kind": "FloatLiteral",
-      "offset": 16189,
+      "offset": 16245,
       "length": 4,
       "value": "0.95"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "FloatLiteral",
-      "offset": 16196,
-      "length": 3,
-      "value": "0.9"
+      "offset": 16252,
+      "length": 4,
+      "value": "0.90"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 16633,
+      "offset": 16699,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 16767,
+      "offset": 16833,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 17369,
+      "offset": 17435,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 18200,
+      "offset": 18266,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 18230,
+      "offset": 18296,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 18369,
+      "offset": 18435,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 18424,
+      "offset": 18490,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 18457,
+      "offset": 18523,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 18596,
+      "offset": 18662,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 18830,
+      "offset": 18896,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 19163,
+      "offset": 19229,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 19256,
+      "offset": 19322,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 19312,
+      "offset": 19378,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 19324,
+      "offset": 19390,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 19391,
+      "offset": 19457,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 19518,
+      "offset": 19584,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 19574,
+      "offset": 19640,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 19588,
+      "offset": 19654,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Face detection\/FacialGestureCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 19655,
+      "offset": 19721,
       "length": 4,
       "value": "true"
     },
@@ -18430,34 +18087,6 @@
       "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/MyIdViewModel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 527,
-      "length": 2,
-      "value": "16"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/MyIdViewModel.swift",
-      "kind": "FloatLiteral",
-      "offset": 625,
-      "length": 3,
-      "value": "0.5"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/MyIdViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1260,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/MyIdViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2522,
-      "length": 4,
-      "value": "true"
-    },
-    {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Presentation\/Resources\/Icons.swift",
       "kind": "StringLiteral",
       "offset": 139,
@@ -20065,7 +19694,7 @@
       "kind": "FloatLiteral",
       "offset": 388,
       "length": 4,
-      "value": "0.50"
+      "value": "0.55"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
@@ -20077,63 +19706,70 @@
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "FloatLiteral",
-      "offset": 983,
+      "offset": 982,
+      "length": 4,
+      "value": "0.60"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "kind": "FloatLiteral",
+      "offset": 1017,
       "length": 4,
       "value": "15.0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "FloatLiteral",
-      "offset": 1018,
+      "offset": 1052,
       "length": 4,
       "value": "20.0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "FloatLiteral",
-      "offset": 1051,
+      "offset": 1085,
       "length": 4,
       "value": "15.0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
-      "offset": 1089,
+      "offset": 1123,
       "length": 64,
       "value": "\"myid_mobile_sdk_(dev)-38StMOL1VGK2s1uvlQsfaz93GOrELSXuqhuAgWmr\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
-      "offset": 1187,
+      "offset": 1221,
       "length": 58,
       "value": "\"myid_mobile_sdk-92SnsJQhWBmajM3rvsUqmMJxikhTykqOHXN2caHC\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "BooleanLiteral",
-      "offset": 1277,
+      "offset": 1311,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "BooleanLiteral",
-      "offset": 1310,
+      "offset": 1344,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "BooleanLiteral",
-      "offset": 1407,
+      "offset": 1441,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
-      "offset": 1442,
+      "offset": 1476,
       "length": 2,
       "value": "\"\""
     },
@@ -22149,7 +21785,7 @@
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/sdk\/MyIdSDK\/Capture\/MyIdClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 6498,
+      "offset": 6102,
       "length": 4,
       "value": "true"
     },
