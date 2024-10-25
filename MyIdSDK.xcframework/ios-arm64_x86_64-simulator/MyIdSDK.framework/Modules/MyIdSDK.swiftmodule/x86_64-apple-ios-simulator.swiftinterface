@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MyIdSDK
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MyIdSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import CoreImage.CIFilterBuiltins
@@ -11,17 +11,54 @@ import CoreImage
 import CoreVideo
 import CryptoKit
 import DeveloperToolsSupport
+import Dispatch
 import Foundation
 import LocalAuthentication
+import MobileCoreServices
 @_exported import MyIdSDK
 import Security
 import Swift
 import SwiftUI
+import SystemConfiguration
 import UIKit
+import UniformTypeIdentifiers
 import Vision
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+import zlib
+@objc open class SessionDelegate : ObjectiveC.NSObject {
+  public init(fileManager: Foundation.FileManager = .default)
+  @objc deinit
+}
+extension MyIdSDK.SessionDelegate : Foundation.URLSessionDelegate {
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
+}
+extension MyIdSDK.SessionDelegate : Foundation.URLSessionTaskDelegate {
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, needNewBodyStream completionHandler: @escaping (Foundation.InputStream?) -> Swift.Void)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLRequest?) -> Swift.Void)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  @available(macOS 10.13, iOS 11.0, tvOS 11.0, watchOS 4.0, *)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, taskIsWaitingForConnectivity task: Foundation.URLSessionTask)
+}
+extension MyIdSDK.SessionDelegate : Foundation.URLSessionDataDelegate {
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse, completionHandler: @escaping (Foundation.URLSession.ResponseDisposition) -> Swift.Void)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, willCacheResponse proposedResponse: Foundation.CachedURLResponse, completionHandler: @escaping (Foundation.CachedURLResponse?) -> Swift.Void)
+}
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+extension MyIdSDK.SessionDelegate : Foundation.URLSessionWebSocketDelegate {
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, webSocketTask: Foundation.URLSessionWebSocketTask, didOpenWithProtocol protocol: Swift.String?)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, webSocketTask: Foundation.URLSessionWebSocketTask, didCloseWith closeCode: Foundation.URLSessionWebSocketTask.CloseCode, reason: Foundation.Data?)
+}
+extension MyIdSDK.SessionDelegate : Foundation.URLSessionDownloadDelegate {
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didResumeAtOffset fileOffset: Swift.Int64, expectedTotalBytes: Swift.Int64)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData bytesWritten: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+}
 @objc public enum MyIdCameraSelector : Swift.Int {
   case FRONT = 0
   case BACK
@@ -30,6 +67,13 @@ import _SwiftConcurrencyShims
   public var rawValue: Swift.Int {
     get
   }
+}
+extension Foundation.URLRequest {
+  public var method: MyIdSDK.HTTPMethod? {
+    get
+    set
+  }
+  public func validate() throws
 }
 @_inheritsConvenienceInitializers @objc public class MyIdException : ObjectiveC.NSObject {
   @objc public var message: Swift.String?
@@ -57,10 +101,81 @@ import _SwiftConcurrencyShims
   @objc public var presentationStyle: MyIdSDK.MyIdPresentationStyle
   @objc public var organizationDetails: MyIdSDK.MyIdOrganizationDetails?
   @objc public var appearance: MyIdSDK.MyIdAppearance?
-  @objc public var withPhoto: Swift.Bool
   @objc public var distance: Swift.Float
   @objc override dynamic public init()
   @objc deinit
+}
+public typealias Parameters = [Swift.String : Any]
+public protocol ParameterEncoding {
+  func encode(_ urlRequest: any MyIdSDK.URLRequestConvertible, with parameters: MyIdSDK.Parameters?) throws -> Foundation.URLRequest
+}
+public struct URLEncoding : MyIdSDK.ParameterEncoding {
+  public enum Destination {
+    case methodDependent
+    case queryString
+    case httpBody
+    public static func == (a: MyIdSDK.URLEncoding.Destination, b: MyIdSDK.URLEncoding.Destination) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum ArrayEncoding {
+    case brackets
+    case noBrackets
+    case indexInBrackets
+    case custom((_ key: Swift.String, _ index: Swift.Int) -> Swift.String)
+  }
+  public enum BoolEncoding {
+    case numeric
+    case literal
+    public static func == (a: MyIdSDK.URLEncoding.BoolEncoding, b: MyIdSDK.URLEncoding.BoolEncoding) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static var `default`: MyIdSDK.URLEncoding {
+    get
+  }
+  public static var queryString: MyIdSDK.URLEncoding {
+    get
+  }
+  public static var httpBody: MyIdSDK.URLEncoding {
+    get
+  }
+  public let destination: MyIdSDK.URLEncoding.Destination
+  public let arrayEncoding: MyIdSDK.URLEncoding.ArrayEncoding
+  public let boolEncoding: MyIdSDK.URLEncoding.BoolEncoding
+  public init(destination: MyIdSDK.URLEncoding.Destination = .methodDependent, arrayEncoding: MyIdSDK.URLEncoding.ArrayEncoding = .brackets, boolEncoding: MyIdSDK.URLEncoding.BoolEncoding = .numeric)
+  public func encode(_ urlRequest: any MyIdSDK.URLRequestConvertible, with parameters: MyIdSDK.Parameters?) throws -> Foundation.URLRequest
+  public func queryComponents(fromKey key: Swift.String, value: Any) -> [(Swift.String, Swift.String)]
+  public func escape(_ string: Swift.String) -> Swift.String
+}
+public struct JSONEncoding : MyIdSDK.ParameterEncoding {
+  public enum Error : Swift.Error {
+    case invalidJSONObject
+    public static func == (a: MyIdSDK.JSONEncoding.Error, b: MyIdSDK.JSONEncoding.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static var `default`: MyIdSDK.JSONEncoding {
+    get
+  }
+  public static var prettyPrinted: MyIdSDK.JSONEncoding {
+    get
+  }
+  public let options: Foundation.JSONSerialization.WritingOptions
+  public init(options: Foundation.JSONSerialization.WritingOptions = [])
+  public func encode(_ urlRequest: any MyIdSDK.URLRequestConvertible, with parameters: MyIdSDK.Parameters?) throws -> Foundation.URLRequest
+  public func encode(_ urlRequest: any MyIdSDK.URLRequestConvertible, withJSONObject jsonObject: Any? = nil) throws -> Foundation.URLRequest
+}
+extension MyIdSDK.JSONEncoding.Error {
+  public var localizedDescription: Swift.String {
+    get
+  }
 }
 @objc public enum MyIdPresentationStyle : Swift.Int {
   case FULL = 0
@@ -70,6 +185,529 @@ import _SwiftConcurrencyShims
   public var rawValue: Swift.Int {
     get
   }
+}
+@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+public struct DataResponsePublisher<Value> : Combine.Publisher {
+  public typealias Output = MyIdSDK.DataResponse<Value, MyIdSDK.AFError>
+  public typealias Failure = Swift.Never
+  public init<Serializer>(_ request: MyIdSDK.DataRequest, queue: Dispatch.DispatchQueue, serializer: Serializer) where Value == Serializer.SerializedObject, Serializer : MyIdSDK.ResponseSerializer
+  public init<Serializer>(_ request: MyIdSDK.DataRequest, queue: Dispatch.DispatchQueue, serializer: Serializer) where Value == Serializer.SerializedObject, Serializer : MyIdSDK.DataResponseSerializerProtocol
+  public func result() -> Combine.AnyPublisher<Swift.Result<Value, MyIdSDK.AFError>, Swift.Never>
+  public func value() -> Combine.AnyPublisher<Value, MyIdSDK.AFError>
+  public func receive<S>(subscriber: S) where S : Combine.Subscriber, S.Failure == Swift.Never, S.Input == MyIdSDK.DataResponse<Value, MyIdSDK.AFError>
+}
+@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+extension MyIdSDK.DataResponsePublisher where Value == Foundation.Data? {
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  public init(_ request: MyIdSDK.DataRequest, queue: Dispatch.DispatchQueue)
+}
+extension MyIdSDK.DataRequest {
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  public func publishResponse<Serializer, T>(using serializer: Serializer, on queue: Dispatch.DispatchQueue = .main) -> MyIdSDK.DataResponsePublisher<T> where Serializer : MyIdSDK.ResponseSerializer, T == Serializer.SerializedObject
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  public func publishData(queue: Dispatch.DispatchQueue = .main, preprocessor: any MyIdSDK.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> MyIdSDK.DataResponsePublisher<Foundation.Data>
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  public func publishString(queue: Dispatch.DispatchQueue = .main, preprocessor: any MyIdSDK.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> MyIdSDK.DataResponsePublisher<Swift.String>
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  @available(*, deprecated, message: "Renamed publishDecodable(type:queue:preprocessor:decoder:emptyResponseCodes:emptyRequestMethods).")
+  @_disfavoredOverload public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, preprocessor: any MyIdSDK.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: any MyIdSDK.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyResponseMethods: Swift.Set<MyIdSDK.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> MyIdSDK.DataResponsePublisher<T> where T : Swift.Decodable
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, preprocessor: any MyIdSDK.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: any MyIdSDK.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> MyIdSDK.DataResponsePublisher<T> where T : Swift.Decodable
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  public func publishUnserialized(queue: Dispatch.DispatchQueue = .main) -> MyIdSDK.DataResponsePublisher<Foundation.Data?>
+}
+@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+public struct DataStreamPublisher<Value> : Combine.Publisher {
+  public typealias Output = MyIdSDK.DataStreamRequest.Stream<Value, MyIdSDK.AFError>
+  public typealias Failure = Swift.Never
+  public init<Serializer>(_ request: MyIdSDK.DataStreamRequest, queue: Dispatch.DispatchQueue, serializer: Serializer) where Value == Serializer.SerializedObject, Serializer : MyIdSDK.DataStreamSerializer
+  public func result() -> Combine.AnyPublisher<Swift.Result<Value, MyIdSDK.AFError>, Swift.Never>
+  public func value() -> Combine.AnyPublisher<Value, MyIdSDK.AFError>
+  public func receive<S>(subscriber: S) where S : Combine.Subscriber, S.Failure == Swift.Never, S.Input == MyIdSDK.DataStreamRequest.Stream<Value, MyIdSDK.AFError>
+}
+extension MyIdSDK.DataStreamRequest {
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  final public func publishStream<Serializer>(using serializer: Serializer, on queue: Dispatch.DispatchQueue = .main) -> MyIdSDK.DataStreamPublisher<Serializer.SerializedObject> where Serializer : MyIdSDK.DataStreamSerializer
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  final public func publishData(queue: Dispatch.DispatchQueue = .main) -> MyIdSDK.DataStreamPublisher<Foundation.Data>
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  final public func publishString(queue: Dispatch.DispatchQueue = .main) -> MyIdSDK.DataStreamPublisher<Swift.String>
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  final public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, decoder: any MyIdSDK.DataDecoder = JSONDecoder(), preprocessor: any MyIdSDK.DataPreprocessor = PassthroughPreprocessor()) -> MyIdSDK.DataStreamPublisher<T> where T : Swift.Decodable
+}
+@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+public struct DownloadResponsePublisher<Value> : Combine.Publisher {
+  public typealias Output = MyIdSDK.DownloadResponse<Value, MyIdSDK.AFError>
+  public typealias Failure = Swift.Never
+  public init<Serializer>(_ request: MyIdSDK.DownloadRequest, queue: Dispatch.DispatchQueue, serializer: Serializer) where Value == Serializer.SerializedObject, Serializer : MyIdSDK.ResponseSerializer
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  public init<Serializer>(_ request: MyIdSDK.DownloadRequest, queue: Dispatch.DispatchQueue, serializer: Serializer) where Value == Serializer.SerializedObject, Serializer : MyIdSDK.DownloadResponseSerializerProtocol
+  public func result() -> Combine.AnyPublisher<Swift.Result<Value, MyIdSDK.AFError>, Swift.Never>
+  public func value() -> Combine.AnyPublisher<Value, MyIdSDK.AFError>
+  public func receive<S>(subscriber: S) where S : Combine.Subscriber, S.Failure == Swift.Never, S.Input == MyIdSDK.DownloadResponse<Value, MyIdSDK.AFError>
+}
+extension MyIdSDK.DownloadRequest {
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  final public func publishResponse<Serializer, T>(using serializer: Serializer, on queue: Dispatch.DispatchQueue = .main) -> MyIdSDK.DownloadResponsePublisher<T> where Serializer : MyIdSDK.ResponseSerializer, T == Serializer.SerializedObject
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  final public func publishResponse<Serializer, T>(using serializer: Serializer, on queue: Dispatch.DispatchQueue = .main) -> MyIdSDK.DownloadResponsePublisher<T> where Serializer : MyIdSDK.DownloadResponseSerializerProtocol, T == Serializer.SerializedObject
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  final public func publishURL(queue: Dispatch.DispatchQueue = .main) -> MyIdSDK.DownloadResponsePublisher<Foundation.URL>
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  final public func publishData(queue: Dispatch.DispatchQueue = .main, preprocessor: any MyIdSDK.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> MyIdSDK.DownloadResponsePublisher<Foundation.Data>
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  final public func publishString(queue: Dispatch.DispatchQueue = .main, preprocessor: any MyIdSDK.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> MyIdSDK.DownloadResponsePublisher<Swift.String>
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  @available(*, deprecated, message: "Renamed publishDecodable(type:queue:preprocessor:decoder:emptyResponseCodes:emptyRequestMethods).")
+  @_disfavoredOverload final public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, preprocessor: any MyIdSDK.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: any MyIdSDK.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyResponseMethods: Swift.Set<MyIdSDK.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> MyIdSDK.DownloadResponsePublisher<T> where T : Swift.Decodable
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  final public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, preprocessor: any MyIdSDK.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: any MyIdSDK.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> MyIdSDK.DownloadResponsePublisher<T> where T : Swift.Decodable
+}
+@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+extension MyIdSDK.DownloadResponsePublisher where Value == Foundation.URL? {
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  public init(_ request: MyIdSDK.DownloadRequest, queue: Dispatch.DispatchQueue)
+}
+extension MyIdSDK.DownloadRequest {
+  @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+  final public func publishUnserialized(on queue: Dispatch.DispatchQueue = .main) -> MyIdSDK.DownloadResponsePublisher<Foundation.URL?>
+}
+@_hasMissingDesignatedInitializers final public class DataStreamRequest : MyIdSDK.Request {
+  public typealias Handler<Success, Failure> = (MyIdSDK.DataStreamRequest.Stream<Success, Failure>) throws -> Swift.Void where Failure : Swift.Error
+  public struct Stream<Success, Failure> where Failure : Swift.Error {
+    public let event: MyIdSDK.DataStreamRequest.Event<Success, Failure>
+    public let token: MyIdSDK.DataStreamRequest.CancellationToken
+    public func cancel()
+  }
+  public enum Event<Success, Failure> where Failure : Swift.Error {
+    case stream(Swift.Result<Success, Failure>)
+    case complete(MyIdSDK.DataStreamRequest.Completion)
+  }
+  public struct Completion {
+    public let request: Foundation.URLRequest?
+    public let response: Foundation.HTTPURLResponse?
+    public let metrics: Foundation.URLSessionTaskMetrics?
+    public let error: MyIdSDK.AFError?
+  }
+  public struct CancellationToken {
+    public func cancel()
+  }
+  final public let convertible: any MyIdSDK.URLRequestConvertible
+  final public let automaticallyCancelOnStreamError: Swift.Bool
+  @discardableResult
+  final public func validate(_ validation: @escaping MyIdSDK.DataStreamRequest.Validation) -> Self
+  final public func asInputStream(bufferSize: Swift.Int = 1024) -> Foundation.InputStream?
+  @discardableResult
+  @_disfavoredOverload final public func onHTTPResponse(on queue: Dispatch.DispatchQueue = .main, perform handler: @escaping (_ response: Foundation.HTTPURLResponse, _ completionHandler: @escaping (MyIdSDK.Request.ResponseDisposition) -> Swift.Void) -> Swift.Void) -> Self
+  @discardableResult
+  final public func onHTTPResponse(on queue: Dispatch.DispatchQueue = .main, perform handler: @escaping (Foundation.HTTPURLResponse) -> Swift.Void) -> Self
+  @discardableResult
+  final public func responseStream(on queue: Dispatch.DispatchQueue = .main, stream: @escaping MyIdSDK.DataStreamRequest.Handler<Foundation.Data, Swift.Never>) -> Self
+  @discardableResult
+  final public func responseStream<Serializer>(using serializer: Serializer, on queue: Dispatch.DispatchQueue = .main, stream: @escaping MyIdSDK.DataStreamRequest.Handler<Serializer.SerializedObject, MyIdSDK.AFError>) -> Self where Serializer : MyIdSDK.DataStreamSerializer
+  @discardableResult
+  final public func responseStreamString(on queue: Dispatch.DispatchQueue = .main, stream: @escaping MyIdSDK.DataStreamRequest.Handler<Swift.String, Swift.Never>) -> Self
+  @discardableResult
+  final public func responseStreamDecodable<T>(of type: T.Type = T.self, on queue: Dispatch.DispatchQueue = .main, using decoder: any MyIdSDK.DataDecoder = JSONDecoder(), preprocessor: any MyIdSDK.DataPreprocessor = PassthroughPreprocessor(), stream: @escaping MyIdSDK.DataStreamRequest.Handler<T, MyIdSDK.AFError>) -> Self where T : Swift.Decodable
+  @objc deinit
+}
+extension MyIdSDK.DataStreamRequest.Stream {
+  public var result: Swift.Result<Success, Failure>? {
+    get
+  }
+  public var value: Success? {
+    get
+  }
+  public var error: Failure? {
+    get
+  }
+  public var completion: MyIdSDK.DataStreamRequest.Completion? {
+    get
+  }
+}
+public protocol DataStreamSerializer {
+  associatedtype SerializedObject
+  func serialize(_ data: Foundation.Data) throws -> Self.SerializedObject
+}
+public struct DecodableStreamSerializer<T> : MyIdSDK.DataStreamSerializer where T : Swift.Decodable {
+  public let decoder: any MyIdSDK.DataDecoder
+  public let dataPreprocessor: any MyIdSDK.DataPreprocessor
+  public init(decoder: any MyIdSDK.DataDecoder = JSONDecoder(), dataPreprocessor: any MyIdSDK.DataPreprocessor = PassthroughPreprocessor())
+  public func serialize(_ data: Foundation.Data) throws -> T
+  public typealias SerializedObject = T
+}
+public struct PassthroughStreamSerializer : MyIdSDK.DataStreamSerializer {
+  public init()
+  public func serialize(_ data: Foundation.Data) throws -> Foundation.Data
+  public typealias SerializedObject = Foundation.Data
+}
+public struct StringStreamSerializer : MyIdSDK.DataStreamSerializer {
+  public init()
+  public func serialize(_ data: Foundation.Data) throws -> Swift.String
+  public typealias SerializedObject = Swift.String
+}
+extension MyIdSDK.DataStreamSerializer {
+  public static func decodable<T>(of type: T.Type, decoder: any MyIdSDK.DataDecoder = JSONDecoder(), dataPreprocessor: any MyIdSDK.DataPreprocessor = PassthroughPreprocessor()) -> Self where Self == MyIdSDK.DecodableStreamSerializer<T>, T : Swift.Decodable
+}
+extension MyIdSDK.DataStreamSerializer where Self == MyIdSDK.PassthroughStreamSerializer {
+  public static var passthrough: MyIdSDK.PassthroughStreamSerializer {
+    get
+  }
+}
+extension MyIdSDK.DataStreamSerializer where Self == MyIdSDK.StringStreamSerializer {
+  public static var string: MyIdSDK.StringStreamSerializer {
+    get
+  }
+}
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+public struct DeflateRequestCompressor : MyIdSDK.RequestInterceptor {
+  public enum DuplicateHeaderBehavior {
+    case error
+    case replace
+    case skip
+    public static func == (a: MyIdSDK.DeflateRequestCompressor.DuplicateHeaderBehavior, b: MyIdSDK.DeflateRequestCompressor.DuplicateHeaderBehavior) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public struct DuplicateHeaderError : Swift.Error {
+  }
+  public let duplicateHeaderBehavior: MyIdSDK.DeflateRequestCompressor.DuplicateHeaderBehavior
+  public let shouldCompressBodyData: (_ bodyData: Foundation.Data) -> Swift.Bool
+  public init(duplicateHeaderBehavior: MyIdSDK.DeflateRequestCompressor.DuplicateHeaderBehavior = .error, shouldCompressBodyData: @escaping (_ bodyData: Foundation.Data) -> Swift.Bool = { _ in true })
+  public func adapt(_ urlRequest: Foundation.URLRequest, for session: MyIdSDK.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+}
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+extension MyIdSDK.RequestInterceptor where Self == MyIdSDK.DeflateRequestCompressor {
+  public static var deflateCompressor: MyIdSDK.DeflateRequestCompressor {
+    get
+  }
+  public static func deflateCompressor(duplicateHeaderBehavior: MyIdSDK.DeflateRequestCompressor.DuplicateHeaderBehavior = .error, shouldCompressBodyData: @escaping (_ bodyData: Foundation.Data) -> Swift.Bool = { _ in true }) -> MyIdSDK.DeflateRequestCompressor
+}
+public protocol RedirectHandler {
+  func task(_ task: Foundation.URLSessionTask, willBeRedirectedTo request: Foundation.URLRequest, for response: Foundation.HTTPURLResponse, completion: @escaping (Foundation.URLRequest?) -> Swift.Void)
+}
+public struct Redirector {
+  public enum Behavior {
+    case follow
+    case doNotFollow
+    case modify((Foundation.URLSessionTask, Foundation.URLRequest, Foundation.HTTPURLResponse) -> Foundation.URLRequest?)
+  }
+  public static let follow: MyIdSDK.Redirector
+  public static let doNotFollow: MyIdSDK.Redirector
+  public let behavior: MyIdSDK.Redirector.Behavior
+  public init(behavior: MyIdSDK.Redirector.Behavior)
+}
+extension MyIdSDK.Redirector : MyIdSDK.RedirectHandler {
+  public func task(_ task: Foundation.URLSessionTask, willBeRedirectedTo request: Foundation.URLRequest, for response: Foundation.HTTPURLResponse, completion: @escaping (Foundation.URLRequest?) -> Swift.Void)
+}
+extension MyIdSDK.RedirectHandler where Self == MyIdSDK.Redirector {
+  public static var follow: MyIdSDK.Redirector {
+    get
+  }
+  public static var doNotFollow: MyIdSDK.Redirector {
+    get
+  }
+  public static func modify(using closure: @escaping (Foundation.URLSessionTask, Foundation.URLRequest, Foundation.HTTPURLResponse) -> Foundation.URLRequest?) -> MyIdSDK.Redirector
+}
+extension MyIdSDK.Request {
+  public static let didResumeNotification: Foundation.Notification.Name
+  public static let didSuspendNotification: Foundation.Notification.Name
+  public static let didCancelNotification: Foundation.Notification.Name
+  public static let didFinishNotification: Foundation.Notification.Name
+  public static let didResumeTaskNotification: Foundation.Notification.Name
+  public static let didSuspendTaskNotification: Foundation.Notification.Name
+  public static let didCancelTaskNotification: Foundation.Notification.Name
+  public static let didCompleteTaskNotification: Foundation.Notification.Name
+}
+extension Foundation.Notification {
+  public var request: MyIdSDK.Request? {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class AlamofireNotifications : MyIdSDK.EventMonitor {
+  final public func requestDidResume(_ request: MyIdSDK.Request)
+  final public func requestDidSuspend(_ request: MyIdSDK.Request)
+  final public func requestDidCancel(_ request: MyIdSDK.Request)
+  final public func requestDidFinish(_ request: MyIdSDK.Request)
+  final public func request(_ request: MyIdSDK.Request, didResumeTask task: Foundation.URLSessionTask)
+  final public func request(_ request: MyIdSDK.Request, didSuspendTask task: Foundation.URLSessionTask)
+  final public func request(_ request: MyIdSDK.Request, didCancelTask task: Foundation.URLSessionTask)
+  final public func request(_ request: MyIdSDK.Request, didCompleteTask task: Foundation.URLSessionTask, with error: MyIdSDK.AFError?)
+  @objc deinit
+}
+final public class URLEncodedFormEncoder {
+  public enum ArrayEncoding {
+    case brackets
+    case noBrackets
+    case indexInBrackets
+    case custom((_ key: Swift.String, _ index: Swift.Int) -> Swift.String)
+  }
+  public enum BoolEncoding {
+    case numeric
+    case literal
+    public static func == (a: MyIdSDK.URLEncodedFormEncoder.BoolEncoding, b: MyIdSDK.URLEncodedFormEncoder.BoolEncoding) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum DataEncoding {
+    case deferredToData
+    case base64
+    case custom((Foundation.Data) throws -> Swift.String)
+  }
+  public enum DateEncoding {
+    case deferredToDate
+    case secondsSince1970
+    case millisecondsSince1970
+    case iso8601
+    case formatted(Foundation.DateFormatter)
+    case custom((Foundation.Date) throws -> Swift.String)
+  }
+  public enum KeyEncoding {
+    case useDefaultKeys
+    case convertToSnakeCase
+    case convertToKebabCase
+    case capitalized
+    case uppercased
+    case lowercased
+    case custom((Swift.String) -> Swift.String)
+  }
+  public struct KeyPathEncoding {
+    public static let brackets: MyIdSDK.URLEncodedFormEncoder.KeyPathEncoding
+    public static let dots: MyIdSDK.URLEncodedFormEncoder.KeyPathEncoding
+    public init(encoding: @escaping (_ subkey: Swift.String) -> Swift.String)
+  }
+  public struct NilEncoding {
+    public static let dropKey: MyIdSDK.URLEncodedFormEncoder.NilEncoding
+    public static let dropValue: MyIdSDK.URLEncodedFormEncoder.NilEncoding
+    public static let null: MyIdSDK.URLEncodedFormEncoder.NilEncoding
+    public init(encoding: @escaping () -> Swift.String?)
+  }
+  public enum SpaceEncoding {
+    case percentEscaped
+    case plusReplaced
+    public static func == (a: MyIdSDK.URLEncodedFormEncoder.SpaceEncoding, b: MyIdSDK.URLEncodedFormEncoder.SpaceEncoding) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Error : Swift.Error {
+    case invalidRootObject(Swift.String)
+  }
+  final public let alphabetizeKeyValuePairs: Swift.Bool
+  final public let arrayEncoding: MyIdSDK.URLEncodedFormEncoder.ArrayEncoding
+  final public let boolEncoding: MyIdSDK.URLEncodedFormEncoder.BoolEncoding
+  final public let dataEncoding: MyIdSDK.URLEncodedFormEncoder.DataEncoding
+  final public let dateEncoding: MyIdSDK.URLEncodedFormEncoder.DateEncoding
+  final public let keyEncoding: MyIdSDK.URLEncodedFormEncoder.KeyEncoding
+  final public let keyPathEncoding: MyIdSDK.URLEncodedFormEncoder.KeyPathEncoding
+  final public let nilEncoding: MyIdSDK.URLEncodedFormEncoder.NilEncoding
+  final public let spaceEncoding: MyIdSDK.URLEncodedFormEncoder.SpaceEncoding
+  final public var allowedCharacters: Foundation.CharacterSet
+  public init(alphabetizeKeyValuePairs: Swift.Bool = true, arrayEncoding: MyIdSDK.URLEncodedFormEncoder.ArrayEncoding = .brackets, boolEncoding: MyIdSDK.URLEncodedFormEncoder.BoolEncoding = .numeric, dataEncoding: MyIdSDK.URLEncodedFormEncoder.DataEncoding = .base64, dateEncoding: MyIdSDK.URLEncodedFormEncoder.DateEncoding = .deferredToDate, keyEncoding: MyIdSDK.URLEncodedFormEncoder.KeyEncoding = .useDefaultKeys, keyPathEncoding: MyIdSDK.URLEncodedFormEncoder.KeyPathEncoding = .brackets, nilEncoding: MyIdSDK.URLEncodedFormEncoder.NilEncoding = .dropKey, spaceEncoding: MyIdSDK.URLEncodedFormEncoder.SpaceEncoding = .percentEscaped, allowedCharacters: Foundation.CharacterSet = .afURLQueryAllowed)
+  final public func encode(_ value: any Swift.Encodable) throws -> Swift.String
+  final public func encode(_ value: any Swift.Encodable) throws -> Foundation.Data
+  @objc deinit
+}
+extension Foundation.CharacterSet {
+  public static let afURLQueryAllowed: Foundation.CharacterSet
+}
+open class ServerTrustManager {
+  final public let allHostsMustBeEvaluated: Swift.Bool
+  final public let evaluators: [Swift.String : any MyIdSDK.ServerTrustEvaluating]
+  public init(allHostsMustBeEvaluated: Swift.Bool = true, evaluators: [Swift.String : any MyIdSDK.ServerTrustEvaluating])
+  open func serverTrustEvaluator(forHost host: Swift.String) throws -> (any MyIdSDK.ServerTrustEvaluating)?
+  @objc deinit
+}
+public protocol ServerTrustEvaluating {
+  func evaluate(_ trust: Security.SecTrust, forHost host: Swift.String) throws
+}
+final public class DefaultTrustEvaluator : MyIdSDK.ServerTrustEvaluating {
+  public init(validateHost: Swift.Bool = true)
+  final public func evaluate(_ trust: Security.SecTrust, forHost host: Swift.String) throws
+  @objc deinit
+}
+final public class RevocationTrustEvaluator : MyIdSDK.ServerTrustEvaluating {
+  public struct Options : Swift.OptionSet {
+    public static let crl: MyIdSDK.RevocationTrustEvaluator.Options
+    public static let networkAccessDisabled: MyIdSDK.RevocationTrustEvaluator.Options
+    public static let ocsp: MyIdSDK.RevocationTrustEvaluator.Options
+    public static let preferCRL: MyIdSDK.RevocationTrustEvaluator.Options
+    public static let requirePositiveResponse: MyIdSDK.RevocationTrustEvaluator.Options
+    public static let any: MyIdSDK.RevocationTrustEvaluator.Options
+    public let rawValue: CoreFoundation.CFOptionFlags
+    public init(rawValue: CoreFoundation.CFOptionFlags)
+    public typealias ArrayLiteralElement = MyIdSDK.RevocationTrustEvaluator.Options
+    public typealias Element = MyIdSDK.RevocationTrustEvaluator.Options
+    public typealias RawValue = CoreFoundation.CFOptionFlags
+  }
+  public init(performDefaultValidation: Swift.Bool = true, validateHost: Swift.Bool = true, options: MyIdSDK.RevocationTrustEvaluator.Options = .any)
+  final public func evaluate(_ trust: Security.SecTrust, forHost host: Swift.String) throws
+  @objc deinit
+}
+extension MyIdSDK.ServerTrustEvaluating where Self == MyIdSDK.RevocationTrustEvaluator {
+  public static var revocationChecking: MyIdSDK.RevocationTrustEvaluator {
+    get
+  }
+  public static func revocationChecking(performDefaultValidation: Swift.Bool = true, validateHost: Swift.Bool = true, options: MyIdSDK.RevocationTrustEvaluator.Options = .any) -> MyIdSDK.RevocationTrustEvaluator
+}
+final public class PinnedCertificatesTrustEvaluator : MyIdSDK.ServerTrustEvaluating {
+  public init(certificates: [Security.SecCertificate] = Bundle.main.af.certificates, acceptSelfSignedCertificates: Swift.Bool = false, performDefaultValidation: Swift.Bool = true, validateHost: Swift.Bool = true)
+  final public func evaluate(_ trust: Security.SecTrust, forHost host: Swift.String) throws
+  @objc deinit
+}
+extension MyIdSDK.ServerTrustEvaluating where Self == MyIdSDK.PinnedCertificatesTrustEvaluator {
+  public static var pinnedCertificates: MyIdSDK.PinnedCertificatesTrustEvaluator {
+    get
+  }
+  public static func pinnedCertificates(certificates: [Security.SecCertificate] = Bundle.main.af.certificates, acceptSelfSignedCertificates: Swift.Bool = false, performDefaultValidation: Swift.Bool = true, validateHost: Swift.Bool = true) -> MyIdSDK.PinnedCertificatesTrustEvaluator
+}
+final public class PublicKeysTrustEvaluator : MyIdSDK.ServerTrustEvaluating {
+  public init(keys: [Security.SecKey] = Bundle.main.af.publicKeys, performDefaultValidation: Swift.Bool = true, validateHost: Swift.Bool = true)
+  final public func evaluate(_ trust: Security.SecTrust, forHost host: Swift.String) throws
+  @objc deinit
+}
+extension MyIdSDK.ServerTrustEvaluating where Self == MyIdSDK.PublicKeysTrustEvaluator {
+  public static var publicKeys: MyIdSDK.PublicKeysTrustEvaluator {
+    get
+  }
+  public static func publicKeys(keys: [Security.SecKey] = Bundle.main.af.publicKeys, performDefaultValidation: Swift.Bool = true, validateHost: Swift.Bool = true) -> MyIdSDK.PublicKeysTrustEvaluator
+}
+final public class CompositeTrustEvaluator : MyIdSDK.ServerTrustEvaluating {
+  public init(evaluators: [any MyIdSDK.ServerTrustEvaluating])
+  final public func evaluate(_ trust: Security.SecTrust, forHost host: Swift.String) throws
+  @objc deinit
+}
+extension MyIdSDK.ServerTrustEvaluating where Self == MyIdSDK.CompositeTrustEvaluator {
+  public static func composite(evaluators: [any MyIdSDK.ServerTrustEvaluating]) -> MyIdSDK.CompositeTrustEvaluator
+}
+@available(*, deprecated, renamed: "DisabledTrustEvaluator", message: "DisabledEvaluator has been renamed DisabledTrustEvaluator.")
+public typealias DisabledEvaluator = MyIdSDK.DisabledTrustEvaluator
+final public class DisabledTrustEvaluator : MyIdSDK.ServerTrustEvaluating {
+  public init()
+  final public func evaluate(_ trust: Security.SecTrust, forHost host: Swift.String) throws
+  @objc deinit
+}
+extension Swift.Array where Element == any MyIdSDK.ServerTrustEvaluating {
+  public func evaluate(_ trust: Security.SecTrust, forHost host: Swift.String) throws
+}
+extension Foundation.Bundle : MyIdSDK.AlamofireExtended {
+  public typealias ExtendedType = Foundation.Bundle
+}
+extension MyIdSDK.AlamofireExtension where ExtendedType : Foundation.Bundle {
+  public var certificates: [Security.SecCertificate] {
+    get
+  }
+  public var publicKeys: [Security.SecKey] {
+    get
+  }
+  public func paths(forResourcesOfTypes types: [Swift.String]) -> [Swift.String]
+}
+extension Security.SecTrust : MyIdSDK.AlamofireExtended {
+  public typealias ExtendedType = Security.SecTrust
+}
+extension MyIdSDK.AlamofireExtension where ExtendedType == Security.SecTrust {
+  @available(iOS 12, macOS 10.14, tvOS 12, watchOS 5, *)
+  public func evaluate(afterApplying policy: Security.SecPolicy) throws
+  @available(iOS, introduced: 10, deprecated: 12, renamed: "evaluate(afterApplying:)")
+  @available(macOS, introduced: 10.12, deprecated: 10.14, renamed: "evaluate(afterApplying:)")
+  @available(tvOS, introduced: 10, deprecated: 12, renamed: "evaluate(afterApplying:)")
+  @available(watchOS, introduced: 3, deprecated: 5, renamed: "evaluate(afterApplying:)")
+  public func validate(policy: Security.SecPolicy, errorProducer: (_ status: Darwin.OSStatus, _ result: Security.SecTrustResultType) -> any Swift.Error) throws
+  public func apply(policy: Security.SecPolicy) throws -> Security.SecTrust
+  @available(iOS 12, macOS 10.14, tvOS 12, watchOS 5, *)
+  public func evaluate() throws
+  @available(iOS, introduced: 10, deprecated: 12, renamed: "evaluate()")
+  @available(macOS, introduced: 10.12, deprecated: 10.14, renamed: "evaluate()")
+  @available(tvOS, introduced: 10, deprecated: 12, renamed: "evaluate()")
+  @available(watchOS, introduced: 3, deprecated: 5, renamed: "evaluate()")
+  public func validate(errorProducer: (_ status: Darwin.OSStatus, _ result: Security.SecTrustResultType) -> any Swift.Error) throws
+  public func setAnchorCertificates(_ certificates: [Security.SecCertificate]) throws
+  public var publicKeys: [Security.SecKey] {
+    get
+  }
+  public var certificates: [Security.SecCertificate] {
+    get
+  }
+  public var certificateData: [Foundation.Data] {
+    get
+  }
+  public func performDefaultValidation(forHost host: Swift.String) throws
+  public func performValidation(forHost host: Swift.String) throws
+}
+extension Security.SecPolicy : MyIdSDK.AlamofireExtended {
+  public typealias ExtendedType = Security.SecPolicy
+}
+extension MyIdSDK.AlamofireExtension where ExtendedType == Security.SecPolicy {
+  public static let `default`: Security.SecPolicy
+  public static func hostname(_ hostname: Swift.String) -> Security.SecPolicy
+  public static func revocation(options: MyIdSDK.RevocationTrustEvaluator.Options) throws -> Security.SecPolicy
+}
+extension Swift.Array : MyIdSDK.AlamofireExtended {
+  public typealias ExtendedType = Swift.Array<Element>
+}
+extension MyIdSDK.AlamofireExtension where ExtendedType == [Security.SecCertificate] {
+  public var data: [Foundation.Data] {
+    get
+  }
+  public var publicKeys: [Security.SecKey] {
+    get
+  }
+}
+extension Security.SecCertificate : MyIdSDK.AlamofireExtended {
+  public typealias ExtendedType = Security.SecCertificate
+}
+extension MyIdSDK.AlamofireExtension where ExtendedType == Security.SecCertificate {
+  public var publicKey: Security.SecKey? {
+    get
+  }
+}
+extension Swift.Int32 : MyIdSDK.AlamofireExtended {
+  public typealias ExtendedType = Swift.Int32
+}
+extension MyIdSDK.AlamofireExtension where ExtendedType == Swift.Int32 {
+  public var isSuccess: Swift.Bool {
+    get
+  }
+}
+extension Security.SecTrustResultType : MyIdSDK.AlamofireExtended {
+  public typealias ExtendedType = Security.SecTrustResultType
+}
+extension MyIdSDK.AlamofireExtension where ExtendedType == Security.SecTrustResultType {
+  public var isSuccess: Swift.Bool {
+    get
+  }
+}
+public typealias AFResult<Success> = Swift.Result<Success, MyIdSDK.AFError>
+public protocol URLConvertible {
+  func asURL() throws -> Foundation.URL
+}
+extension Swift.String : MyIdSDK.URLConvertible {
+  public func asURL() throws -> Foundation.URL
+}
+extension Foundation.URL : MyIdSDK.URLConvertible {
+  public func asURL() throws -> Foundation.URL
+}
+extension Foundation.URLComponents : MyIdSDK.URLConvertible {
+  public func asURL() throws -> Foundation.URL
+}
+public protocol URLRequestConvertible {
+  func asURLRequest() throws -> Foundation.URLRequest
+}
+extension MyIdSDK.URLRequestConvertible {
+  public var urlRequest: Foundation.URLRequest? {
+    get
+  }
+}
+extension Foundation.URLRequest : MyIdSDK.URLRequestConvertible {
+  public func asURLRequest() throws -> Foundation.URLRequest
+}
+extension Foundation.URLRequest {
+  public init(url: any MyIdSDK.URLConvertible, method: MyIdSDK.HTTPMethod, headers: MyIdSDK.HTTPHeaders? = nil) throws
 }
 @objc public enum MyIdResidency : Swift.Int {
   case USER_DEFINED = 0
@@ -81,6 +719,103 @@ import _SwiftConcurrencyShims
     get
   }
 }
+public protocol AuthenticationCredential {
+  var requiresRefresh: Swift.Bool { get }
+}
+public protocol Authenticator : AnyObject {
+  associatedtype Credential : MyIdSDK.AuthenticationCredential
+  func apply(_ credential: Self.Credential, to urlRequest: inout Foundation.URLRequest)
+  func refresh(_ credential: Self.Credential, for session: MyIdSDK.Session, completion: @escaping (Swift.Result<Self.Credential, any Swift.Error>) -> Swift.Void)
+  func didRequest(_ urlRequest: Foundation.URLRequest, with response: Foundation.HTTPURLResponse, failDueToAuthenticationError error: any Swift.Error) -> Swift.Bool
+  func isRequest(_ urlRequest: Foundation.URLRequest, authenticatedWith credential: Self.Credential) -> Swift.Bool
+}
+public enum AuthenticationError : Swift.Error {
+  case missingCredential
+  case excessiveRefresh
+  public static func == (a: MyIdSDK.AuthenticationError, b: MyIdSDK.AuthenticationError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class AuthenticationInterceptor<AuthenticatorType> : MyIdSDK.RequestInterceptor where AuthenticatorType : MyIdSDK.Authenticator {
+  public typealias Credential = AuthenticatorType.Credential
+  public struct RefreshWindow {
+    public let interval: Foundation.TimeInterval
+    public let maximumAttempts: Swift.Int
+    public init(interval: Foundation.TimeInterval = 30.0, maximumAttempts: Swift.Int = 5)
+  }
+  public var credential: MyIdSDK.AuthenticationInterceptor<AuthenticatorType>.Credential? {
+    get
+    set
+  }
+  public init(authenticator: AuthenticatorType, credential: MyIdSDK.AuthenticationInterceptor<AuthenticatorType>.Credential? = nil, refreshWindow: MyIdSDK.AuthenticationInterceptor<AuthenticatorType>.RefreshWindow? = RefreshWindow())
+  public func adapt(_ urlRequest: Foundation.URLRequest, for session: MyIdSDK.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+  public func retry(_ request: MyIdSDK.Request, for session: MyIdSDK.Session, dueTo error: any Swift.Error, completion: @escaping (MyIdSDK.RetryResult) -> Swift.Void)
+  @objc deinit
+}
+open class RetryPolicy : MyIdSDK.RequestInterceptor {
+  public static let defaultRetryLimit: Swift.UInt
+  public static let defaultExponentialBackoffBase: Swift.UInt
+  public static let defaultExponentialBackoffScale: Swift.Double
+  public static let defaultRetryableHTTPMethods: Swift.Set<MyIdSDK.HTTPMethod>
+  public static let defaultRetryableHTTPStatusCodes: Swift.Set<Swift.Int>
+  public static let defaultRetryableURLErrorCodes: Swift.Set<Foundation.URLError.Code>
+  final public let retryLimit: Swift.UInt
+  final public let exponentialBackoffBase: Swift.UInt
+  final public let exponentialBackoffScale: Swift.Double
+  final public let retryableHTTPMethods: Swift.Set<MyIdSDK.HTTPMethod>
+  final public let retryableHTTPStatusCodes: Swift.Set<Swift.Int>
+  final public let retryableURLErrorCodes: Swift.Set<Foundation.URLError.Code>
+  public init(retryLimit: Swift.UInt = RetryPolicy.defaultRetryLimit, exponentialBackoffBase: Swift.UInt = RetryPolicy.defaultExponentialBackoffBase, exponentialBackoffScale: Swift.Double = RetryPolicy.defaultExponentialBackoffScale, retryableHTTPMethods: Swift.Set<MyIdSDK.HTTPMethod> = RetryPolicy.defaultRetryableHTTPMethods, retryableHTTPStatusCodes: Swift.Set<Swift.Int> = RetryPolicy.defaultRetryableHTTPStatusCodes, retryableURLErrorCodes: Swift.Set<Foundation.URLError.Code> = RetryPolicy.defaultRetryableURLErrorCodes)
+  open func retry(_ request: MyIdSDK.Request, for session: MyIdSDK.Session, dueTo error: any Swift.Error, completion: @escaping (MyIdSDK.RetryResult) -> Swift.Void)
+  open func shouldRetry(request: MyIdSDK.Request, dueTo error: any Swift.Error) -> Swift.Bool
+  @objc deinit
+}
+extension MyIdSDK.RequestInterceptor where Self == MyIdSDK.RetryPolicy {
+  public static var retryPolicy: MyIdSDK.RetryPolicy {
+    get
+  }
+  public static func retryPolicy(retryLimit: Swift.UInt = RetryPolicy.defaultRetryLimit, exponentialBackoffBase: Swift.UInt = RetryPolicy.defaultExponentialBackoffBase, exponentialBackoffScale: Swift.Double = RetryPolicy.defaultExponentialBackoffScale, retryableHTTPMethods: Swift.Set<MyIdSDK.HTTPMethod> = RetryPolicy.defaultRetryableHTTPMethods, retryableHTTPStatusCodes: Swift.Set<Swift.Int> = RetryPolicy.defaultRetryableHTTPStatusCodes, retryableURLErrorCodes: Swift.Set<Foundation.URLError.Code> = RetryPolicy.defaultRetryableURLErrorCodes) -> MyIdSDK.RetryPolicy
+}
+open class ConnectionLostRetryPolicy : MyIdSDK.RetryPolicy {
+  public init(retryLimit: Swift.UInt = RetryPolicy.defaultRetryLimit, exponentialBackoffBase: Swift.UInt = RetryPolicy.defaultExponentialBackoffBase, exponentialBackoffScale: Swift.Double = RetryPolicy.defaultExponentialBackoffScale, retryableHTTPMethods: Swift.Set<MyIdSDK.HTTPMethod> = RetryPolicy.defaultRetryableHTTPMethods)
+  @objc deinit
+}
+extension MyIdSDK.RequestInterceptor where Self == MyIdSDK.ConnectionLostRetryPolicy {
+  public static var connectionLostRetryPolicy: MyIdSDK.ConnectionLostRetryPolicy {
+    get
+  }
+  public static func connectionLostRetryPolicy(retryLimit: Swift.UInt = RetryPolicy.defaultRetryLimit, exponentialBackoffBase: Swift.UInt = RetryPolicy.defaultExponentialBackoffBase, exponentialBackoffScale: Swift.Double = RetryPolicy.defaultExponentialBackoffScale, retryableHTTPMethods: Swift.Set<MyIdSDK.HTTPMethod> = RetryPolicy.defaultRetryableHTTPMethods) -> MyIdSDK.ConnectionLostRetryPolicy
+}
+@_hasMissingDesignatedInitializers public class DataRequest : MyIdSDK.Request {
+  final public let convertible: any MyIdSDK.URLRequestConvertible
+  public var data: Foundation.Data? {
+    get
+  }
+  @discardableResult
+  public func validate(_ validation: @escaping MyIdSDK.DataRequest.Validation) -> Self
+  @discardableResult
+  @_disfavoredOverload public func onHTTPResponse(on queue: Dispatch.DispatchQueue = .main, perform handler: @escaping (_ response: Foundation.HTTPURLResponse, _ completionHandler: @escaping (MyIdSDK.Request.ResponseDisposition) -> Swift.Void) -> Swift.Void) -> Self
+  @discardableResult
+  public func onHTTPResponse(on queue: Dispatch.DispatchQueue = .main, perform handler: @escaping (Foundation.HTTPURLResponse) -> Swift.Void) -> Self
+  @discardableResult
+  public func response(queue: Dispatch.DispatchQueue = .main, completionHandler: @escaping (MyIdSDK.AFDataResponse<Foundation.Data?>) -> Swift.Void) -> Self
+  @discardableResult
+  public func response<Serializer>(queue: Dispatch.DispatchQueue = .main, responseSerializer: Serializer, completionHandler: @escaping (MyIdSDK.AFDataResponse<Serializer.SerializedObject>) -> Swift.Void) -> Self where Serializer : MyIdSDK.DataResponseSerializerProtocol
+  @discardableResult
+  public func response<Serializer>(queue: Dispatch.DispatchQueue = .main, responseSerializer: Serializer, completionHandler: @escaping (MyIdSDK.AFDataResponse<Serializer.SerializedObject>) -> Swift.Void) -> Self where Serializer : MyIdSDK.ResponseSerializer
+  @discardableResult
+  public func responseData(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any MyIdSDK.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods, completionHandler: @escaping (MyIdSDK.AFDataResponse<Foundation.Data>) -> Swift.Void) -> Self
+  @discardableResult
+  public func responseString(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any MyIdSDK.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods, completionHandler: @escaping (MyIdSDK.AFDataResponse<Swift.String>) -> Swift.Void) -> Self
+  @available(*, deprecated, message: "responseJSON deprecated and will be removed in Alamofire 6. Use responseDecodable instead.")
+  @discardableResult
+  public func responseJSON(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any MyIdSDK.DataPreprocessor = JSONResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = JSONResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = JSONResponseSerializer.defaultEmptyRequestMethods, options: Foundation.JSONSerialization.ReadingOptions = .allowFragments, completionHandler: @escaping (MyIdSDK.AFDataResponse<Any>) -> Swift.Void) -> Self
+  @discardableResult
+  public func responseDecodable<T>(of type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any MyIdSDK.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: any MyIdSDK.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods, completionHandler: @escaping (MyIdSDK.AFDataResponse<T>) -> Swift.Void) -> Self where T : Swift.Decodable
+  @objc deinit
+}
 @objc public enum MyIdEntryType : Swift.Int {
   case AUTH = 0
   case FACE
@@ -89,6 +824,83 @@ import _SwiftConcurrencyShims
   public var rawValue: Swift.Int {
     get
   }
+}
+@_hasMissingDesignatedInitializers final public class DownloadRequest : MyIdSDK.Request {
+  public struct Options : Swift.OptionSet {
+    public static let createIntermediateDirectories: MyIdSDK.DownloadRequest.Options
+    public static let removePreviousFile: MyIdSDK.DownloadRequest.Options
+    public let rawValue: Swift.Int
+    public init(rawValue: Swift.Int)
+    public typealias ArrayLiteralElement = MyIdSDK.DownloadRequest.Options
+    public typealias Element = MyIdSDK.DownloadRequest.Options
+    public typealias RawValue = Swift.Int
+  }
+  public typealias Destination = (_ temporaryURL: Foundation.URL, _ response: Foundation.HTTPURLResponse) -> (destinationURL: Foundation.URL, options: MyIdSDK.DownloadRequest.Options)
+  final public class func suggestedDownloadDestination(for directory: Foundation.FileManager.SearchPathDirectory = .documentDirectory, in domain: Foundation.FileManager.SearchPathDomainMask = .userDomainMask, options: MyIdSDK.DownloadRequest.Options = []) -> MyIdSDK.DownloadRequest.Destination
+  public enum Downloadable {
+    case request(any MyIdSDK.URLRequestConvertible)
+    case resumeData(Foundation.Data)
+  }
+  final public var resumeData: Foundation.Data? {
+    get
+  }
+  final public var fileURL: Foundation.URL? {
+    get
+  }
+  final public let downloadable: MyIdSDK.DownloadRequest.Downloadable
+  final public func task(forResumeData data: Foundation.Data, using session: Foundation.URLSession) -> Foundation.URLSessionTask
+  @discardableResult
+  override final public func cancel() -> Self
+  @discardableResult
+  final public func cancel(producingResumeData shouldProduceResumeData: Swift.Bool) -> Self
+  @discardableResult
+  final public func cancel(byProducingResumeData completionHandler: @escaping (_ data: Foundation.Data?) -> Swift.Void) -> Self
+  @discardableResult
+  final public func validate(_ validation: @escaping MyIdSDK.DownloadRequest.Validation) -> Self
+  @discardableResult
+  final public func response(queue: Dispatch.DispatchQueue = .main, completionHandler: @escaping (MyIdSDK.AFDownloadResponse<Foundation.URL?>) -> Swift.Void) -> Self
+  @discardableResult
+  final public func response<Serializer>(queue: Dispatch.DispatchQueue = .main, responseSerializer: Serializer, completionHandler: @escaping (MyIdSDK.AFDownloadResponse<Serializer.SerializedObject>) -> Swift.Void) -> Self where Serializer : MyIdSDK.DownloadResponseSerializerProtocol
+  @discardableResult
+  final public func response<Serializer>(queue: Dispatch.DispatchQueue = .main, responseSerializer: Serializer, completionHandler: @escaping (MyIdSDK.AFDownloadResponse<Serializer.SerializedObject>) -> Swift.Void) -> Self where Serializer : MyIdSDK.ResponseSerializer
+  @discardableResult
+  final public func responseURL(queue: Dispatch.DispatchQueue = .main, completionHandler: @escaping (MyIdSDK.AFDownloadResponse<Foundation.URL>) -> Swift.Void) -> Self
+  @discardableResult
+  final public func responseData(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any MyIdSDK.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods, completionHandler: @escaping (MyIdSDK.AFDownloadResponse<Foundation.Data>) -> Swift.Void) -> Self
+  @discardableResult
+  final public func responseString(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any MyIdSDK.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods, completionHandler: @escaping (MyIdSDK.AFDownloadResponse<Swift.String>) -> Swift.Void) -> Self
+  @available(*, deprecated, message: "responseJSON deprecated and will be removed in Alamofire 6. Use responseDecodable instead.")
+  @discardableResult
+  final public func responseJSON(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any MyIdSDK.DataPreprocessor = JSONResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = JSONResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = JSONResponseSerializer.defaultEmptyRequestMethods, options: Foundation.JSONSerialization.ReadingOptions = .allowFragments, completionHandler: @escaping (MyIdSDK.AFDownloadResponse<Any>) -> Swift.Void) -> Self
+  @discardableResult
+  final public func responseDecodable<T>(of type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any MyIdSDK.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: any MyIdSDK.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods, completionHandler: @escaping (MyIdSDK.AFDownloadResponse<T>) -> Swift.Void) -> Self where T : Swift.Decodable
+  @objc deinit
+}
+public protocol CachedResponseHandler {
+  func dataTask(_ task: Foundation.URLSessionDataTask, willCacheResponse response: Foundation.CachedURLResponse, completion: @escaping (Foundation.CachedURLResponse?) -> Swift.Void)
+}
+public struct ResponseCacher {
+  public enum Behavior {
+    case cache
+    case doNotCache
+    case modify((Foundation.URLSessionDataTask, Foundation.CachedURLResponse) -> Foundation.CachedURLResponse?)
+  }
+  public static let cache: MyIdSDK.ResponseCacher
+  public static let doNotCache: MyIdSDK.ResponseCacher
+  public let behavior: MyIdSDK.ResponseCacher.Behavior
+  public init(behavior: MyIdSDK.ResponseCacher.Behavior)
+}
+extension MyIdSDK.ResponseCacher : MyIdSDK.CachedResponseHandler {
+  public func dataTask(_ task: Foundation.URLSessionDataTask, willCacheResponse response: Foundation.CachedURLResponse, completion: @escaping (Foundation.CachedURLResponse?) -> Swift.Void)
+}
+extension MyIdSDK.CachedResponseHandler where Self == MyIdSDK.ResponseCacher {
+  public static var cache: MyIdSDK.ResponseCacher {
+    get
+  }
+  public static var doNotCache: MyIdSDK.ResponseCacher {
+    get
+  }
+  public static func modify(using closure: @escaping ((Foundation.URLSessionDataTask, Foundation.CachedURLResponse) -> Foundation.CachedURLResponse?)) -> MyIdSDK.ResponseCacher
 }
 @objc public enum MyIdResolution : Swift.Int {
   case RESOLUTION_480 = 0
@@ -110,6 +922,395 @@ import _SwiftConcurrencyShims
   @objc override dynamic public init()
   @objc deinit
 }
+@_hasMissingDesignatedInitializers open class NetworkReachabilityManager {
+  public enum NetworkReachabilityStatus {
+    case unknown
+    case notReachable
+    case reachable(MyIdSDK.NetworkReachabilityManager.NetworkReachabilityStatus.ConnectionType)
+    public enum ConnectionType {
+      case ethernetOrWiFi
+      case cellular
+      public static func == (a: MyIdSDK.NetworkReachabilityManager.NetworkReachabilityStatus.ConnectionType, b: MyIdSDK.NetworkReachabilityManager.NetworkReachabilityStatus.ConnectionType) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+  }
+  public typealias Listener = (MyIdSDK.NetworkReachabilityManager.NetworkReachabilityStatus) -> Swift.Void
+  public static let `default`: MyIdSDK.NetworkReachabilityManager?
+  open var isReachable: Swift.Bool {
+    get
+  }
+  open var isReachableOnCellular: Swift.Bool {
+    get
+  }
+  open var isReachableOnEthernetOrWiFi: Swift.Bool {
+    get
+  }
+  final public let reachabilityQueue: Dispatch.DispatchQueue
+  open var flags: SystemConfiguration.SCNetworkReachabilityFlags? {
+    get
+  }
+  open var status: MyIdSDK.NetworkReachabilityManager.NetworkReachabilityStatus {
+    get
+  }
+  convenience public init?(host: Swift.String)
+  convenience public init?()
+  @objc deinit
+  @discardableResult
+  open func startListening(onQueue queue: Dispatch.DispatchQueue = .main, onUpdatePerforming listener: @escaping MyIdSDK.NetworkReachabilityManager.Listener) -> Swift.Bool
+  open func stopListening()
+}
+extension MyIdSDK.NetworkReachabilityManager.NetworkReachabilityStatus : Swift.Equatable {
+  public static func == (a: MyIdSDK.NetworkReachabilityManager.NetworkReachabilityStatus, b: MyIdSDK.NetworkReachabilityManager.NetworkReachabilityStatus) -> Swift.Bool
+}
+public protocol ParameterEncoder {
+  func encode<Parameters>(_ parameters: Parameters?, into request: Foundation.URLRequest) throws -> Foundation.URLRequest where Parameters : Swift.Encodable
+}
+open class JSONParameterEncoder : MyIdSDK.ParameterEncoder {
+  public static var `default`: MyIdSDK.JSONParameterEncoder {
+    get
+  }
+  public static var prettyPrinted: MyIdSDK.JSONParameterEncoder {
+    get
+  }
+  @available(macOS 10.13, iOS 11.0, tvOS 11.0, watchOS 4.0, *)
+  public static var sortedKeys: MyIdSDK.JSONParameterEncoder {
+    get
+  }
+  final public let encoder: Foundation.JSONEncoder
+  public init(encoder: Foundation.JSONEncoder = JSONEncoder())
+  open func encode<Parameters>(_ parameters: Parameters?, into request: Foundation.URLRequest) throws -> Foundation.URLRequest where Parameters : Swift.Encodable
+  @objc deinit
+}
+extension MyIdSDK.ParameterEncoder where Self == MyIdSDK.JSONParameterEncoder {
+  public static var json: MyIdSDK.JSONParameterEncoder {
+    get
+  }
+  public static func json(encoder: Foundation.JSONEncoder = JSONEncoder()) -> MyIdSDK.JSONParameterEncoder
+}
+open class URLEncodedFormParameterEncoder : MyIdSDK.ParameterEncoder {
+  public enum Destination {
+    case methodDependent
+    case queryString
+    case httpBody
+    public static func == (a: MyIdSDK.URLEncodedFormParameterEncoder.Destination, b: MyIdSDK.URLEncodedFormParameterEncoder.Destination) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static var `default`: MyIdSDK.URLEncodedFormParameterEncoder {
+    get
+  }
+  final public let encoder: MyIdSDK.URLEncodedFormEncoder
+  final public let destination: MyIdSDK.URLEncodedFormParameterEncoder.Destination
+  public init(encoder: MyIdSDK.URLEncodedFormEncoder = URLEncodedFormEncoder(), destination: MyIdSDK.URLEncodedFormParameterEncoder.Destination = .methodDependent)
+  open func encode<Parameters>(_ parameters: Parameters?, into request: Foundation.URLRequest) throws -> Foundation.URLRequest where Parameters : Swift.Encodable
+  @objc deinit
+}
+extension MyIdSDK.ParameterEncoder where Self == MyIdSDK.URLEncodedFormParameterEncoder {
+  public static var urlEncodedForm: MyIdSDK.URLEncodedFormParameterEncoder {
+    get
+  }
+  public static func urlEncodedForm(encoder: MyIdSDK.URLEncodedFormEncoder = URLEncodedFormEncoder(), destination: MyIdSDK.URLEncodedFormParameterEncoder.Destination = .methodDependent) -> MyIdSDK.URLEncodedFormParameterEncoder
+}
+public let AF: MyIdSDK.Session
+public enum AFInfo {
+  public static let version: Swift.String
+}
+@_hasMissingDesignatedInitializers final public class UploadRequest : MyIdSDK.DataRequest {
+  public enum Uploadable {
+    case data(Foundation.Data)
+    case file(Foundation.URL, shouldRemove: Swift.Bool)
+    case stream(Foundation.InputStream)
+  }
+  final public let upload: any MyIdSDK.UploadableConvertible
+  final public let fileManager: Foundation.FileManager
+  final public var uploadable: MyIdSDK.UploadRequest.Uploadable?
+  final public func cleanup()
+  @objc deinit
+}
+public protocol UploadableConvertible {
+  func createUploadable() throws -> MyIdSDK.UploadRequest.Uploadable
+}
+extension MyIdSDK.UploadRequest.Uploadable : MyIdSDK.UploadableConvertible {
+  public func createUploadable() throws -> MyIdSDK.UploadRequest.Uploadable
+}
+public protocol UploadConvertible : MyIdSDK.URLRequestConvertible, MyIdSDK.UploadableConvertible {
+}
+public struct HTTPMethod : Swift.RawRepresentable, Swift.Equatable, Swift.Hashable, Swift.Sendable {
+  public static let connect: MyIdSDK.HTTPMethod
+  public static let delete: MyIdSDK.HTTPMethod
+  public static let get: MyIdSDK.HTTPMethod
+  public static let head: MyIdSDK.HTTPMethod
+  public static let options: MyIdSDK.HTTPMethod
+  public static let patch: MyIdSDK.HTTPMethod
+  public static let post: MyIdSDK.HTTPMethod
+  public static let put: MyIdSDK.HTTPMethod
+  public static let query: MyIdSDK.HTTPMethod
+  public static let trace: MyIdSDK.HTTPMethod
+  public let rawValue: Swift.String
+  public init(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+}
+extension MyIdSDK.Request {
+  public typealias ValidationResult = Swift.Result<Swift.Void, any Swift.Error>
+}
+extension MyIdSDK.DataRequest {
+  public typealias Validation = (Foundation.URLRequest?, Foundation.HTTPURLResponse, Foundation.Data?) -> MyIdSDK.DataRequest.ValidationResult
+  @discardableResult
+  public func validate<S>(statusCode acceptableStatusCodes: S) -> Self where S : Swift.Sequence, S.Element == Swift.Int
+  @discardableResult
+  public func validate<S>(contentType acceptableContentTypes: @autoclosure @escaping () -> S) -> Self where S : Swift.Sequence, S.Element == Swift.String
+  @discardableResult
+  public func validate() -> Self
+}
+extension MyIdSDK.DataStreamRequest {
+  public typealias Validation = (_ request: Foundation.URLRequest?, _ response: Foundation.HTTPURLResponse) -> MyIdSDK.DataStreamRequest.ValidationResult
+  @discardableResult
+  final public func validate<S>(statusCode acceptableStatusCodes: S) -> Self where S : Swift.Sequence, S.Element == Swift.Int
+  @discardableResult
+  final public func validate<S>(contentType acceptableContentTypes: @autoclosure @escaping () -> S) -> Self where S : Swift.Sequence, S.Element == Swift.String
+  @discardableResult
+  final public func validate() -> Self
+}
+extension MyIdSDK.DownloadRequest {
+  public typealias Validation = (_ request: Foundation.URLRequest?, _ response: Foundation.HTTPURLResponse, _ fileURL: Foundation.URL?) -> MyIdSDK.DownloadRequest.ValidationResult
+  @discardableResult
+  final public func validate<S>(statusCode acceptableStatusCodes: S) -> Self where S : Swift.Sequence, S.Element == Swift.Int
+  @discardableResult
+  final public func validate<S>(contentType acceptableContentTypes: @autoclosure @escaping () -> S) -> Self where S : Swift.Sequence, S.Element == Swift.String
+  @discardableResult
+  final public func validate() -> Self
+}
+#if compiler(>=5.3) && $PrimaryAssociatedTypes2
+public protocol DataResponseSerializerProtocol<SerializedObject> {
+  associatedtype SerializedObject
+  func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> Self.SerializedObject
+}
+#else
+public protocol DataResponseSerializerProtocol {
+  associatedtype SerializedObject
+  func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> Self.SerializedObject
+}
+#endif
+#if compiler(>=5.3) && $PrimaryAssociatedTypes2
+public protocol DownloadResponseSerializerProtocol<SerializedObject> {
+  associatedtype SerializedObject
+  func serializeDownload(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, fileURL: Foundation.URL?, error: (any Swift.Error)?) throws -> Self.SerializedObject
+}
+#else
+public protocol DownloadResponseSerializerProtocol {
+  associatedtype SerializedObject
+  func serializeDownload(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, fileURL: Foundation.URL?, error: (any Swift.Error)?) throws -> Self.SerializedObject
+}
+#endif
+#if compiler(>=5.3) && $PrimaryAssociatedTypes2
+public protocol ResponseSerializer<SerializedObject> : MyIdSDK.DataResponseSerializerProtocol, MyIdSDK.DownloadResponseSerializerProtocol {
+  var dataPreprocessor: any MyIdSDK.DataPreprocessor { get }
+  var emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> { get }
+  var emptyResponseCodes: Swift.Set<Swift.Int> { get }
+}
+#else
+public protocol ResponseSerializer : MyIdSDK.DataResponseSerializerProtocol, MyIdSDK.DownloadResponseSerializerProtocol {
+  var dataPreprocessor: any MyIdSDK.DataPreprocessor { get }
+  var emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> { get }
+  var emptyResponseCodes: Swift.Set<Swift.Int> { get }
+}
+#endif
+public protocol DataPreprocessor {
+  func preprocess(_ data: Foundation.Data) throws -> Foundation.Data
+}
+public struct PassthroughPreprocessor : MyIdSDK.DataPreprocessor {
+  public init()
+  public func preprocess(_ data: Foundation.Data) throws -> Foundation.Data
+}
+public struct GoogleXSSIPreprocessor : MyIdSDK.DataPreprocessor {
+  public init()
+  public func preprocess(_ data: Foundation.Data) throws -> Foundation.Data
+}
+extension MyIdSDK.DataPreprocessor where Self == MyIdSDK.PassthroughPreprocessor {
+  public static var passthrough: MyIdSDK.PassthroughPreprocessor {
+    get
+  }
+}
+extension MyIdSDK.DataPreprocessor where Self == MyIdSDK.GoogleXSSIPreprocessor {
+  public static var googleXSSI: MyIdSDK.GoogleXSSIPreprocessor {
+    get
+  }
+}
+extension MyIdSDK.ResponseSerializer {
+  public static var defaultDataPreprocessor: any MyIdSDK.DataPreprocessor {
+    get
+  }
+  public static var defaultEmptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> {
+    get
+  }
+  public static var defaultEmptyResponseCodes: Swift.Set<Swift.Int> {
+    get
+  }
+  public var dataPreprocessor: any MyIdSDK.DataPreprocessor {
+    get
+  }
+  public var emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> {
+    get
+  }
+  public var emptyResponseCodes: Swift.Set<Swift.Int> {
+    get
+  }
+  public func requestAllowsEmptyResponseData(_ request: Foundation.URLRequest?) -> Swift.Bool?
+  public func responseAllowsEmptyResponseData(_ response: Foundation.HTTPURLResponse?) -> Swift.Bool?
+  public func emptyResponseAllowed(forRequest request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?) -> Swift.Bool
+}
+extension MyIdSDK.DownloadResponseSerializerProtocol where Self : MyIdSDK.DataResponseSerializerProtocol {
+  public func serializeDownload(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, fileURL: Foundation.URL?, error: (any Swift.Error)?) throws -> Self.SerializedObject
+}
+public struct URLResponseSerializer : MyIdSDK.DownloadResponseSerializerProtocol {
+  public init()
+  public func serializeDownload(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, fileURL: Foundation.URL?, error: (any Swift.Error)?) throws -> Foundation.URL
+  public typealias SerializedObject = Foundation.URL
+}
+extension MyIdSDK.DownloadResponseSerializerProtocol where Self == MyIdSDK.URLResponseSerializer {
+  public static var url: MyIdSDK.URLResponseSerializer {
+    get
+  }
+}
+final public class DataResponseSerializer : MyIdSDK.ResponseSerializer {
+  final public let dataPreprocessor: any MyIdSDK.DataPreprocessor
+  final public let emptyResponseCodes: Swift.Set<Swift.Int>
+  final public let emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod>
+  public init(dataPreprocessor: any MyIdSDK.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods)
+  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> Foundation.Data
+  public typealias SerializedObject = Foundation.Data
+  @objc deinit
+}
+extension MyIdSDK.ResponseSerializer where Self == MyIdSDK.DataResponseSerializer {
+  public static var data: MyIdSDK.DataResponseSerializer {
+    get
+  }
+  public static func data(dataPreprocessor: any MyIdSDK.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> MyIdSDK.DataResponseSerializer
+}
+final public class StringResponseSerializer : MyIdSDK.ResponseSerializer {
+  final public let dataPreprocessor: any MyIdSDK.DataPreprocessor
+  final public let encoding: Swift.String.Encoding?
+  final public let emptyResponseCodes: Swift.Set<Swift.Int>
+  final public let emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod>
+  public init(dataPreprocessor: any MyIdSDK.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods)
+  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> Swift.String
+  public typealias SerializedObject = Swift.String
+  @objc deinit
+}
+extension MyIdSDK.ResponseSerializer where Self == MyIdSDK.StringResponseSerializer {
+  public static var string: MyIdSDK.StringResponseSerializer {
+    get
+  }
+  public static func string(dataPreprocessor: any MyIdSDK.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> MyIdSDK.StringResponseSerializer
+}
+@available(*, deprecated, message: "JSONResponseSerializer deprecated and will be removed in Alamofire 6. Use DecodableResponseSerializer instead.")
+final public class JSONResponseSerializer : MyIdSDK.ResponseSerializer {
+  final public let dataPreprocessor: any MyIdSDK.DataPreprocessor
+  final public let emptyResponseCodes: Swift.Set<Swift.Int>
+  final public let emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod>
+  final public let options: Foundation.JSONSerialization.ReadingOptions
+  public init(dataPreprocessor: any MyIdSDK.DataPreprocessor = JSONResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = JSONResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = JSONResponseSerializer.defaultEmptyRequestMethods, options: Foundation.JSONSerialization.ReadingOptions = .allowFragments)
+  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> Any
+  public typealias SerializedObject = Any
+  @objc deinit
+}
+public protocol EmptyResponse {
+  static func emptyValue() -> Self
+}
+public struct Empty : Swift.Codable, Swift.Sendable {
+  public static let value: MyIdSDK.Empty
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension MyIdSDK.Empty : MyIdSDK.EmptyResponse {
+  public static func emptyValue() -> MyIdSDK.Empty
+}
+public protocol DataDecoder {
+  func decode<D>(_ type: D.Type, from data: Foundation.Data) throws -> D where D : Swift.Decodable
+}
+extension Foundation.JSONDecoder : MyIdSDK.DataDecoder {
+}
+extension Foundation.PropertyListDecoder : MyIdSDK.DataDecoder {
+}
+final public class DecodableResponseSerializer<T> : MyIdSDK.ResponseSerializer where T : Swift.Decodable {
+  final public let dataPreprocessor: any MyIdSDK.DataPreprocessor
+  final public let decoder: any MyIdSDK.DataDecoder
+  final public let emptyResponseCodes: Swift.Set<Swift.Int>
+  final public let emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod>
+  public init(dataPreprocessor: any MyIdSDK.DataPreprocessor = DecodableResponseSerializer.defaultDataPreprocessor, decoder: any MyIdSDK.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DecodableResponseSerializer.defaultEmptyRequestMethods)
+  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> T
+  public typealias SerializedObject = T
+  @objc deinit
+}
+extension MyIdSDK.ResponseSerializer {
+  public static func decodable<T>(of type: T.Type, dataPreprocessor: any MyIdSDK.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: any MyIdSDK.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> MyIdSDK.DecodableResponseSerializer<T> where Self == MyIdSDK.DecodableResponseSerializer<T>, T : Swift.Decodable
+}
+public typealias AFDataResponse<Success> = MyIdSDK.DataResponse<Success, MyIdSDK.AFError>
+public typealias AFDownloadResponse<Success> = MyIdSDK.DownloadResponse<Success, MyIdSDK.AFError>
+public struct DataResponse<Success, Failure> where Failure : Swift.Error {
+  public let request: Foundation.URLRequest?
+  public let response: Foundation.HTTPURLResponse?
+  public let data: Foundation.Data?
+  public let metrics: Foundation.URLSessionTaskMetrics?
+  public let serializationDuration: Foundation.TimeInterval
+  public let result: Swift.Result<Success, Failure>
+  public var value: Success? {
+    get
+  }
+  public var error: Failure? {
+    get
+  }
+  public init(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, metrics: Foundation.URLSessionTaskMetrics?, serializationDuration: Foundation.TimeInterval, result: Swift.Result<Success, Failure>)
+}
+extension MyIdSDK.DataResponse : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension MyIdSDK.DataResponse {
+  public func map<NewSuccess>(_ transform: (Success) -> NewSuccess) -> MyIdSDK.DataResponse<NewSuccess, Failure>
+  public func tryMap<NewSuccess>(_ transform: (Success) throws -> NewSuccess) -> MyIdSDK.DataResponse<NewSuccess, any Swift.Error>
+  public func mapError<NewFailure>(_ transform: (Failure) -> NewFailure) -> MyIdSDK.DataResponse<Success, NewFailure> where NewFailure : Swift.Error
+  public func tryMapError<NewFailure>(_ transform: (Failure) throws -> NewFailure) -> MyIdSDK.DataResponse<Success, any Swift.Error> where NewFailure : Swift.Error
+}
+public struct DownloadResponse<Success, Failure> where Failure : Swift.Error {
+  public let request: Foundation.URLRequest?
+  public let response: Foundation.HTTPURLResponse?
+  public let fileURL: Foundation.URL?
+  public let resumeData: Foundation.Data?
+  public let metrics: Foundation.URLSessionTaskMetrics?
+  public let serializationDuration: Foundation.TimeInterval
+  public let result: Swift.Result<Success, Failure>
+  public var value: Success? {
+    get
+  }
+  public var error: Failure? {
+    get
+  }
+  public init(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, fileURL: Foundation.URL?, resumeData: Foundation.Data?, metrics: Foundation.URLSessionTaskMetrics?, serializationDuration: Foundation.TimeInterval, result: Swift.Result<Success, Failure>)
+}
+extension MyIdSDK.DownloadResponse : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension MyIdSDK.DownloadResponse {
+  public func map<NewSuccess>(_ transform: (Success) -> NewSuccess) -> MyIdSDK.DownloadResponse<NewSuccess, Failure>
+  public func tryMap<NewSuccess>(_ transform: (Success) throws -> NewSuccess) -> MyIdSDK.DownloadResponse<NewSuccess, any Swift.Error>
+  public func mapError<NewFailure>(_ transform: (Failure) -> NewFailure) -> MyIdSDK.DownloadResponse<Success, NewFailure> where NewFailure : Swift.Error
+  public func tryMapError<NewFailure>(_ transform: (Failure) throws -> NewFailure) -> MyIdSDK.DownloadResponse<Success, any Swift.Error> where NewFailure : Swift.Error
+}
 @_inheritsConvenienceInitializers @objc public class MyIdGenerator : ObjectiveC.NSObject {
   @objc public class func hash(payload: Swift.String, clientHash: Swift.String, clientHashId: Swift.String) -> Swift.String?
   @objc public class func device() -> Swift.String
@@ -122,6 +1323,58 @@ import _SwiftConcurrencyShims
   @objc public class func isSimulator() -> Swift.Bool
   @objc override dynamic public init()
   @objc deinit
+}
+open class Session {
+  public static let `default`: MyIdSDK.Session
+  final public let session: Foundation.URLSession
+  final public let delegate: MyIdSDK.SessionDelegate
+  final public let rootQueue: Dispatch.DispatchQueue
+  final public let startRequestsImmediately: Swift.Bool
+  final public let requestQueue: Dispatch.DispatchQueue
+  final public let serializationQueue: Dispatch.DispatchQueue
+  final public let interceptor: (any MyIdSDK.RequestInterceptor)?
+  final public let serverTrustManager: MyIdSDK.ServerTrustManager?
+  final public let redirectHandler: (any MyIdSDK.RedirectHandler)?
+  final public let cachedResponseHandler: (any MyIdSDK.CachedResponseHandler)?
+  final public let eventMonitor: MyIdSDK.CompositeEventMonitor
+  final public let defaultEventMonitors: [any MyIdSDK.EventMonitor]
+  public init(session: Foundation.URLSession, delegate: MyIdSDK.SessionDelegate, rootQueue: Dispatch.DispatchQueue, startRequestsImmediately: Swift.Bool = true, requestQueue: Dispatch.DispatchQueue? = nil, serializationQueue: Dispatch.DispatchQueue? = nil, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, serverTrustManager: MyIdSDK.ServerTrustManager? = nil, redirectHandler: (any MyIdSDK.RedirectHandler)? = nil, cachedResponseHandler: (any MyIdSDK.CachedResponseHandler)? = nil, eventMonitors: [any MyIdSDK.EventMonitor] = [])
+  convenience public init(configuration: Foundation.URLSessionConfiguration = URLSessionConfiguration.af.default, delegate: MyIdSDK.SessionDelegate = SessionDelegate(), rootQueue: Dispatch.DispatchQueue = DispatchQueue(label: "org.alamofire.session.rootQueue"), startRequestsImmediately: Swift.Bool = true, requestQueue: Dispatch.DispatchQueue? = nil, serializationQueue: Dispatch.DispatchQueue? = nil, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, serverTrustManager: MyIdSDK.ServerTrustManager? = nil, redirectHandler: (any MyIdSDK.RedirectHandler)? = nil, cachedResponseHandler: (any MyIdSDK.CachedResponseHandler)? = nil, eventMonitors: [any MyIdSDK.EventMonitor] = [])
+  @objc deinit
+  public func withAllRequests(perform action: @escaping (Swift.Set<MyIdSDK.Request>) -> Swift.Void)
+  public func cancelAllRequests(completingOnQueue queue: Dispatch.DispatchQueue = .main, completion: (() -> Swift.Void)? = nil)
+  public typealias RequestModifier = (inout Foundation.URLRequest) throws -> Swift.Void
+  open func request(_ convertible: any MyIdSDK.URLConvertible, method: MyIdSDK.HTTPMethod = .get, parameters: MyIdSDK.Parameters? = nil, encoding: any MyIdSDK.ParameterEncoding = URLEncoding.default, headers: MyIdSDK.HTTPHeaders? = nil, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, requestModifier: MyIdSDK.Session.RequestModifier? = nil) -> MyIdSDK.DataRequest
+  open func request<Parameters>(_ convertible: any MyIdSDK.URLConvertible, method: MyIdSDK.HTTPMethod = .get, parameters: Parameters? = nil, encoder: any MyIdSDK.ParameterEncoder = URLEncodedFormParameterEncoder.default, headers: MyIdSDK.HTTPHeaders? = nil, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, requestModifier: MyIdSDK.Session.RequestModifier? = nil) -> MyIdSDK.DataRequest where Parameters : Swift.Encodable
+  open func request(_ convertible: any MyIdSDK.URLRequestConvertible, interceptor: (any MyIdSDK.RequestInterceptor)? = nil) -> MyIdSDK.DataRequest
+  open func streamRequest<Parameters>(_ convertible: any MyIdSDK.URLConvertible, method: MyIdSDK.HTTPMethod = .get, parameters: Parameters? = nil, encoder: any MyIdSDK.ParameterEncoder = URLEncodedFormParameterEncoder.default, headers: MyIdSDK.HTTPHeaders? = nil, automaticallyCancelOnStreamError: Swift.Bool = false, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, requestModifier: MyIdSDK.Session.RequestModifier? = nil) -> MyIdSDK.DataStreamRequest where Parameters : Swift.Encodable
+  open func streamRequest(_ convertible: any MyIdSDK.URLConvertible, method: MyIdSDK.HTTPMethod = .get, headers: MyIdSDK.HTTPHeaders? = nil, automaticallyCancelOnStreamError: Swift.Bool = false, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, requestModifier: MyIdSDK.Session.RequestModifier? = nil) -> MyIdSDK.DataStreamRequest
+  open func streamRequest(_ convertible: any MyIdSDK.URLRequestConvertible, automaticallyCancelOnStreamError: Swift.Bool = false, interceptor: (any MyIdSDK.RequestInterceptor)? = nil) -> MyIdSDK.DataStreamRequest
+  open func download(_ convertible: any MyIdSDK.URLConvertible, method: MyIdSDK.HTTPMethod = .get, parameters: MyIdSDK.Parameters? = nil, encoding: any MyIdSDK.ParameterEncoding = URLEncoding.default, headers: MyIdSDK.HTTPHeaders? = nil, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, requestModifier: MyIdSDK.Session.RequestModifier? = nil, to destination: MyIdSDK.DownloadRequest.Destination? = nil) -> MyIdSDK.DownloadRequest
+  open func download<Parameters>(_ convertible: any MyIdSDK.URLConvertible, method: MyIdSDK.HTTPMethod = .get, parameters: Parameters? = nil, encoder: any MyIdSDK.ParameterEncoder = URLEncodedFormParameterEncoder.default, headers: MyIdSDK.HTTPHeaders? = nil, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, requestModifier: MyIdSDK.Session.RequestModifier? = nil, to destination: MyIdSDK.DownloadRequest.Destination? = nil) -> MyIdSDK.DownloadRequest where Parameters : Swift.Encodable
+  open func download(_ convertible: any MyIdSDK.URLRequestConvertible, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, to destination: MyIdSDK.DownloadRequest.Destination? = nil) -> MyIdSDK.DownloadRequest
+  open func download(resumingWith data: Foundation.Data, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, to destination: MyIdSDK.DownloadRequest.Destination? = nil) -> MyIdSDK.DownloadRequest
+  open func upload(_ data: Foundation.Data, to convertible: any MyIdSDK.URLConvertible, method: MyIdSDK.HTTPMethod = .post, headers: MyIdSDK.HTTPHeaders? = nil, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default, requestModifier: MyIdSDK.Session.RequestModifier? = nil) -> MyIdSDK.UploadRequest
+  open func upload(_ data: Foundation.Data, with convertible: any MyIdSDK.URLRequestConvertible, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default) -> MyIdSDK.UploadRequest
+  open func upload(_ fileURL: Foundation.URL, to convertible: any MyIdSDK.URLConvertible, method: MyIdSDK.HTTPMethod = .post, headers: MyIdSDK.HTTPHeaders? = nil, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default, requestModifier: MyIdSDK.Session.RequestModifier? = nil) -> MyIdSDK.UploadRequest
+  open func upload(_ fileURL: Foundation.URL, with convertible: any MyIdSDK.URLRequestConvertible, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default) -> MyIdSDK.UploadRequest
+  open func upload(_ stream: Foundation.InputStream, to convertible: any MyIdSDK.URLConvertible, method: MyIdSDK.HTTPMethod = .post, headers: MyIdSDK.HTTPHeaders? = nil, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default, requestModifier: MyIdSDK.Session.RequestModifier? = nil) -> MyIdSDK.UploadRequest
+  open func upload(_ stream: Foundation.InputStream, with convertible: any MyIdSDK.URLRequestConvertible, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default) -> MyIdSDK.UploadRequest
+  open func upload(multipartFormData: @escaping (MyIdSDK.MultipartFormData) -> Swift.Void, to url: any MyIdSDK.URLConvertible, usingThreshold encodingMemoryThreshold: Swift.UInt64 = MultipartFormData.encodingMemoryThreshold, method: MyIdSDK.HTTPMethod = .post, headers: MyIdSDK.HTTPHeaders? = nil, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default, requestModifier: MyIdSDK.Session.RequestModifier? = nil) -> MyIdSDK.UploadRequest
+  open func upload(multipartFormData: @escaping (MyIdSDK.MultipartFormData) -> Swift.Void, with request: any MyIdSDK.URLRequestConvertible, usingThreshold encodingMemoryThreshold: Swift.UInt64 = MultipartFormData.encodingMemoryThreshold, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default) -> MyIdSDK.UploadRequest
+  open func upload(multipartFormData: MyIdSDK.MultipartFormData, to url: any MyIdSDK.URLConvertible, usingThreshold encodingMemoryThreshold: Swift.UInt64 = MultipartFormData.encodingMemoryThreshold, method: MyIdSDK.HTTPMethod = .post, headers: MyIdSDK.HTTPHeaders? = nil, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default, requestModifier: MyIdSDK.Session.RequestModifier? = nil) -> MyIdSDK.UploadRequest
+  open func upload(multipartFormData: MyIdSDK.MultipartFormData, with request: any MyIdSDK.URLRequestConvertible, usingThreshold encodingMemoryThreshold: Swift.UInt64 = MultipartFormData.encodingMemoryThreshold, interceptor: (any MyIdSDK.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default) -> MyIdSDK.UploadRequest
+}
+extension MyIdSDK.Session : MyIdSDK.RequestDelegate {
+  public var sessionConfiguration: Foundation.URLSessionConfiguration {
+    get
+  }
+  public var startImmediately: Swift.Bool {
+    get
+  }
+  public func cleanup(after request: MyIdSDK.Request)
+  public func retryResult(for request: MyIdSDK.Request, dueTo error: MyIdSDK.AFError, completion: @escaping (MyIdSDK.RetryResult) -> Swift.Void)
+  public func retryRequest(_ request: MyIdSDK.Request, withDelay timeDelay: Foundation.TimeInterval?)
 }
 @objc public enum MyIdDocumentType : Swift.Int {
   case ID_CARD = 0
@@ -142,7 +1395,343 @@ import _SwiftConcurrencyShims
     get
   }
 }
+#if compiler(>=5.3) && $PrimaryAssociatedTypes2
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+public protocol WebSocketMessageSerializer<Output, Failure> {
+  associatedtype Output
+  associatedtype Failure : Swift.Error = any Swift.Error
+  func decode(_ message: Foundation.URLSessionWebSocketTask.Message) throws -> Self.Output
+}
+#else
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+public protocol WebSocketMessageSerializer {
+  associatedtype Output
+  associatedtype Failure : Swift.Error = any Swift.Error
+  func decode(_ message: Foundation.URLSessionWebSocketTask.Message) throws -> Self.Output
+}
+#endif
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+extension MyIdSDK.WebSocketMessageSerializer {
+  public static func json<Value>(decoding _: Value.Type = Value.self, using decoder: Foundation.JSONDecoder = JSONDecoder()) -> MyIdSDK.DecodableWebSocketMessageDecoder<Value> where Self == MyIdSDK.DecodableWebSocketMessageDecoder<Value>, Value : Swift.Decodable
+}
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+public struct DecodableWebSocketMessageDecoder<Value> : MyIdSDK.WebSocketMessageSerializer where Value : Swift.Decodable {
+  public enum Error : Swift.Error {
+    case decoding(any Swift.Error)
+    case unknownMessage(description: Swift.String)
+  }
+  public let decoder: any MyIdSDK.DataDecoder
+  public init(decoder: any MyIdSDK.DataDecoder)
+  public func decode(_ message: Foundation.URLSessionWebSocketTask.Message) throws -> Value
+  public typealias Failure = any Swift.Error
+  public typealias Output = Value
+}
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+extension MyIdSDK.Request {
+  #if compiler(>=5.3) && $RethrowsProtocol
+  public func uploadProgress(bufferingPolicy: MyIdSDK.StreamOf<Foundation.Progress>.BufferingPolicy = .unbounded) -> MyIdSDK.StreamOf<Foundation.Progress>
+  #endif
+  #if compiler(>=5.3) && $RethrowsProtocol
+  public func downloadProgress(bufferingPolicy: MyIdSDK.StreamOf<Foundation.Progress>.BufferingPolicy = .unbounded) -> MyIdSDK.StreamOf<Foundation.Progress>
+  #endif
+  #if compiler(>=5.3) && $RethrowsProtocol
+  public func urlRequests(bufferingPolicy: MyIdSDK.StreamOf<Foundation.URLRequest>.BufferingPolicy = .unbounded) -> MyIdSDK.StreamOf<Foundation.URLRequest>
+  #endif
+  #if compiler(>=5.3) && $RethrowsProtocol
+  public func urlSessionTasks(bufferingPolicy: MyIdSDK.StreamOf<Foundation.URLSessionTask>.BufferingPolicy = .unbounded) -> MyIdSDK.StreamOf<Foundation.URLSessionTask>
+  #endif
+  #if compiler(>=5.3) && $RethrowsProtocol
+  public func cURLDescriptions(bufferingPolicy: MyIdSDK.StreamOf<Swift.String>.BufferingPolicy = .unbounded) -> MyIdSDK.StreamOf<Swift.String>
+  #endif
+}
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+public struct DataTask<Value> {
+  #if compiler(>=5.3) && $EffectfulProp
+  public var response: MyIdSDK.DataResponse<Value, MyIdSDK.AFError> {
+    get async
+  }
+  #endif
+  #if compiler(>=5.3) && $EffectfulProp
+  public var result: Swift.Result<Value, MyIdSDK.AFError> {
+    get async
+  }
+  #endif
+  #if compiler(>=5.3) && $EffectfulProp
+  public var value: Value {
+    get async throws
+  }
+  #endif
+  public func cancel()
+  public func resume()
+  public func suspend()
+}
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+extension MyIdSDK.DataRequest {
+  #if compiler(>=5.3) && $RethrowsProtocol
+  public func httpResponses(bufferingPolicy: MyIdSDK.StreamOf<Foundation.HTTPURLResponse>.BufferingPolicy = .unbounded) -> MyIdSDK.StreamOf<Foundation.HTTPURLResponse>
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait && $Sendable
+  @discardableResult
+  @_disfavoredOverload public func onHTTPResponse(perform handler: @escaping @Sendable (_ response: Foundation.HTTPURLResponse) async -> MyIdSDK.Request.ResponseDisposition) -> Self
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait && $Sendable
+  @discardableResult
+  public func onHTTPResponse(perform handler: @escaping @Sendable (_ response: Foundation.HTTPURLResponse) async -> Swift.Void) -> Self
+  #endif
+  public func serializingData(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, dataPreprocessor: any MyIdSDK.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> MyIdSDK.DataTask<Foundation.Data>
+  public func serializingDecodable<Value>(_ type: Value.Type = Value.self, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, dataPreprocessor: any MyIdSDK.DataPreprocessor = DecodableResponseSerializer<Value>.defaultDataPreprocessor, decoder: any MyIdSDK.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<Value>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DecodableResponseSerializer<Value>.defaultEmptyRequestMethods) -> MyIdSDK.DataTask<Value> where Value : Swift.Decodable
+  public func serializingString(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, dataPreprocessor: any MyIdSDK.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> MyIdSDK.DataTask<Swift.String>
+  public func serializingResponse<Serializer>(using serializer: Serializer, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true) -> MyIdSDK.DataTask<Serializer.SerializedObject> where Serializer : MyIdSDK.ResponseSerializer
+  public func serializingResponse<Serializer>(using serializer: Serializer, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true) -> MyIdSDK.DataTask<Serializer.SerializedObject> where Serializer : MyIdSDK.DataResponseSerializerProtocol
+}
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+public struct DownloadTask<Value> {
+  #if compiler(>=5.3) && $EffectfulProp
+  public var response: MyIdSDK.DownloadResponse<Value, MyIdSDK.AFError> {
+    get async
+  }
+  #endif
+  #if compiler(>=5.3) && $EffectfulProp
+  public var result: Swift.Result<Value, MyIdSDK.AFError> {
+    get async
+  }
+  #endif
+  #if compiler(>=5.3) && $EffectfulProp
+  public var value: Value {
+    get async throws
+  }
+  #endif
+  public func cancel()
+  public func resume()
+  public func suspend()
+}
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+extension MyIdSDK.DownloadRequest {
+  final public func serializingData(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, dataPreprocessor: any MyIdSDK.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> MyIdSDK.DownloadTask<Foundation.Data>
+  final public func serializingDecodable<Value>(_ type: Value.Type = Value.self, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, dataPreprocessor: any MyIdSDK.DataPreprocessor = DecodableResponseSerializer<Value>.defaultDataPreprocessor, decoder: any MyIdSDK.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<Value>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DecodableResponseSerializer<Value>.defaultEmptyRequestMethods) -> MyIdSDK.DownloadTask<Value> where Value : Swift.Decodable
+  final public func serializingDownloadedFileURL(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true) -> MyIdSDK.DownloadTask<Foundation.URL>
+  final public func serializingString(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, dataPreprocessor: any MyIdSDK.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> MyIdSDK.DownloadTask<Swift.String>
+  final public func serializingDownload<Serializer>(using serializer: Serializer, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true) -> MyIdSDK.DownloadTask<Serializer.SerializedObject> where Serializer : MyIdSDK.ResponseSerializer
+  final public func serializingDownload<Serializer>(using serializer: Serializer, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true) -> MyIdSDK.DownloadTask<Serializer.SerializedObject> where Serializer : MyIdSDK.DownloadResponseSerializerProtocol
+}
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+public struct DataStreamTask {
+  #if compiler(>=5.3) && $RethrowsProtocol
+  public typealias Stream<Success, Failure> = MyIdSDK.StreamOf<MyIdSDK.DataStreamRequest.Stream<Success, Failure>> where Failure : Swift.Error
+  #endif
+  #if compiler(>=5.3) && $RethrowsProtocol
+  public func streamingData(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, bufferingPolicy: MyIdSDK.DataStreamTask.Stream<Foundation.Data, Swift.Never>.BufferingPolicy = .unbounded) -> MyIdSDK.DataStreamTask.Stream<Foundation.Data, Swift.Never>
+  #endif
+  #if compiler(>=5.3) && $RethrowsProtocol
+  public func streamingStrings(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, bufferingPolicy: MyIdSDK.DataStreamTask.Stream<Swift.String, Swift.Never>.BufferingPolicy = .unbounded) -> MyIdSDK.DataStreamTask.Stream<Swift.String, Swift.Never>
+  #endif
+  #if compiler(>=5.3) && $RethrowsProtocol
+  public func streamingDecodables<T>(_ type: T.Type = T.self, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, bufferingPolicy: MyIdSDK.DataStreamTask.Stream<T, MyIdSDK.AFError>.BufferingPolicy = .unbounded) -> MyIdSDK.DataStreamTask.Stream<T, MyIdSDK.AFError> where T : Swift.Decodable
+  #endif
+  #if compiler(>=5.3) && $RethrowsProtocol
+  public func streamingResponses<Serializer>(serializedUsing serializer: Serializer, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, bufferingPolicy: MyIdSDK.DataStreamTask.Stream<Serializer.SerializedObject, MyIdSDK.AFError>.BufferingPolicy = .unbounded) -> MyIdSDK.DataStreamTask.Stream<Serializer.SerializedObject, MyIdSDK.AFError> where Serializer : MyIdSDK.DataStreamSerializer
+  #endif
+  public func cancel()
+  public func resume()
+  public func suspend()
+}
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+extension MyIdSDK.DataStreamRequest {
+  #if compiler(>=5.3) && $RethrowsProtocol
+  final public func httpResponses(bufferingPolicy: MyIdSDK.StreamOf<Foundation.HTTPURLResponse>.BufferingPolicy = .unbounded) -> MyIdSDK.StreamOf<Foundation.HTTPURLResponse>
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait && $Sendable
+  @discardableResult
+  @_disfavoredOverload final public func onHTTPResponse(perform handler: @escaping @Sendable (Foundation.HTTPURLResponse) async -> MyIdSDK.Request.ResponseDisposition) -> Self
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait && $Sendable
+  @discardableResult
+  final public func onHTTPResponse(perform handler: @escaping @Sendable (Foundation.HTTPURLResponse) async -> Swift.Void) -> Self
+  #endif
+  final public func streamTask() -> MyIdSDK.DataStreamTask
+}
+#if compiler(>=5.3) && $RethrowsProtocol
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+public struct StreamOf<Element> : _Concurrency.AsyncSequence {
+  public typealias AsyncIterator = MyIdSDK.StreamOf<Element>.Iterator
+  public typealias BufferingPolicy = _Concurrency.AsyncStream<Element>.Continuation.BufferingPolicy
+  public func makeAsyncIterator() -> MyIdSDK.StreamOf<Element>.Iterator
+  public struct Iterator : _Concurrency.AsyncIteratorProtocol {
+    #if compiler(>=5.3) && $AsyncAwait
+    public mutating func next() async -> Element?
+    #endif
+  }
+}
+#endif
 extension Swift.String : Swift.Error {
+}
+@_hasMissingDesignatedInitializers public class Request {
+  public enum State {
+    case initialized
+    case resumed
+    case suspended
+    case cancelled
+    case finished
+    public static func == (a: MyIdSDK.Request.State, b: MyIdSDK.Request.State) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let id: Foundation.UUID
+  final public let underlyingQueue: Dispatch.DispatchQueue
+  final public let serializationQueue: Dispatch.DispatchQueue
+  final public let eventMonitor: (any MyIdSDK.EventMonitor)?
+  final public let interceptor: (any MyIdSDK.RequestInterceptor)?
+  weak public var delegate: (any MyIdSDK.RequestDelegate)? {
+    get
+  }
+  public var state: MyIdSDK.Request.State {
+    get
+  }
+  public var isInitialized: Swift.Bool {
+    get
+  }
+  public var isResumed: Swift.Bool {
+    get
+  }
+  public var isSuspended: Swift.Bool {
+    get
+  }
+  public var isCancelled: Swift.Bool {
+    get
+  }
+  public var isFinished: Swift.Bool {
+    get
+  }
+  public typealias ProgressHandler = (Foundation.Progress) -> Swift.Void
+  final public let uploadProgress: Foundation.Progress
+  final public let downloadProgress: Foundation.Progress
+  public var uploadProgressHandler: (handler: MyIdSDK.Request.ProgressHandler, queue: Dispatch.DispatchQueue)? {
+    get
+  }
+  public var downloadProgressHandler: (handler: MyIdSDK.Request.ProgressHandler, queue: Dispatch.DispatchQueue)? {
+    get
+  }
+  public var redirectHandler: (any MyIdSDK.RedirectHandler)? {
+    get
+  }
+  public var cachedResponseHandler: (any MyIdSDK.CachedResponseHandler)? {
+    get
+  }
+  public var credential: Foundation.URLCredential? {
+    get
+  }
+  public var requests: [Foundation.URLRequest] {
+    get
+  }
+  public var firstRequest: Foundation.URLRequest? {
+    get
+  }
+  public var lastRequest: Foundation.URLRequest? {
+    get
+  }
+  public var request: Foundation.URLRequest? {
+    get
+  }
+  public var performedRequests: [Foundation.URLRequest] {
+    get
+  }
+  public var response: Foundation.HTTPURLResponse? {
+    get
+  }
+  public var tasks: [Foundation.URLSessionTask] {
+    get
+  }
+  public var firstTask: Foundation.URLSessionTask? {
+    get
+  }
+  public var lastTask: Foundation.URLSessionTask? {
+    get
+  }
+  public var task: Foundation.URLSessionTask? {
+    get
+  }
+  public var allMetrics: [Foundation.URLSessionTaskMetrics] {
+    get
+  }
+  public var firstMetrics: Foundation.URLSessionTaskMetrics? {
+    get
+  }
+  public var lastMetrics: Foundation.URLSessionTaskMetrics? {
+    get
+  }
+  public var metrics: Foundation.URLSessionTaskMetrics? {
+    get
+  }
+  public var retryCount: Swift.Int {
+    get
+  }
+  public var error: MyIdSDK.AFError? {
+    get
+  }
+  @discardableResult
+  public func cancel() -> Self
+  @discardableResult
+  public func suspend() -> Self
+  @discardableResult
+  public func resume() -> Self
+  @discardableResult
+  public func authenticate(username: Swift.String, password: Swift.String, persistence: Foundation.URLCredential.Persistence = .forSession) -> Self
+  @discardableResult
+  public func authenticate(with credential: Foundation.URLCredential) -> Self
+  @discardableResult
+  public func downloadProgress(queue: Dispatch.DispatchQueue = .main, closure: @escaping MyIdSDK.Request.ProgressHandler) -> Self
+  @discardableResult
+  public func uploadProgress(queue: Dispatch.DispatchQueue = .main, closure: @escaping MyIdSDK.Request.ProgressHandler) -> Self
+  @discardableResult
+  public func redirect(using handler: any MyIdSDK.RedirectHandler) -> Self
+  @discardableResult
+  public func cacheResponse(using handler: any MyIdSDK.CachedResponseHandler) -> Self
+  @discardableResult
+  public func cURLDescription(on queue: Dispatch.DispatchQueue, calling handler: @escaping (Swift.String) -> Swift.Void) -> Self
+  @discardableResult
+  public func cURLDescription(calling handler: @escaping (Swift.String) -> Swift.Void) -> Self
+  @discardableResult
+  public func onURLRequestCreation(on queue: Dispatch.DispatchQueue = .main, perform handler: @escaping (Foundation.URLRequest) -> Swift.Void) -> Self
+  @discardableResult
+  public func onURLSessionTaskCreation(on queue: Dispatch.DispatchQueue = .main, perform handler: @escaping (Foundation.URLSessionTask) -> Swift.Void) -> Self
+  @objc deinit
+}
+extension MyIdSDK.Request {
+  public enum ResponseDisposition {
+    case allow
+    case cancel
+    public static func == (a: MyIdSDK.Request.ResponseDisposition, b: MyIdSDK.Request.ResponseDisposition) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension MyIdSDK.Request : Swift.Equatable {
+  public static func == (lhs: MyIdSDK.Request, rhs: MyIdSDK.Request) -> Swift.Bool
+}
+extension MyIdSDK.Request : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension MyIdSDK.Request : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension MyIdSDK.Request {
+  public func cURLDescription() -> Swift.String
+}
+public protocol RequestDelegate : AnyObject {
+  var sessionConfiguration: Foundation.URLSessionConfiguration { get }
+  var startImmediately: Swift.Bool { get }
+  func cleanup(after request: MyIdSDK.Request)
+  func retryResult(for request: MyIdSDK.Request, dueTo error: MyIdSDK.AFError, completion: @escaping (MyIdSDK.RetryResult) -> Swift.Void)
+  func retryRequest(_ request: MyIdSDK.Request, withDelay timeDelay: Foundation.TimeInterval?)
 }
 @_inheritsConvenienceInitializers @objc public class MyIdResult : ObjectiveC.NSObject {
   @objc public var image: UIKit.UIImage?
@@ -160,6 +1749,454 @@ extension Swift.String : Swift.Error {
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
+  }
+}
+public struct AlamofireExtension<ExtendedType> {
+  public var type: ExtendedType {
+    get
+  }
+  public init(_ type: ExtendedType)
+}
+public protocol AlamofireExtended {
+  associatedtype ExtendedType
+  static var af: MyIdSDK.AlamofireExtension<Self.ExtendedType>.Type { get set }
+  var af: MyIdSDK.AlamofireExtension<Self.ExtendedType> { get set }
+}
+extension MyIdSDK.AlamofireExtended {
+  public static var af: MyIdSDK.AlamofireExtension<Self>.Type {
+    get
+    set
+  }
+  public var af: MyIdSDK.AlamofireExtension<Self> {
+    get
+    set
+  }
+}
+public struct RequestAdapterState {
+  public let requestID: Foundation.UUID
+  public let session: MyIdSDK.Session
+}
+public protocol RequestAdapter {
+  func adapt(_ urlRequest: Foundation.URLRequest, for session: MyIdSDK.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+  func adapt(_ urlRequest: Foundation.URLRequest, using state: MyIdSDK.RequestAdapterState, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+}
+extension MyIdSDK.RequestAdapter {
+  public func adapt(_ urlRequest: Foundation.URLRequest, using state: MyIdSDK.RequestAdapterState, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+}
+public enum RetryResult {
+  case retry
+  case retryWithDelay(Foundation.TimeInterval)
+  case doNotRetry
+  case doNotRetryWithError(any Swift.Error)
+}
+public protocol RequestRetrier {
+  func retry(_ request: MyIdSDK.Request, for session: MyIdSDK.Session, dueTo error: any Swift.Error, completion: @escaping (MyIdSDK.RetryResult) -> Swift.Void)
+}
+public protocol RequestInterceptor : MyIdSDK.RequestAdapter, MyIdSDK.RequestRetrier {
+}
+extension MyIdSDK.RequestInterceptor {
+  public func adapt(_ urlRequest: Foundation.URLRequest, for session: MyIdSDK.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+  public func retry(_ request: MyIdSDK.Request, for session: MyIdSDK.Session, dueTo error: any Swift.Error, completion: @escaping (MyIdSDK.RetryResult) -> Swift.Void)
+}
+public typealias AdaptHandler = (Foundation.URLRequest, MyIdSDK.Session, _ completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void) -> Swift.Void
+public typealias RetryHandler = (MyIdSDK.Request, MyIdSDK.Session, any Swift.Error, _ completion: @escaping (MyIdSDK.RetryResult) -> Swift.Void) -> Swift.Void
+open class Adapter : MyIdSDK.RequestInterceptor {
+  public init(_ adaptHandler: @escaping MyIdSDK.AdaptHandler)
+  open func adapt(_ urlRequest: Foundation.URLRequest, for session: MyIdSDK.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+  open func adapt(_ urlRequest: Foundation.URLRequest, using state: MyIdSDK.RequestAdapterState, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
+extension MyIdSDK.RequestAdapter where Self == MyIdSDK.Adapter {
+  public static func adapter(using closure: @escaping MyIdSDK.AdaptHandler) -> MyIdSDK.Adapter
+}
+open class Retrier : MyIdSDK.RequestInterceptor {
+  public init(_ retryHandler: @escaping MyIdSDK.RetryHandler)
+  open func retry(_ request: MyIdSDK.Request, for session: MyIdSDK.Session, dueTo error: any Swift.Error, completion: @escaping (MyIdSDK.RetryResult) -> Swift.Void)
+  @objc deinit
+}
+extension MyIdSDK.RequestRetrier where Self == MyIdSDK.Retrier {
+  public static func retrier(using closure: @escaping MyIdSDK.RetryHandler) -> MyIdSDK.Retrier
+}
+open class Interceptor : MyIdSDK.RequestInterceptor {
+  final public let adapters: [any MyIdSDK.RequestAdapter]
+  final public let retriers: [any MyIdSDK.RequestRetrier]
+  public init(adaptHandler: @escaping MyIdSDK.AdaptHandler, retryHandler: @escaping MyIdSDK.RetryHandler)
+  public init(adapter: any MyIdSDK.RequestAdapter, retrier: any MyIdSDK.RequestRetrier)
+  public init(adapters: [any MyIdSDK.RequestAdapter] = [], retriers: [any MyIdSDK.RequestRetrier] = [], interceptors: [any MyIdSDK.RequestInterceptor] = [])
+  open func adapt(_ urlRequest: Foundation.URLRequest, for session: MyIdSDK.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+  open func adapt(_ urlRequest: Foundation.URLRequest, using state: MyIdSDK.RequestAdapterState, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+  open func retry(_ request: MyIdSDK.Request, for session: MyIdSDK.Session, dueTo error: any Swift.Error, completion: @escaping (MyIdSDK.RetryResult) -> Swift.Void)
+  @objc deinit
+}
+extension MyIdSDK.RequestInterceptor where Self == MyIdSDK.Interceptor {
+  public static func interceptor(adapter: @escaping MyIdSDK.AdaptHandler, retrier: @escaping MyIdSDK.RetryHandler) -> MyIdSDK.Interceptor
+  public static func interceptor(adapter: any MyIdSDK.RequestAdapter, retrier: any MyIdSDK.RequestRetrier) -> MyIdSDK.Interceptor
+  public static func interceptor(adapters: [any MyIdSDK.RequestAdapter] = [], retriers: [any MyIdSDK.RequestRetrier] = [], interceptors: [any MyIdSDK.RequestInterceptor] = []) -> MyIdSDK.Interceptor
+}
+open class MultipartFormData {
+  public static let encodingMemoryThreshold: Swift.UInt64
+  open var contentType: Swift.String {
+    get
+    set
+  }
+  public var contentLength: Swift.UInt64 {
+    get
+  }
+  final public let boundary: Swift.String
+  public init(fileManager: Foundation.FileManager = .default, boundary: Swift.String? = nil)
+  public func append(_ data: Foundation.Data, withName name: Swift.String, fileName: Swift.String? = nil, mimeType: Swift.String? = nil)
+  public func append(_ fileURL: Foundation.URL, withName name: Swift.String)
+  public func append(_ fileURL: Foundation.URL, withName name: Swift.String, fileName: Swift.String, mimeType: Swift.String)
+  public func append(_ stream: Foundation.InputStream, withLength length: Swift.UInt64, name: Swift.String, fileName: Swift.String, mimeType: Swift.String)
+  public func append(_ stream: Foundation.InputStream, withLength length: Swift.UInt64, headers: MyIdSDK.HTTPHeaders)
+  public func encode() throws -> Foundation.Data
+  public func writeEncodedData(to fileURL: Foundation.URL) throws
+  @objc deinit
+}
+public protocol EventMonitor {
+  var queue: Dispatch.DispatchQueue { get }
+  func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
+  func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge)
+  func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
+  func urlSession(_ session: Foundation.URLSession, taskNeedsNewBodyStream task: Foundation.URLSessionTask)
+  func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest)
+  func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
+  func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  func urlSession(_ session: Foundation.URLSession, taskIsWaitingForConnectivity task: Foundation.URLSessionTask)
+  func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse)
+  func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
+  func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, willCacheResponse proposedResponse: Foundation.CachedURLResponse)
+  func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didResumeAtOffset fileOffset: Swift.Int64, expectedTotalBytes: Swift.Int64)
+  func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData bytesWritten: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)
+  func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+  func request(_ request: MyIdSDK.Request, didCreateInitialURLRequest urlRequest: Foundation.URLRequest)
+  func request(_ request: MyIdSDK.Request, didFailToCreateURLRequestWithError error: MyIdSDK.AFError)
+  func request(_ request: MyIdSDK.Request, didAdaptInitialRequest initialRequest: Foundation.URLRequest, to adaptedRequest: Foundation.URLRequest)
+  func request(_ request: MyIdSDK.Request, didFailToAdaptURLRequest initialRequest: Foundation.URLRequest, withError error: MyIdSDK.AFError)
+  func request(_ request: MyIdSDK.Request, didCreateURLRequest urlRequest: Foundation.URLRequest)
+  func request(_ request: MyIdSDK.Request, didCreateTask task: Foundation.URLSessionTask)
+  func request(_ request: MyIdSDK.Request, didGatherMetrics metrics: Foundation.URLSessionTaskMetrics)
+  func request(_ request: MyIdSDK.Request, didFailTask task: Foundation.URLSessionTask, earlyWithError error: MyIdSDK.AFError)
+  func request(_ request: MyIdSDK.Request, didCompleteTask task: Foundation.URLSessionTask, with error: MyIdSDK.AFError?)
+  func requestIsRetrying(_ request: MyIdSDK.Request)
+  func requestDidFinish(_ request: MyIdSDK.Request)
+  func requestDidResume(_ request: MyIdSDK.Request)
+  func request(_ request: MyIdSDK.Request, didResumeTask task: Foundation.URLSessionTask)
+  func requestDidSuspend(_ request: MyIdSDK.Request)
+  func request(_ request: MyIdSDK.Request, didSuspendTask task: Foundation.URLSessionTask)
+  func requestDidCancel(_ request: MyIdSDK.Request)
+  func request(_ request: MyIdSDK.Request, didCancelTask task: Foundation.URLSessionTask)
+  func request(_ request: MyIdSDK.DataRequest, didValidateRequest urlRequest: Foundation.URLRequest?, response: Foundation.HTTPURLResponse, data: Foundation.Data?, withResult result: MyIdSDK.Request.ValidationResult)
+  func request(_ request: MyIdSDK.DataRequest, didParseResponse response: MyIdSDK.DataResponse<Foundation.Data?, MyIdSDK.AFError>)
+  func request<Value>(_ request: MyIdSDK.DataRequest, didParseResponse response: MyIdSDK.DataResponse<Value, MyIdSDK.AFError>)
+  func request(_ request: MyIdSDK.DataStreamRequest, didValidateRequest urlRequest: Foundation.URLRequest?, response: Foundation.HTTPURLResponse, withResult result: MyIdSDK.Request.ValidationResult)
+  func request<Value>(_ request: MyIdSDK.DataStreamRequest, didParseStream result: Swift.Result<Value, MyIdSDK.AFError>)
+  func request(_ request: MyIdSDK.UploadRequest, didCreateUploadable uploadable: MyIdSDK.UploadRequest.Uploadable)
+  func request(_ request: MyIdSDK.UploadRequest, didFailToCreateUploadableWithError error: MyIdSDK.AFError)
+  func request(_ request: MyIdSDK.UploadRequest, didProvideInputStream stream: Foundation.InputStream)
+  func request(_ request: MyIdSDK.DownloadRequest, didFinishDownloadingUsing task: Foundation.URLSessionTask, with result: Swift.Result<Foundation.URL, MyIdSDK.AFError>)
+  func request(_ request: MyIdSDK.DownloadRequest, didCreateDestinationURL url: Foundation.URL)
+  func request(_ request: MyIdSDK.DownloadRequest, didValidateRequest urlRequest: Foundation.URLRequest?, response: Foundation.HTTPURLResponse, fileURL: Foundation.URL?, withResult result: MyIdSDK.Request.ValidationResult)
+  func request(_ request: MyIdSDK.DownloadRequest, didParseResponse response: MyIdSDK.DownloadResponse<Foundation.URL?, MyIdSDK.AFError>)
+  func request<Value>(_ request: MyIdSDK.DownloadRequest, didParseResponse response: MyIdSDK.DownloadResponse<Value, MyIdSDK.AFError>)
+}
+extension MyIdSDK.EventMonitor {
+  public var queue: Dispatch.DispatchQueue {
+    get
+  }
+  public func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
+  public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge)
+  public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
+  public func urlSession(_ session: Foundation.URLSession, taskNeedsNewBodyStream task: Foundation.URLSessionTask)
+  public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest)
+  public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
+  public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  public func urlSession(_ session: Foundation.URLSession, taskIsWaitingForConnectivity task: Foundation.URLSessionTask)
+  public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse)
+  public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
+  public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, willCacheResponse proposedResponse: Foundation.CachedURLResponse)
+  public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didResumeAtOffset fileOffset: Swift.Int64, expectedTotalBytes: Swift.Int64)
+  public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData bytesWritten: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)
+  public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+  public func request(_ request: MyIdSDK.Request, didCreateInitialURLRequest urlRequest: Foundation.URLRequest)
+  public func request(_ request: MyIdSDK.Request, didFailToCreateURLRequestWithError error: MyIdSDK.AFError)
+  public func request(_ request: MyIdSDK.Request, didAdaptInitialRequest initialRequest: Foundation.URLRequest, to adaptedRequest: Foundation.URLRequest)
+  public func request(_ request: MyIdSDK.Request, didFailToAdaptURLRequest initialRequest: Foundation.URLRequest, withError error: MyIdSDK.AFError)
+  public func request(_ request: MyIdSDK.Request, didCreateURLRequest urlRequest: Foundation.URLRequest)
+  public func request(_ request: MyIdSDK.Request, didCreateTask task: Foundation.URLSessionTask)
+  public func request(_ request: MyIdSDK.Request, didGatherMetrics metrics: Foundation.URLSessionTaskMetrics)
+  public func request(_ request: MyIdSDK.Request, didFailTask task: Foundation.URLSessionTask, earlyWithError error: MyIdSDK.AFError)
+  public func request(_ request: MyIdSDK.Request, didCompleteTask task: Foundation.URLSessionTask, with error: MyIdSDK.AFError?)
+  public func requestIsRetrying(_ request: MyIdSDK.Request)
+  public func requestDidFinish(_ request: MyIdSDK.Request)
+  public func requestDidResume(_ request: MyIdSDK.Request)
+  public func request(_ request: MyIdSDK.Request, didResumeTask task: Foundation.URLSessionTask)
+  public func requestDidSuspend(_ request: MyIdSDK.Request)
+  public func request(_ request: MyIdSDK.Request, didSuspendTask task: Foundation.URLSessionTask)
+  public func requestDidCancel(_ request: MyIdSDK.Request)
+  public func request(_ request: MyIdSDK.Request, didCancelTask task: Foundation.URLSessionTask)
+  public func request(_ request: MyIdSDK.DataRequest, didValidateRequest urlRequest: Foundation.URLRequest?, response: Foundation.HTTPURLResponse, data: Foundation.Data?, withResult result: MyIdSDK.Request.ValidationResult)
+  public func request(_ request: MyIdSDK.DataRequest, didParseResponse response: MyIdSDK.DataResponse<Foundation.Data?, MyIdSDK.AFError>)
+  public func request<Value>(_ request: MyIdSDK.DataRequest, didParseResponse response: MyIdSDK.DataResponse<Value, MyIdSDK.AFError>)
+  public func request(_ request: MyIdSDK.DataStreamRequest, didValidateRequest urlRequest: Foundation.URLRequest?, response: Foundation.HTTPURLResponse, withResult result: MyIdSDK.Request.ValidationResult)
+  public func request<Value>(_ request: MyIdSDK.DataStreamRequest, didParseStream result: Swift.Result<Value, MyIdSDK.AFError>)
+  public func request(_ request: MyIdSDK.UploadRequest, didCreateUploadable uploadable: MyIdSDK.UploadRequest.Uploadable)
+  public func request(_ request: MyIdSDK.UploadRequest, didFailToCreateUploadableWithError error: MyIdSDK.AFError)
+  public func request(_ request: MyIdSDK.UploadRequest, didProvideInputStream stream: Foundation.InputStream)
+  public func request(_ request: MyIdSDK.DownloadRequest, didFinishDownloadingUsing task: Foundation.URLSessionTask, with result: Swift.Result<Foundation.URL, MyIdSDK.AFError>)
+  public func request(_ request: MyIdSDK.DownloadRequest, didCreateDestinationURL url: Foundation.URL)
+  public func request(_ request: MyIdSDK.DownloadRequest, didValidateRequest urlRequest: Foundation.URLRequest?, response: Foundation.HTTPURLResponse, fileURL: Foundation.URL?, withResult result: MyIdSDK.Request.ValidationResult)
+  public func request(_ request: MyIdSDK.DownloadRequest, didParseResponse response: MyIdSDK.DownloadResponse<Foundation.URL?, MyIdSDK.AFError>)
+  public func request<Value>(_ request: MyIdSDK.DownloadRequest, didParseResponse response: MyIdSDK.DownloadResponse<Value, MyIdSDK.AFError>)
+}
+@_hasMissingDesignatedInitializers final public class CompositeEventMonitor : MyIdSDK.EventMonitor {
+  final public let queue: Dispatch.DispatchQueue
+  final public func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
+  final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge)
+  final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
+  final public func urlSession(_ session: Foundation.URLSession, taskNeedsNewBodyStream task: Foundation.URLSessionTask)
+  final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest)
+  final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
+  final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  @available(macOS 10.13, iOS 11.0, tvOS 11.0, watchOS 4.0, *)
+  final public func urlSession(_ session: Foundation.URLSession, taskIsWaitingForConnectivity task: Foundation.URLSessionTask)
+  final public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse)
+  final public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
+  final public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, willCacheResponse proposedResponse: Foundation.CachedURLResponse)
+  final public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didResumeAtOffset fileOffset: Swift.Int64, expectedTotalBytes: Swift.Int64)
+  final public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData bytesWritten: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)
+  final public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+  final public func request(_ request: MyIdSDK.Request, didCreateInitialURLRequest urlRequest: Foundation.URLRequest)
+  final public func request(_ request: MyIdSDK.Request, didFailToCreateURLRequestWithError error: MyIdSDK.AFError)
+  final public func request(_ request: MyIdSDK.Request, didAdaptInitialRequest initialRequest: Foundation.URLRequest, to adaptedRequest: Foundation.URLRequest)
+  final public func request(_ request: MyIdSDK.Request, didFailToAdaptURLRequest initialRequest: Foundation.URLRequest, withError error: MyIdSDK.AFError)
+  final public func request(_ request: MyIdSDK.Request, didCreateURLRequest urlRequest: Foundation.URLRequest)
+  final public func request(_ request: MyIdSDK.Request, didCreateTask task: Foundation.URLSessionTask)
+  final public func request(_ request: MyIdSDK.Request, didGatherMetrics metrics: Foundation.URLSessionTaskMetrics)
+  final public func request(_ request: MyIdSDK.Request, didFailTask task: Foundation.URLSessionTask, earlyWithError error: MyIdSDK.AFError)
+  final public func request(_ request: MyIdSDK.Request, didCompleteTask task: Foundation.URLSessionTask, with error: MyIdSDK.AFError?)
+  final public func requestIsRetrying(_ request: MyIdSDK.Request)
+  final public func requestDidFinish(_ request: MyIdSDK.Request)
+  final public func requestDidResume(_ request: MyIdSDK.Request)
+  final public func request(_ request: MyIdSDK.Request, didResumeTask task: Foundation.URLSessionTask)
+  final public func requestDidSuspend(_ request: MyIdSDK.Request)
+  final public func request(_ request: MyIdSDK.Request, didSuspendTask task: Foundation.URLSessionTask)
+  final public func requestDidCancel(_ request: MyIdSDK.Request)
+  final public func request(_ request: MyIdSDK.Request, didCancelTask task: Foundation.URLSessionTask)
+  final public func request(_ request: MyIdSDK.DataRequest, didValidateRequest urlRequest: Foundation.URLRequest?, response: Foundation.HTTPURLResponse, data: Foundation.Data?, withResult result: MyIdSDK.Request.ValidationResult)
+  final public func request(_ request: MyIdSDK.DataRequest, didParseResponse response: MyIdSDK.DataResponse<Foundation.Data?, MyIdSDK.AFError>)
+  final public func request<Value>(_ request: MyIdSDK.DataRequest, didParseResponse response: MyIdSDK.DataResponse<Value, MyIdSDK.AFError>)
+  final public func request(_ request: MyIdSDK.DataStreamRequest, didValidateRequest urlRequest: Foundation.URLRequest?, response: Foundation.HTTPURLResponse, withResult result: MyIdSDK.Request.ValidationResult)
+  final public func request<Value>(_ request: MyIdSDK.DataStreamRequest, didParseStream result: Swift.Result<Value, MyIdSDK.AFError>)
+  final public func request(_ request: MyIdSDK.UploadRequest, didCreateUploadable uploadable: MyIdSDK.UploadRequest.Uploadable)
+  final public func request(_ request: MyIdSDK.UploadRequest, didFailToCreateUploadableWithError error: MyIdSDK.AFError)
+  final public func request(_ request: MyIdSDK.UploadRequest, didProvideInputStream stream: Foundation.InputStream)
+  final public func request(_ request: MyIdSDK.DownloadRequest, didFinishDownloadingUsing task: Foundation.URLSessionTask, with result: Swift.Result<Foundation.URL, MyIdSDK.AFError>)
+  final public func request(_ request: MyIdSDK.DownloadRequest, didCreateDestinationURL url: Foundation.URL)
+  final public func request(_ request: MyIdSDK.DownloadRequest, didValidateRequest urlRequest: Foundation.URLRequest?, response: Foundation.HTTPURLResponse, fileURL: Foundation.URL?, withResult result: MyIdSDK.Request.ValidationResult)
+  final public func request(_ request: MyIdSDK.DownloadRequest, didParseResponse response: MyIdSDK.DownloadResponse<Foundation.URL?, MyIdSDK.AFError>)
+  final public func request<Value>(_ request: MyIdSDK.DownloadRequest, didParseResponse response: MyIdSDK.DownloadResponse<Value, MyIdSDK.AFError>)
+  @objc deinit
+}
+open class ClosureEventMonitor : MyIdSDK.EventMonitor {
+  open var sessionDidBecomeInvalidWithError: ((Foundation.URLSession, (any Swift.Error)?) -> Swift.Void)?
+  open var taskDidReceiveChallenge: ((Foundation.URLSession, Foundation.URLSessionTask, Foundation.URLAuthenticationChallenge) -> Swift.Void)?
+  open var taskDidSendBodyData: ((Foundation.URLSession, Foundation.URLSessionTask, Swift.Int64, Swift.Int64, Swift.Int64) -> Swift.Void)?
+  open var taskNeedNewBodyStream: ((Foundation.URLSession, Foundation.URLSessionTask) -> Swift.Void)?
+  open var taskWillPerformHTTPRedirection: ((Foundation.URLSession, Foundation.URLSessionTask, Foundation.HTTPURLResponse, Foundation.URLRequest) -> Swift.Void)?
+  open var taskDidFinishCollectingMetrics: ((Foundation.URLSession, Foundation.URLSessionTask, Foundation.URLSessionTaskMetrics) -> Swift.Void)?
+  open var taskDidComplete: ((Foundation.URLSession, Foundation.URLSessionTask, (any Swift.Error)?) -> Swift.Void)?
+  open var taskIsWaitingForConnectivity: ((Foundation.URLSession, Foundation.URLSessionTask) -> Swift.Void)?
+  open var dataTaskDidReceiveResponse: ((Foundation.URLSession, Foundation.URLSessionDataTask, Foundation.URLResponse) -> Swift.Void)?
+  open var dataTaskDidReceiveData: ((Foundation.URLSession, Foundation.URLSessionDataTask, Foundation.Data) -> Swift.Void)?
+  open var dataTaskWillCacheResponse: ((Foundation.URLSession, Foundation.URLSessionDataTask, Foundation.CachedURLResponse) -> Swift.Void)?
+  open var downloadTaskDidFinishDownloadingToURL: ((Foundation.URLSession, Foundation.URLSessionDownloadTask, Foundation.URL) -> Swift.Void)?
+  open var downloadTaskDidWriteData: ((Foundation.URLSession, Foundation.URLSessionDownloadTask, Swift.Int64, Swift.Int64, Swift.Int64) -> Swift.Void)?
+  open var downloadTaskDidResumeAtOffset: ((Foundation.URLSession, Foundation.URLSessionDownloadTask, Swift.Int64, Swift.Int64) -> Swift.Void)?
+  open var requestDidCreateInitialURLRequest: ((MyIdSDK.Request, Foundation.URLRequest) -> Swift.Void)?
+  open var requestDidFailToCreateURLRequestWithError: ((MyIdSDK.Request, MyIdSDK.AFError) -> Swift.Void)?
+  open var requestDidAdaptInitialRequestToAdaptedRequest: ((MyIdSDK.Request, Foundation.URLRequest, Foundation.URLRequest) -> Swift.Void)?
+  open var requestDidFailToAdaptURLRequestWithError: ((MyIdSDK.Request, Foundation.URLRequest, MyIdSDK.AFError) -> Swift.Void)?
+  open var requestDidCreateURLRequest: ((MyIdSDK.Request, Foundation.URLRequest) -> Swift.Void)?
+  open var requestDidCreateTask: ((MyIdSDK.Request, Foundation.URLSessionTask) -> Swift.Void)?
+  open var requestDidGatherMetrics: ((MyIdSDK.Request, Foundation.URLSessionTaskMetrics) -> Swift.Void)?
+  open var requestDidFailTaskEarlyWithError: ((MyIdSDK.Request, Foundation.URLSessionTask, MyIdSDK.AFError) -> Swift.Void)?
+  open var requestDidCompleteTaskWithError: ((MyIdSDK.Request, Foundation.URLSessionTask, MyIdSDK.AFError?) -> Swift.Void)?
+  open var requestIsRetrying: ((MyIdSDK.Request) -> Swift.Void)?
+  open var requestDidFinish: ((MyIdSDK.Request) -> Swift.Void)?
+  open var requestDidResume: ((MyIdSDK.Request) -> Swift.Void)?
+  open var requestDidResumeTask: ((MyIdSDK.Request, Foundation.URLSessionTask) -> Swift.Void)?
+  open var requestDidSuspend: ((MyIdSDK.Request) -> Swift.Void)?
+  open var requestDidSuspendTask: ((MyIdSDK.Request, Foundation.URLSessionTask) -> Swift.Void)?
+  open var requestDidCancel: ((MyIdSDK.Request) -> Swift.Void)?
+  open var requestDidCancelTask: ((MyIdSDK.Request, Foundation.URLSessionTask) -> Swift.Void)?
+  open var requestDidValidateRequestResponseDataWithResult: ((MyIdSDK.DataRequest, Foundation.URLRequest?, Foundation.HTTPURLResponse, Foundation.Data?, MyIdSDK.Request.ValidationResult) -> Swift.Void)?
+  open var requestDidParseResponse: ((MyIdSDK.DataRequest, MyIdSDK.DataResponse<Foundation.Data?, MyIdSDK.AFError>) -> Swift.Void)?
+  open var requestDidValidateRequestResponseWithResult: ((MyIdSDK.DataStreamRequest, Foundation.URLRequest?, Foundation.HTTPURLResponse, MyIdSDK.Request.ValidationResult) -> Swift.Void)?
+  open var requestDidCreateUploadable: ((MyIdSDK.UploadRequest, MyIdSDK.UploadRequest.Uploadable) -> Swift.Void)?
+  open var requestDidFailToCreateUploadableWithError: ((MyIdSDK.UploadRequest, MyIdSDK.AFError) -> Swift.Void)?
+  open var requestDidProvideInputStream: ((MyIdSDK.UploadRequest, Foundation.InputStream) -> Swift.Void)?
+  open var requestDidFinishDownloadingUsingTaskWithResult: ((MyIdSDK.DownloadRequest, Foundation.URLSessionTask, Swift.Result<Foundation.URL, MyIdSDK.AFError>) -> Swift.Void)?
+  open var requestDidCreateDestinationURL: ((MyIdSDK.DownloadRequest, Foundation.URL) -> Swift.Void)?
+  open var requestDidValidateRequestResponseFileURLWithResult: ((MyIdSDK.DownloadRequest, Foundation.URLRequest?, Foundation.HTTPURLResponse, Foundation.URL?, MyIdSDK.Request.ValidationResult) -> Swift.Void)?
+  open var requestDidParseDownloadResponse: ((MyIdSDK.DownloadRequest, MyIdSDK.DownloadResponse<Foundation.URL?, MyIdSDK.AFError>) -> Swift.Void)?
+  final public let queue: Dispatch.DispatchQueue
+  public init(queue: Dispatch.DispatchQueue = .main)
+  open func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
+  open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge)
+  open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
+  open func urlSession(_ session: Foundation.URLSession, taskNeedsNewBodyStream task: Foundation.URLSessionTask)
+  open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest)
+  open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
+  open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  @available(macOS 10.13, iOS 11.0, tvOS 11.0, watchOS 4.0, *)
+  open func urlSession(_ session: Foundation.URLSession, taskIsWaitingForConnectivity task: Foundation.URLSessionTask)
+  open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse)
+  open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
+  open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, willCacheResponse proposedResponse: Foundation.CachedURLResponse)
+  open func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didResumeAtOffset fileOffset: Swift.Int64, expectedTotalBytes: Swift.Int64)
+  open func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData bytesWritten: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)
+  open func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+  open func request(_ request: MyIdSDK.Request, didCreateInitialURLRequest urlRequest: Foundation.URLRequest)
+  open func request(_ request: MyIdSDK.Request, didFailToCreateURLRequestWithError error: MyIdSDK.AFError)
+  open func request(_ request: MyIdSDK.Request, didAdaptInitialRequest initialRequest: Foundation.URLRequest, to adaptedRequest: Foundation.URLRequest)
+  open func request(_ request: MyIdSDK.Request, didFailToAdaptURLRequest initialRequest: Foundation.URLRequest, withError error: MyIdSDK.AFError)
+  open func request(_ request: MyIdSDK.Request, didCreateURLRequest urlRequest: Foundation.URLRequest)
+  open func request(_ request: MyIdSDK.Request, didCreateTask task: Foundation.URLSessionTask)
+  open func request(_ request: MyIdSDK.Request, didGatherMetrics metrics: Foundation.URLSessionTaskMetrics)
+  open func request(_ request: MyIdSDK.Request, didFailTask task: Foundation.URLSessionTask, earlyWithError error: MyIdSDK.AFError)
+  open func request(_ request: MyIdSDK.Request, didCompleteTask task: Foundation.URLSessionTask, with error: MyIdSDK.AFError?)
+  open func requestIsRetrying(_ request: MyIdSDK.Request)
+  open func requestDidFinish(_ request: MyIdSDK.Request)
+  open func requestDidResume(_ request: MyIdSDK.Request)
+  public func request(_ request: MyIdSDK.Request, didResumeTask task: Foundation.URLSessionTask)
+  open func requestDidSuspend(_ request: MyIdSDK.Request)
+  public func request(_ request: MyIdSDK.Request, didSuspendTask task: Foundation.URLSessionTask)
+  open func requestDidCancel(_ request: MyIdSDK.Request)
+  public func request(_ request: MyIdSDK.Request, didCancelTask task: Foundation.URLSessionTask)
+  open func request(_ request: MyIdSDK.DataRequest, didValidateRequest urlRequest: Foundation.URLRequest?, response: Foundation.HTTPURLResponse, data: Foundation.Data?, withResult result: MyIdSDK.Request.ValidationResult)
+  open func request(_ request: MyIdSDK.DataRequest, didParseResponse response: MyIdSDK.DataResponse<Foundation.Data?, MyIdSDK.AFError>)
+  public func request(_ request: MyIdSDK.DataStreamRequest, didValidateRequest urlRequest: Foundation.URLRequest?, response: Foundation.HTTPURLResponse, withResult result: MyIdSDK.Request.ValidationResult)
+  open func request(_ request: MyIdSDK.UploadRequest, didCreateUploadable uploadable: MyIdSDK.UploadRequest.Uploadable)
+  open func request(_ request: MyIdSDK.UploadRequest, didFailToCreateUploadableWithError error: MyIdSDK.AFError)
+  open func request(_ request: MyIdSDK.UploadRequest, didProvideInputStream stream: Foundation.InputStream)
+  open func request(_ request: MyIdSDK.DownloadRequest, didFinishDownloadingUsing task: Foundation.URLSessionTask, with result: Swift.Result<Foundation.URL, MyIdSDK.AFError>)
+  open func request(_ request: MyIdSDK.DownloadRequest, didCreateDestinationURL url: Foundation.URL)
+  open func request(_ request: MyIdSDK.DownloadRequest, didValidateRequest urlRequest: Foundation.URLRequest?, response: Foundation.HTTPURLResponse, fileURL: Foundation.URL?, withResult result: MyIdSDK.Request.ValidationResult)
+  open func request(_ request: MyIdSDK.DownloadRequest, didParseResponse response: MyIdSDK.DownloadResponse<Foundation.URL?, MyIdSDK.AFError>)
+  @objc deinit
+}
+public struct HTTPHeaders : Swift.Equatable, Swift.Hashable, Swift.Sendable {
+  public init()
+  public init(_ headers: [MyIdSDK.HTTPHeader])
+  public init(_ dictionary: [Swift.String : Swift.String])
+  public mutating func add(name: Swift.String, value: Swift.String)
+  public mutating func add(_ header: MyIdSDK.HTTPHeader)
+  public mutating func update(name: Swift.String, value: Swift.String)
+  public mutating func update(_ header: MyIdSDK.HTTPHeader)
+  public mutating func remove(name: Swift.String)
+  public mutating func sort()
+  public func sorted() -> MyIdSDK.HTTPHeaders
+  public func value(for name: Swift.String) -> Swift.String?
+  public subscript(name: Swift.String) -> Swift.String? {
+    get
+    set
+  }
+  public var dictionary: [Swift.String : Swift.String] {
+    get
+  }
+  public static func == (a: MyIdSDK.HTTPHeaders, b: MyIdSDK.HTTPHeaders) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension MyIdSDK.HTTPHeaders : Swift.ExpressibleByDictionaryLiteral {
+  public init(dictionaryLiteral elements: (Swift.String, Swift.String)...)
+  public typealias Key = Swift.String
+  public typealias Value = Swift.String
+}
+extension MyIdSDK.HTTPHeaders : Swift.ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: MyIdSDK.HTTPHeader...)
+  public typealias ArrayLiteralElement = MyIdSDK.HTTPHeader
+}
+extension MyIdSDK.HTTPHeaders : Swift.Sequence {
+  public func makeIterator() -> Swift.IndexingIterator<[MyIdSDK.HTTPHeader]>
+}
+extension MyIdSDK.HTTPHeaders : Swift.Collection {
+  public var startIndex: Swift.Int {
+    get
+  }
+  public var endIndex: Swift.Int {
+    get
+  }
+  public subscript(position: Swift.Int) -> MyIdSDK.HTTPHeader {
+    get
+  }
+  public func index(after i: Swift.Int) -> Swift.Int
+  public typealias Element = MyIdSDK.HTTPHeader
+  public typealias Index = Swift.Int
+  public typealias Indices = Swift.DefaultIndices<MyIdSDK.HTTPHeaders>
+  public typealias Iterator = Swift.IndexingIterator<[MyIdSDK.HTTPHeader]>
+  public typealias SubSequence = Swift.Slice<MyIdSDK.HTTPHeaders>
+}
+extension MyIdSDK.HTTPHeaders : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public struct HTTPHeader : Swift.Equatable, Swift.Hashable, Swift.Sendable {
+  public let name: Swift.String
+  public let value: Swift.String
+  public init(name: Swift.String, value: Swift.String)
+  public static func == (a: MyIdSDK.HTTPHeader, b: MyIdSDK.HTTPHeader) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension MyIdSDK.HTTPHeader : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension MyIdSDK.HTTPHeader {
+  public static func accept(_ value: Swift.String) -> MyIdSDK.HTTPHeader
+  public static func acceptCharset(_ value: Swift.String) -> MyIdSDK.HTTPHeader
+  public static func acceptLanguage(_ value: Swift.String) -> MyIdSDK.HTTPHeader
+  public static func acceptEncoding(_ value: Swift.String) -> MyIdSDK.HTTPHeader
+  public static func authorization(username: Swift.String, password: Swift.String) -> MyIdSDK.HTTPHeader
+  public static func authorization(bearerToken: Swift.String) -> MyIdSDK.HTTPHeader
+  public static func authorization(_ value: Swift.String) -> MyIdSDK.HTTPHeader
+  public static func contentDisposition(_ value: Swift.String) -> MyIdSDK.HTTPHeader
+  public static func contentEncoding(_ value: Swift.String) -> MyIdSDK.HTTPHeader
+  public static func contentType(_ value: Swift.String) -> MyIdSDK.HTTPHeader
+  public static func userAgent(_ value: Swift.String) -> MyIdSDK.HTTPHeader
+  public static func websocketProtocol(_ value: Swift.String) -> MyIdSDK.HTTPHeader
+}
+extension MyIdSDK.HTTPHeaders {
+  public static let `default`: MyIdSDK.HTTPHeaders
+}
+extension MyIdSDK.HTTPHeader {
+  public static let defaultAcceptEncoding: MyIdSDK.HTTPHeader
+  public static let defaultAcceptLanguage: MyIdSDK.HTTPHeader
+  public static let defaultUserAgent: MyIdSDK.HTTPHeader
+}
+extension Foundation.URLRequest {
+  public var headers: MyIdSDK.HTTPHeaders {
+    get
+    set
+  }
+}
+extension Foundation.HTTPURLResponse {
+  public var headers: MyIdSDK.HTTPHeaders {
+    get
+  }
+}
+extension Foundation.URLSessionConfiguration {
+  public var headers: MyIdSDK.HTTPHeaders {
+    get
+    set
   }
 }
 @objc public enum MyIdCameraShape : Swift.Int {
@@ -182,33 +2219,254 @@ extension Swift.String : Swift.Error {
   @objc func onError(exception: MyIdSDK.MyIdException)
   @objc func onUserExited()
 }
+public enum AFError : Swift.Error {
+  public enum MultipartEncodingFailureReason {
+    case bodyPartURLInvalid(url: Foundation.URL)
+    case bodyPartFilenameInvalid(in: Foundation.URL)
+    case bodyPartFileNotReachable(at: Foundation.URL)
+    case bodyPartFileNotReachableWithError(atURL: Foundation.URL, error: any Swift.Error)
+    case bodyPartFileIsDirectory(at: Foundation.URL)
+    case bodyPartFileSizeNotAvailable(at: Foundation.URL)
+    case bodyPartFileSizeQueryFailedWithError(forURL: Foundation.URL, error: any Swift.Error)
+    case bodyPartInputStreamCreationFailed(for: Foundation.URL)
+    case outputStreamCreationFailed(for: Foundation.URL)
+    case outputStreamFileAlreadyExists(at: Foundation.URL)
+    case outputStreamURLInvalid(url: Foundation.URL)
+    case outputStreamWriteFailed(error: any Swift.Error)
+    case inputStreamReadFailed(error: any Swift.Error)
+  }
+  public struct UnexpectedInputStreamLength : Swift.Error {
+    public var bytesExpected: Swift.UInt64
+    public var bytesRead: Swift.UInt64
+  }
+  public enum ParameterEncodingFailureReason {
+    case missingURL
+    case jsonEncodingFailed(error: any Swift.Error)
+    case customEncodingFailed(error: any Swift.Error)
+  }
+  public enum ParameterEncoderFailureReason {
+    public enum RequiredComponent {
+      case url
+      case httpMethod(rawValue: Swift.String)
+    }
+    case missingRequiredComponent(MyIdSDK.AFError.ParameterEncoderFailureReason.RequiredComponent)
+    case encoderFailed(error: any Swift.Error)
+  }
+  public enum ResponseValidationFailureReason {
+    case dataFileNil
+    case dataFileReadFailed(at: Foundation.URL)
+    case missingContentType(acceptableContentTypes: [Swift.String])
+    case unacceptableContentType(acceptableContentTypes: [Swift.String], responseContentType: Swift.String)
+    case unacceptableStatusCode(code: Swift.Int)
+    case customValidationFailed(error: any Swift.Error)
+  }
+  public enum ResponseSerializationFailureReason {
+    case inputDataNilOrZeroLength
+    case inputFileNil
+    case inputFileReadFailed(at: Foundation.URL)
+    case stringSerializationFailed(encoding: Swift.String.Encoding)
+    case jsonSerializationFailed(error: any Swift.Error)
+    case decodingFailed(error: any Swift.Error)
+    case customSerializationFailed(error: any Swift.Error)
+    case invalidEmptyResponse(type: Swift.String)
+  }
+  public enum ServerTrustFailureReason {
+    public struct Output {
+      public let host: Swift.String
+      public let trust: Security.SecTrust
+      public let status: Darwin.OSStatus
+      public let result: Security.SecTrustResultType
+    }
+    case noRequiredEvaluator(host: Swift.String)
+    case noCertificatesFound
+    case noPublicKeysFound
+    case policyApplicationFailed(trust: Security.SecTrust, policy: Security.SecPolicy, status: Darwin.OSStatus)
+    case settingAnchorCertificatesFailed(status: Darwin.OSStatus, certificates: [Security.SecCertificate])
+    case revocationPolicyCreationFailed
+    case trustEvaluationFailed(error: (any Swift.Error)?)
+    case defaultEvaluationFailed(output: MyIdSDK.AFError.ServerTrustFailureReason.Output)
+    case hostValidationFailed(output: MyIdSDK.AFError.ServerTrustFailureReason.Output)
+    case revocationCheckFailed(output: MyIdSDK.AFError.ServerTrustFailureReason.Output, options: MyIdSDK.RevocationTrustEvaluator.Options)
+    case certificatePinningFailed(host: Swift.String, trust: Security.SecTrust, pinnedCertificates: [Security.SecCertificate], serverCertificates: [Security.SecCertificate])
+    case publicKeyPinningFailed(host: Swift.String, trust: Security.SecTrust, pinnedKeys: [Security.SecKey], serverKeys: [Security.SecKey])
+    case customEvaluationFailed(error: any Swift.Error)
+  }
+  public enum URLRequestValidationFailureReason {
+    case bodyDataInGETRequest(Foundation.Data)
+  }
+  case createUploadableFailed(error: any Swift.Error)
+  case createURLRequestFailed(error: any Swift.Error)
+  case downloadedFileMoveFailed(error: any Swift.Error, source: Foundation.URL, destination: Foundation.URL)
+  case explicitlyCancelled
+  case invalidURL(url: any MyIdSDK.URLConvertible)
+  case multipartEncodingFailed(reason: MyIdSDK.AFError.MultipartEncodingFailureReason)
+  case parameterEncodingFailed(reason: MyIdSDK.AFError.ParameterEncodingFailureReason)
+  case parameterEncoderFailed(reason: MyIdSDK.AFError.ParameterEncoderFailureReason)
+  case requestAdaptationFailed(error: any Swift.Error)
+  case requestRetryFailed(retryError: any Swift.Error, originalError: any Swift.Error)
+  case responseValidationFailed(reason: MyIdSDK.AFError.ResponseValidationFailureReason)
+  case responseSerializationFailed(reason: MyIdSDK.AFError.ResponseSerializationFailureReason)
+  case serverTrustEvaluationFailed(reason: MyIdSDK.AFError.ServerTrustFailureReason)
+  case sessionDeinitialized
+  case sessionInvalidated(error: (any Swift.Error)?)
+  case sessionTaskFailed(error: any Swift.Error)
+  case urlRequestValidationFailed(reason: MyIdSDK.AFError.URLRequestValidationFailureReason)
+}
+extension Swift.Error {
+  public var asAFError: MyIdSDK.AFError? {
+    get
+  }
+  public func asAFError(orFailWith message: @autoclosure () -> Swift.String, file: Swift.StaticString = #file, line: Swift.UInt = #line) -> MyIdSDK.AFError
+}
+extension MyIdSDK.AFError {
+  public var isSessionDeinitializedError: Swift.Bool {
+    get
+  }
+  public var isSessionInvalidatedError: Swift.Bool {
+    get
+  }
+  public var isExplicitlyCancelledError: Swift.Bool {
+    get
+  }
+  public var isInvalidURLError: Swift.Bool {
+    get
+  }
+  public var isParameterEncodingError: Swift.Bool {
+    get
+  }
+  public var isParameterEncoderError: Swift.Bool {
+    get
+  }
+  public var isMultipartEncodingError: Swift.Bool {
+    get
+  }
+  public var isRequestAdaptationError: Swift.Bool {
+    get
+  }
+  public var isResponseValidationError: Swift.Bool {
+    get
+  }
+  public var isResponseSerializationError: Swift.Bool {
+    get
+  }
+  public var isServerTrustEvaluationError: Swift.Bool {
+    get
+  }
+  public var isRequestRetryError: Swift.Bool {
+    get
+  }
+  public var isCreateUploadableError: Swift.Bool {
+    get
+  }
+  public var isCreateURLRequestError: Swift.Bool {
+    get
+  }
+  public var isDownloadedFileMoveError: Swift.Bool {
+    get
+  }
+  public var isSessionTaskError: Swift.Bool {
+    get
+  }
+}
+extension MyIdSDK.AFError {
+  public var urlConvertible: (any MyIdSDK.URLConvertible)? {
+    get
+  }
+  public var url: Foundation.URL? {
+    get
+  }
+  public var underlyingError: (any Swift.Error)? {
+    get
+  }
+  public var acceptableContentTypes: [Swift.String]? {
+    get
+  }
+  public var responseContentType: Swift.String? {
+    get
+  }
+  public var responseCode: Swift.Int? {
+    get
+  }
+  public var failedStringEncoding: Swift.String.Encoding? {
+    get
+  }
+  public var sourceURL: Foundation.URL? {
+    get
+  }
+  public var destinationURL: Foundation.URL? {
+    get
+  }
+  public var downloadResumeData: Foundation.Data? {
+    get
+  }
+}
+extension MyIdSDK.AFError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
 @_inheritsConvenienceInitializers @objc public class MyIdClient : ObjectiveC.NSObject {
   @objc public class func start(withConfig config: MyIdSDK.MyIdConfig, withDelegate delegate: any MyIdSDK.MyIdClientDelegate)
   @objc public class func run(withConfig config: MyIdSDK.MyIdConfig, withDelegate delegate: any MyIdSDK.MyIdClientDelegate) -> UIKit.UIViewController
   @objc override dynamic public init()
   @objc deinit
 }
+extension Foundation.URLSessionConfiguration : MyIdSDK.AlamofireExtended {
+  public typealias ExtendedType = Foundation.URLSessionConfiguration
+}
+extension MyIdSDK.AlamofireExtension where ExtendedType : Foundation.URLSessionConfiguration {
+  public static var `default`: Foundation.URLSessionConfiguration {
+    get
+  }
+  public static var ephemeral: Foundation.URLSessionConfiguration {
+    get
+  }
+}
 extension MyIdSDK.MyIdCameraSelector : Swift.Equatable {}
 extension MyIdSDK.MyIdCameraSelector : Swift.Hashable {}
 extension MyIdSDK.MyIdCameraSelector : Swift.RawRepresentable {}
+extension MyIdSDK.URLEncoding.Destination : Swift.Equatable {}
+extension MyIdSDK.URLEncoding.Destination : Swift.Hashable {}
+extension MyIdSDK.URLEncoding.BoolEncoding : Swift.Equatable {}
+extension MyIdSDK.URLEncoding.BoolEncoding : Swift.Hashable {}
+extension MyIdSDK.JSONEncoding.Error : Swift.Equatable {}
+extension MyIdSDK.JSONEncoding.Error : Swift.Hashable {}
 extension MyIdSDK.MyIdPresentationStyle : Swift.Equatable {}
 extension MyIdSDK.MyIdPresentationStyle : Swift.Hashable {}
 extension MyIdSDK.MyIdPresentationStyle : Swift.RawRepresentable {}
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+extension MyIdSDK.DeflateRequestCompressor.DuplicateHeaderBehavior : Swift.Equatable {}
+@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+extension MyIdSDK.DeflateRequestCompressor.DuplicateHeaderBehavior : Swift.Hashable {}
+extension MyIdSDK.URLEncodedFormEncoder.BoolEncoding : Swift.Equatable {}
+extension MyIdSDK.URLEncodedFormEncoder.BoolEncoding : Swift.Hashable {}
+extension MyIdSDK.URLEncodedFormEncoder.SpaceEncoding : Swift.Equatable {}
+extension MyIdSDK.URLEncodedFormEncoder.SpaceEncoding : Swift.Hashable {}
 extension MyIdSDK.MyIdResidency : Swift.Equatable {}
 extension MyIdSDK.MyIdResidency : Swift.Hashable {}
 extension MyIdSDK.MyIdResidency : Swift.RawRepresentable {}
+extension MyIdSDK.AuthenticationError : Swift.Equatable {}
+extension MyIdSDK.AuthenticationError : Swift.Hashable {}
 extension MyIdSDK.MyIdEntryType : Swift.Equatable {}
 extension MyIdSDK.MyIdEntryType : Swift.Hashable {}
 extension MyIdSDK.MyIdEntryType : Swift.RawRepresentable {}
 extension MyIdSDK.MyIdResolution : Swift.Equatable {}
 extension MyIdSDK.MyIdResolution : Swift.Hashable {}
 extension MyIdSDK.MyIdResolution : Swift.RawRepresentable {}
+extension MyIdSDK.NetworkReachabilityManager.NetworkReachabilityStatus.ConnectionType : Swift.Equatable {}
+extension MyIdSDK.NetworkReachabilityManager.NetworkReachabilityStatus.ConnectionType : Swift.Hashable {}
+extension MyIdSDK.URLEncodedFormParameterEncoder.Destination : Swift.Equatable {}
+extension MyIdSDK.URLEncodedFormParameterEncoder.Destination : Swift.Hashable {}
 extension MyIdSDK.MyIdDocumentType : Swift.Equatable {}
 extension MyIdSDK.MyIdDocumentType : Swift.Hashable {}
 extension MyIdSDK.MyIdDocumentType : Swift.RawRepresentable {}
 extension MyIdSDK.MyIdBuildMode : Swift.Equatable {}
 extension MyIdSDK.MyIdBuildMode : Swift.Hashable {}
 extension MyIdSDK.MyIdBuildMode : Swift.RawRepresentable {}
+extension MyIdSDK.Request.State : Swift.Equatable {}
+extension MyIdSDK.Request.State : Swift.Hashable {}
+extension MyIdSDK.Request.ResponseDisposition : Swift.Equatable {}
+extension MyIdSDK.Request.ResponseDisposition : Swift.Hashable {}
 extension MyIdSDK.MyIdLocale : Swift.Equatable {}
 extension MyIdSDK.MyIdLocale : Swift.Hashable {}
 extension MyIdSDK.MyIdLocale : Swift.RawRepresentable {}
