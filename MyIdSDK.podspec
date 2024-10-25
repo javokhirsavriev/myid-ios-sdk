@@ -5,8 +5,8 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '12.0'
   spec.summary            = "MyID Framework"
   spec.description        = "MyID Framework for iOS"
-  spec.homepage           = "https://gitlab.myid.uz/myid-public-code/myid-sample-ios"
-  spec.documentation_url  = "https://gitlab.myid.uz/myid-public-code/myid-sample-ios"
+  spec.homepage           = "https://gitlab.myid.uz/myid-public-code/myid-ios-sdk"
+  spec.documentation_url  = "https://gitlab.myid.uz/myid-public-code/myid-ios-sdk"
   spec.swift_versions = '5.0'
   spec.license = { :type => 'Commercial', :text => 'See www.myid.uz' }
   spec.author             = { "Uzinfocom" => "..." }
