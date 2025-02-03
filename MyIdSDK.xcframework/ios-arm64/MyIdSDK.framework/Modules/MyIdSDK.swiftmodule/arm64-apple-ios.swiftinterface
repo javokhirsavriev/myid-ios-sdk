@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MyIdSDK
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name MyIdSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import CoreImage.CIFilterBuiltins
 import Combine
@@ -1216,6 +1216,7 @@ final public class JSONResponseSerializer : MyIdSDK.ResponseSerializer {
   final public let options: Foundation.JSONSerialization.ReadingOptions
   public init(dataPreprocessor: any MyIdSDK.DataPreprocessor = JSONResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = JSONResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = JSONResponseSerializer.defaultEmptyRequestMethods, options: Foundation.JSONSerialization.ReadingOptions = .allowFragments)
   final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> Any
+  @available(*, deprecated, message: "JSONResponseSerializer deprecated and will be removed in Alamofire 6. Use DecodableResponseSerializer instead.")
   public typealias SerializedObject = Any
   @objc deinit
 }
@@ -1423,61 +1424,41 @@ public struct DecodableWebSocketMessageDecoder<Value> : MyIdSDK.WebSocketMessage
   public let decoder: any MyIdSDK.DataDecoder
   public init(decoder: any MyIdSDK.DataDecoder)
   public func decode(_ message: Foundation.URLSessionWebSocketTask.Message) throws -> Value
+  @available(iOS 13, tvOS 13, watchOS 6, macOS 10.15, *)
   public typealias Failure = any Swift.Error
+  @available(iOS 13, tvOS 13, watchOS 6, macOS 10.15, *)
   public typealias Output = Value
 }
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension MyIdSDK.Request {
-  #if compiler(>=5.3) && $RethrowsProtocol
   public func uploadProgress(bufferingPolicy: MyIdSDK.StreamOf<Foundation.Progress>.BufferingPolicy = .unbounded) -> MyIdSDK.StreamOf<Foundation.Progress>
-  #endif
-  #if compiler(>=5.3) && $RethrowsProtocol
   public func downloadProgress(bufferingPolicy: MyIdSDK.StreamOf<Foundation.Progress>.BufferingPolicy = .unbounded) -> MyIdSDK.StreamOf<Foundation.Progress>
-  #endif
-  #if compiler(>=5.3) && $RethrowsProtocol
   public func urlRequests(bufferingPolicy: MyIdSDK.StreamOf<Foundation.URLRequest>.BufferingPolicy = .unbounded) -> MyIdSDK.StreamOf<Foundation.URLRequest>
-  #endif
-  #if compiler(>=5.3) && $RethrowsProtocol
   public func urlSessionTasks(bufferingPolicy: MyIdSDK.StreamOf<Foundation.URLSessionTask>.BufferingPolicy = .unbounded) -> MyIdSDK.StreamOf<Foundation.URLSessionTask>
-  #endif
-  #if compiler(>=5.3) && $RethrowsProtocol
   public func cURLDescriptions(bufferingPolicy: MyIdSDK.StreamOf<Swift.String>.BufferingPolicy = .unbounded) -> MyIdSDK.StreamOf<Swift.String>
-  #endif
 }
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public struct DataTask<Value> {
-  #if compiler(>=5.3) && $EffectfulProp
   public var response: MyIdSDK.DataResponse<Value, MyIdSDK.AFError> {
     get async
   }
-  #endif
-  #if compiler(>=5.3) && $EffectfulProp
   public var result: Swift.Result<Value, MyIdSDK.AFError> {
     get async
   }
-  #endif
-  #if compiler(>=5.3) && $EffectfulProp
   public var value: Value {
     get async throws
   }
-  #endif
   public func cancel()
   public func resume()
   public func suspend()
 }
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension MyIdSDK.DataRequest {
-  #if compiler(>=5.3) && $RethrowsProtocol
   public func httpResponses(bufferingPolicy: MyIdSDK.StreamOf<Foundation.HTTPURLResponse>.BufferingPolicy = .unbounded) -> MyIdSDK.StreamOf<Foundation.HTTPURLResponse>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait && $Sendable
   @discardableResult
   @_disfavoredOverload public func onHTTPResponse(perform handler: @escaping @Sendable (_ response: Foundation.HTTPURLResponse) async -> MyIdSDK.Request.ResponseDisposition) -> Self
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait && $Sendable
   @discardableResult
   public func onHTTPResponse(perform handler: @escaping @Sendable (_ response: Foundation.HTTPURLResponse) async -> Swift.Void) -> Self
-  #endif
   public func serializingData(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, dataPreprocessor: any MyIdSDK.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> MyIdSDK.DataTask<Foundation.Data>
   public func serializingDecodable<Value>(_ type: Value.Type = Value.self, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, dataPreprocessor: any MyIdSDK.DataPreprocessor = DecodableResponseSerializer<Value>.defaultDataPreprocessor, decoder: any MyIdSDK.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<Value>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = DecodableResponseSerializer<Value>.defaultEmptyRequestMethods) -> MyIdSDK.DataTask<Value> where Value : Swift.Decodable
   public func serializingString(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, dataPreprocessor: any MyIdSDK.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<MyIdSDK.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> MyIdSDK.DataTask<Swift.String>
@@ -1486,21 +1467,15 @@ extension MyIdSDK.DataRequest {
 }
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public struct DownloadTask<Value> {
-  #if compiler(>=5.3) && $EffectfulProp
   public var response: MyIdSDK.DownloadResponse<Value, MyIdSDK.AFError> {
     get async
   }
-  #endif
-  #if compiler(>=5.3) && $EffectfulProp
   public var result: Swift.Result<Value, MyIdSDK.AFError> {
     get async
   }
-  #endif
-  #if compiler(>=5.3) && $EffectfulProp
   public var value: Value {
     get async throws
   }
-  #endif
   public func cancel()
   public func resume()
   public func suspend()
@@ -1516,53 +1491,47 @@ extension MyIdSDK.DownloadRequest {
 }
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public struct DataStreamTask {
-  #if compiler(>=5.3) && $RethrowsProtocol
   public typealias Stream<Success, Failure> = MyIdSDK.StreamOf<MyIdSDK.DataStreamRequest.Stream<Success, Failure>> where Failure : Swift.Error
-  #endif
-  #if compiler(>=5.3) && $RethrowsProtocol
   public func streamingData(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, bufferingPolicy: MyIdSDK.DataStreamTask.Stream<Foundation.Data, Swift.Never>.BufferingPolicy = .unbounded) -> MyIdSDK.DataStreamTask.Stream<Foundation.Data, Swift.Never>
-  #endif
-  #if compiler(>=5.3) && $RethrowsProtocol
   public func streamingStrings(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, bufferingPolicy: MyIdSDK.DataStreamTask.Stream<Swift.String, Swift.Never>.BufferingPolicy = .unbounded) -> MyIdSDK.DataStreamTask.Stream<Swift.String, Swift.Never>
-  #endif
-  #if compiler(>=5.3) && $RethrowsProtocol
   public func streamingDecodables<T>(_ type: T.Type = T.self, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, bufferingPolicy: MyIdSDK.DataStreamTask.Stream<T, MyIdSDK.AFError>.BufferingPolicy = .unbounded) -> MyIdSDK.DataStreamTask.Stream<T, MyIdSDK.AFError> where T : Swift.Decodable
-  #endif
-  #if compiler(>=5.3) && $RethrowsProtocol
   public func streamingResponses<Serializer>(serializedUsing serializer: Serializer, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = true, bufferingPolicy: MyIdSDK.DataStreamTask.Stream<Serializer.SerializedObject, MyIdSDK.AFError>.BufferingPolicy = .unbounded) -> MyIdSDK.DataStreamTask.Stream<Serializer.SerializedObject, MyIdSDK.AFError> where Serializer : MyIdSDK.DataStreamSerializer
-  #endif
   public func cancel()
   public func resume()
   public func suspend()
 }
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension MyIdSDK.DataStreamRequest {
-  #if compiler(>=5.3) && $RethrowsProtocol
   final public func httpResponses(bufferingPolicy: MyIdSDK.StreamOf<Foundation.HTTPURLResponse>.BufferingPolicy = .unbounded) -> MyIdSDK.StreamOf<Foundation.HTTPURLResponse>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait && $Sendable
   @discardableResult
   @_disfavoredOverload final public func onHTTPResponse(perform handler: @escaping @Sendable (Foundation.HTTPURLResponse) async -> MyIdSDK.Request.ResponseDisposition) -> Self
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait && $Sendable
   @discardableResult
   final public func onHTTPResponse(perform handler: @escaping @Sendable (Foundation.HTTPURLResponse) async -> Swift.Void) -> Self
-  #endif
   final public func streamTask() -> MyIdSDK.DataStreamTask
 }
-#if compiler(>=5.3) && $RethrowsProtocol
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public struct StreamOf<Element> : _Concurrency.AsyncSequence {
   public typealias AsyncIterator = MyIdSDK.StreamOf<Element>.Iterator
   public typealias BufferingPolicy = _Concurrency.AsyncStream<Element>.Continuation.BufferingPolicy
   public func makeAsyncIterator() -> MyIdSDK.StreamOf<Element>.Iterator
   public struct Iterator : _Concurrency.AsyncIteratorProtocol {
-    #if compiler(>=5.3) && $AsyncAwait
     public mutating func next() async -> Element?
+    #if compiler(>=5.3) && $AssociatedTypeImplements
+    @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+    @_implements(_Concurrency.AsyncIteratorProtocol, Failure) public typealias __AsyncIteratorProtocol_Failure = Swift.Never
+    #else
+    @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+    public typealias __AsyncIteratorProtocol_Failure = Swift.Never
     #endif
   }
+  #if compiler(>=5.3) && $AssociatedTypeImplements
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  @_implements(_Concurrency.AsyncSequence, Failure) public typealias __AsyncSequence_Failure = Swift.Never
+  #else
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  public typealias __AsyncSequence_Failure = Swift.Never
+  #endif
 }
-#endif
 extension Swift.String : Swift.Error {
 }
 @_hasMissingDesignatedInitializers public class Request {
@@ -2122,6 +2091,8 @@ extension MyIdSDK.HTTPHeaders : Swift.ExpressibleByArrayLiteral {
 }
 extension MyIdSDK.HTTPHeaders : Swift.Sequence {
   public func makeIterator() -> Swift.IndexingIterator<[MyIdSDK.HTTPHeader]>
+  public typealias Element = Swift.IndexingIterator<[MyIdSDK.HTTPHeader]>.Element
+  public typealias Iterator = Swift.IndexingIterator<[MyIdSDK.HTTPHeader]>
 }
 extension MyIdSDK.HTTPHeaders : Swift.Collection {
   public var startIndex: Swift.Int {
@@ -2134,10 +2105,8 @@ extension MyIdSDK.HTTPHeaders : Swift.Collection {
     get
   }
   public func index(after i: Swift.Int) -> Swift.Int
-  public typealias Element = MyIdSDK.HTTPHeader
   public typealias Index = Swift.Int
   public typealias Indices = Swift.DefaultIndices<MyIdSDK.HTTPHeaders>
-  public typealias Iterator = Swift.IndexingIterator<[MyIdSDK.HTTPHeader]>
   public typealias SubSequence = Swift.Slice<MyIdSDK.HTTPHeaders>
 }
 extension MyIdSDK.HTTPHeaders : Swift.CustomStringConvertible {
@@ -2412,6 +2381,7 @@ extension MyIdSDK.AFError : Foundation.LocalizedError {
   @objc deinit
 }
 extension Foundation.URLSessionConfiguration : MyIdSDK.AlamofireExtended {
+  @available(iOS 7.0, *)
   public typealias ExtendedType = Foundation.URLSessionConfiguration
 }
 extension MyIdSDK.AlamofireExtension where ExtendedType : Foundation.URLSessionConfiguration {
