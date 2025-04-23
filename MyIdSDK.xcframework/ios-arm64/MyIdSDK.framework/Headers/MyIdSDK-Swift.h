@@ -306,39 +306,37 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC7MyIdSDK14MyIdAppearance")
 @interface MyIdAppearance : NSObject
-@property (nonatomic, strong) UIColor * _Nullable primaryColor;
-@property (nonatomic, strong) UIColor * _Nullable errorColor;
-@property (nonatomic, strong) UIColor * _Nullable primaryButtonColor;
-@property (nonatomic, strong) UIColor * _Nullable primaryButtonColorDisabled;
-@property (nonatomic, strong) UIColor * _Nullable primaryButtonTextColor;
-@property (nonatomic, strong) UIColor * _Nullable primaryButtonTextColorDisabled;
+@property (nonatomic, strong) UIColor * _Nullable colorPrimary;
+@property (nonatomic, strong) UIColor * _Nullable colorOnPrimary;
+@property (nonatomic, strong) UIColor * _Nullable colorError;
+@property (nonatomic, strong) UIColor * _Nullable colorOnError;
+@property (nonatomic, strong) UIColor * _Nullable colorOutline;
+@property (nonatomic, strong) UIColor * _Nullable colorDivider;
+@property (nonatomic, strong) UIColor * _Nullable colorSuccess;
+@property (nonatomic, strong) UIColor * _Nullable colorButtonContainer;
+@property (nonatomic, strong) UIColor * _Nullable colorButtonContainerDisabled;
+@property (nonatomic, strong) UIColor * _Nullable colorButtonContent;
+@property (nonatomic, strong) UIColor * _Nullable colorButtonContentDisabled;
 @property (nonatomic) float buttonCornerRadius;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-typedef SWIFT_ENUM(NSInteger, MyIdBuildMode, open) {
-  MyIdBuildModeDEBUG = 0,
-  MyIdBuildModePRODUCTION = 1,
-};
-
 typedef SWIFT_ENUM(NSInteger, MyIdCameraSelector, open) {
-  MyIdCameraSelectorFRONT = 0,
-  MyIdCameraSelectorBACK = 1,
+  MyIdCameraSelectorFront = 0,
+  MyIdCameraSelectorBack = 1,
 };
 
 typedef SWIFT_ENUM(NSInteger, MyIdCameraShape, open) {
-  MyIdCameraShapeELLIPSE = 0,
-  MyIdCameraShapeCIRCLE = 1,
+  MyIdCameraShapeCircle = 0,
+  MyIdCameraShapeEllipse = 1,
 };
 
 @class MyIdConfig;
 @protocol MyIdClientDelegate;
-@class UIViewController;
 
 SWIFT_CLASS("_TtC7MyIdSDK10MyIdClient")
 @interface MyIdClient : NSObject
 + (void)startWithConfig:(MyIdConfig * _Nonnull)config withDelegate:(id <MyIdClientDelegate> _Nonnull)delegate;
-+ (UIViewController * _Nonnull)runWithConfig:(MyIdConfig * _Nonnull)config withDelegate:(id <MyIdClientDelegate> _Nonnull)delegate SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -353,10 +351,10 @@ SWIFT_PROTOCOL("_TtP7MyIdSDK18MyIdClientDelegate_")
 @end
 
 @class NSString;
-enum MyIdEntryType : NSInteger;
 enum MyIdResidency : NSInteger;
+enum MyIdEnvironment : NSInteger;
+enum MyIdEntryType : NSInteger;
 enum MyIdLocale : NSInteger;
-enum MyIdResolution : NSInteger;
 enum MyIdPresentationStyle : NSInteger;
 @class MyIdOrganizationDetails;
 
@@ -367,33 +365,39 @@ SWIFT_CLASS("_TtC7MyIdSDK10MyIdConfig")
 @property (nonatomic, copy) NSString * _Nullable clientHashId;
 @property (nonatomic, copy) NSString * _Nullable passportData;
 @property (nonatomic, copy) NSString * _Nullable dateOfBirth;
-@property (nonatomic) NSInteger minAge;
 @property (nonatomic, copy) NSString * _Nullable sdkHash;
+@property (nonatomic) NSInteger minAge;
 @property (nonatomic, copy) NSString * _Nullable externalId;
 @property (nonatomic) float threshold;
-@property (nonatomic) enum MyIdBuildMode buildMode;
-@property (nonatomic) enum MyIdEntryType entryType;
+@property (nonatomic) float distance;
 @property (nonatomic) enum MyIdResidency residency;
+@property (nonatomic) enum MyIdEnvironment environment;
+@property (nonatomic) enum MyIdEntryType entryType;
 @property (nonatomic) enum MyIdLocale locale;
 @property (nonatomic) enum MyIdCameraShape cameraShape;
-@property (nonatomic) enum MyIdResolution resolution;
 @property (nonatomic) enum MyIdCameraSelector cameraSelector;
 @property (nonatomic) enum MyIdPresentationStyle presentationStyle;
 @property (nonatomic, strong) MyIdOrganizationDetails * _Nullable organizationDetails;
 @property (nonatomic, strong) MyIdAppearance * _Nullable appearance;
-@property (nonatomic) float distance;
+@property (nonatomic) BOOL withSoundGuides;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 typedef SWIFT_ENUM(NSInteger, MyIdDocumentType, open) {
-  MyIdDocumentTypeID_CARD = 0,
-  MyIdDocumentTypePASSPORT = 1,
-  MyIdDocumentTypeDRIVER_LICENSE = 2,
+  MyIdDocumentTypeIdCard = 0,
+  MyIdDocumentTypePassport = 1,
+  MyIdDocumentTypeDriverLicense = 2,
 };
 
 typedef SWIFT_ENUM(NSInteger, MyIdEntryType, open) {
-  MyIdEntryTypeAUTH = 0,
-  MyIdEntryTypeFACE = 1,
+  MyIdEntryTypeIdentification = 0,
+  MyIdEntryTypeVideoIdentification = 1,
+  MyIdEntryTypeFaceDetection = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, MyIdEnvironment, open) {
+  MyIdEnvironmentDebug = 0,
+  MyIdEnvironmentProduction = 1,
 };
 
 
@@ -404,10 +408,11 @@ SWIFT_CLASS("_TtC7MyIdSDK13MyIdException")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSData;
 
 SWIFT_CLASS("_TtC7MyIdSDK13MyIdGenerator")
 @interface MyIdGenerator : NSObject
-+ (NSString * _Nullable)hashWithPayload:(NSString * _Nonnull)payload clientHash:(NSString * _Nonnull)clientHash clientHashId:(NSString * _Nonnull)clientHashId SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)hashWithPayload:(NSData * _Nonnull)payload clientHash:(NSString * _Nonnull)clientHash clientHashId:(NSString * _Nonnull)clientHashId SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nonnull)device SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nullable)deviceModel SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nullable)deviceName SWIFT_WARN_UNUSED_RESULT;
@@ -420,10 +425,9 @@ SWIFT_CLASS("_TtC7MyIdSDK13MyIdGenerator")
 @end
 
 typedef SWIFT_ENUM(NSInteger, MyIdLocale, open) {
-  MyIdLocaleRU = 0,
-  MyIdLocaleEN = 1,
-  MyIdLocaleUZ = 2,
-  MyIdLocaleKY = 3,
+  MyIdLocaleUzbek = 0,
+  MyIdLocaleEnglish = 1,
+  MyIdLocaleRussian = 2,
 };
 
 @class UIImage;
@@ -436,19 +440,14 @@ SWIFT_CLASS("_TtC7MyIdSDK23MyIdOrganizationDetails")
 @end
 
 typedef SWIFT_ENUM(NSInteger, MyIdPresentationStyle, open) {
-  MyIdPresentationStyleFULL = 0,
-  MyIdPresentationStyleSHEET = 1,
+  MyIdPresentationStyleFull = 0,
+  MyIdPresentationStyleSheet = 1,
 };
 
 typedef SWIFT_ENUM(NSInteger, MyIdResidency, open) {
-  MyIdResidencyUSER_DEFINED = 0,
-  MyIdResidencyRESIDENT = 1,
-  MyIdResidencyNON_RESIDENT = 2,
-};
-
-typedef SWIFT_ENUM(NSInteger, MyIdResolution, open) {
-  MyIdResolutionRESOLUTION_480 = 0,
-  MyIdResolutionRESOLUTION_720 = 1,
+  MyIdResidencyUserDefined = 0,
+  MyIdResidencyResident = 1,
+  MyIdResidencyNonResident = 2,
 };
 
 
@@ -459,7 +458,6 @@ SWIFT_CLASS("_TtC7MyIdSDK10MyIdResult")
 @property (nonatomic, copy) NSString * _Nullable comparisonValue;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
-
 
 
 
