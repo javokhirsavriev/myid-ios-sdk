@@ -10205,1841 +10205,1841 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "StringLiteral",
       "offset": 251,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "StringLiteral",
       "offset": 284,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 314,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "StringLiteral",
       "offset": 1872,
       "length": 24,
       "value": "\"Image Processing Queue\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "Array",
       "offset": 1949,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 2130,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 2170,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 2209,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 2251,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 2293,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 2331,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "IntegerLiteral",
       "offset": 2364,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "StringLiteral",
       "offset": 1235,
       "length": 20,
       "value": "\"Video Output Queue\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "Array",
       "offset": 1306,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "StringLiteral",
       "offset": 1430,
       "length": 24,
       "value": "\"Image Processing Queue\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "Array",
       "offset": 1505,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "BooleanLiteral",
       "offset": 1844,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "BooleanLiteral",
       "offset": 1931,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "BooleanLiteral",
       "offset": 1972,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "BooleanLiteral",
       "offset": 2011,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "BooleanLiteral",
       "offset": 2052,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "IntegerLiteral",
       "offset": 2100,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "IntegerLiteral",
       "offset": 2143,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "IntegerLiteral",
       "offset": 2183,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "IntegerLiteral",
       "offset": 2211,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "BooleanLiteral",
       "offset": 15637,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/ECKeys.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/ECKeys.swift",
       "kind": "Dictionary",
       "offset": 5250,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/ECKeys.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/ECKeys.swift",
       "kind": "Dictionary",
       "offset": 6192,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/ECKeys.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/ECKeys.swift",
       "kind": "Dictionary",
       "offset": 10317,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/ECKeys.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/ECKeys.swift",
       "kind": "Dictionary",
       "offset": 11529,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Auth\/AuthScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Auth\/AuthScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 438,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Auth\/AuthScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Auth\/AuthScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 473,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Auth\/AuthScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Auth\/AuthScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 664,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Auth\/AuthScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Auth\/AuthScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 699,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Auth\/AuthScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Auth\/AuthScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 1541,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraSelector.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraSelector.swift",
       "kind": "IntegerLiteral",
       "offset": 149,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraSelector.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraSelector.swift",
       "kind": "IntegerLiteral",
       "offset": 160,
       "length": 4,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdStore.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdStore.swift",
       "kind": "StringLiteral",
       "offset": 165,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdAppearance.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdAppearance.swift",
       "kind": "IntegerLiteral",
       "offset": 703,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/JobResponse.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/JobResponse.swift",
       "kind": "StringLiteral",
       "offset": 251,
       "length": 8,
       "value": "\"job_id\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/JobResponse.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/JobResponse.swift",
       "kind": "StringLiteral",
       "offset": 281,
       "length": 7,
       "value": "\"nonce\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/AccessTokenResponse.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/AccessTokenResponse.swift",
       "kind": "StringLiteral",
       "offset": 350,
       "length": 14,
       "value": "\"access_token\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/AccessTokenResponse.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/AccessTokenResponse.swift",
       "kind": "StringLiteral",
       "offset": 391,
       "length": 13,
       "value": "\"result_code\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/AccessTokenResponse.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/AccessTokenResponse.swift",
       "kind": "StringLiteral",
       "offset": 431,
       "length": 13,
       "value": "\"result_note\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/AccessTokenResponse.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/AccessTokenResponse.swift",
       "kind": "StringLiteral",
       "offset": 476,
       "length": 18,
       "value": "\"comparison_value\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpCodes.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpCodes.swift",
       "kind": "IntegerLiteral",
       "offset": 124,
       "length": 3,
       "value": "202"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpCodes.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpCodes.swift",
       "kind": "IntegerLiteral",
       "offset": 163,
       "length": 3,
       "value": "307"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpCodes.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpCodes.swift",
       "kind": "IntegerLiteral",
       "offset": 200,
       "length": 3,
       "value": "429"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWSHeader.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWSHeader.swift",
       "kind": "Array",
       "offset": 1334,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/ASN1DERParsing.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/ASN1DERParsing.swift",
       "kind": "IntegerLiteral",
       "offset": 8780,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
       "kind": "StringLiteral",
       "offset": 981,
       "length": 20,
       "value": "\"Video Output Queue\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
       "kind": "Array",
       "offset": 1052,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
       "kind": "StringLiteral",
       "offset": 1176,
       "length": 24,
       "value": "\"Image Processing Queue\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
       "kind": "Array",
       "offset": 1251,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
       "kind": "StringLiteral",
       "offset": 1524,
       "length": 20,
       "value": "\"Depth Output Queue\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
       "kind": "Array",
       "offset": 1595,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
       "kind": "BooleanLiteral",
       "offset": 1829,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
       "kind": "BooleanLiteral",
       "offset": 1874,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
       "kind": "IntegerLiteral",
       "offset": 1907,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
       "kind": "IntegerLiteral",
       "offset": 1944,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
       "kind": "IntegerLiteral",
       "offset": 1981,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FacialGestureCameraView.swift",
       "kind": "IntegerLiteral",
       "offset": 2019,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
       "kind": "StringLiteral",
       "offset": 248,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
       "kind": "StringLiteral",
       "offset": 281,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 311,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 673,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 1641,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
       "kind": "IntegerLiteral",
       "offset": 1674,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSAKeys.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSAKeys.swift",
       "kind": "Dictionary",
       "offset": 4994,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSAKeys.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSAKeys.swift",
       "kind": "Dictionary",
       "offset": 5879,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSAKeys.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSAKeys.swift",
       "kind": "Dictionary",
       "offset": 9608,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSAKeys.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSAKeys.swift",
       "kind": "Dictionary",
       "offset": 10637,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/SettingsResponse.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/SettingsResponse.swift",
       "kind": "StringLiteral",
       "offset": 263,
       "length": 18,
       "value": "\"server_timestamp\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "StringLiteral",
       "offset": 207,
       "length": 23,
       "value": "\"JSON Processing Queue\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
       "kind": "Array",
       "offset": 275,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/Field\/MRZFieldFormatter.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/Field\/MRZFieldFormatter.swift",
       "kind": "IntegerLiteral",
       "offset": 208,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/Field\/MRZFieldFormatter.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/Field\/MRZFieldFormatter.swift",
       "kind": "IntegerLiteral",
       "offset": 281,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/Field\/MRZFieldFormatter.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/Field\/MRZFieldFormatter.swift",
       "kind": "StringLiteral",
       "offset": 495,
       "length": 10,
       "value": "\"yyyyMMdd\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/Field\/MRZFieldFormatter.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/Field\/MRZFieldFormatter.swift",
       "kind": "StringLiteral",
       "offset": 552,
       "length": 13,
       "value": "\"en_US_POSIX\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/Field\/MRZFieldFormatter.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/Field\/MRZFieldFormatter.swift",
       "kind": "StringLiteral",
       "offset": 619,
       "length": 10,
       "value": "\"GMT+0:00\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/Field\/MRZFieldFormatter.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/Field\/MRZFieldFormatter.swift",
       "kind": "BooleanLiteral",
       "offset": 2637,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationViewModel.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationViewModel.swift",
       "kind": "StringLiteral",
       "offset": 676,
       "length": 24,
       "value": "\"Depth Processing Queue\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationViewModel.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationViewModel.swift",
       "kind": "Array",
       "offset": 753,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationViewModel.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationViewModel.swift",
       "kind": "StringLiteral",
       "offset": 877,
       "length": 22,
       "value": "\"ZIP Processing Queue\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationViewModel.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationViewModel.swift",
       "kind": "Array",
       "offset": 952,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/Constants.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 122,
       "length": 17,
       "value": "\"uz.myid.ios.sdk\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/Constants.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 169,
       "length": 7,
       "value": "\"2.3.7\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/Constants.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 206,
       "length": 11,
       "value": "\"712022202\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/Constants.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 248,
       "length": 12,
       "value": "\"##.##.####\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/Constants.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/Constants.swift",
       "kind": "BooleanLiteral",
       "offset": 299,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 399,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
       "offset": 557,
       "length": 2,
       "value": "18"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
       "kind": "IntegerLiteral",
       "offset": 591,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 770,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
       "kind": "StringLiteral",
       "offset": 1013,
       "length": 24,
       "value": "\"myid_icon_check_circle\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 1100,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 1226,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 1295,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
       "offset": 174,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
       "offset": 205,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
       "offset": 238,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
       "offset": 271,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
       "offset": 303,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
       "offset": 331,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "IntegerLiteral",
       "offset": 363,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
       "offset": 394,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 431,
       "length": 4,
       "value": "0.55"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 469,
       "length": 4,
       "value": "0.60"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "BooleanLiteral",
       "offset": 991,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
       "offset": 1033,
       "length": 64,
       "value": "\"myid_mobile_sdk_(dev)-38StMOL1VGK2s1uvlQsfaz93GOrELSXuqhuAgWmr\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "StringLiteral",
       "offset": 1131,
       "length": 58,
       "value": "\"myid_mobile_sdk-92SnsJQhWBmajM3rvsUqmMJxikhTykqOHXN2caHC\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 1220,
       "length": 4,
       "value": "15.0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 1255,
       "length": 4,
       "value": "20.0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
       "kind": "FloatLiteral",
       "offset": 1288,
       "length": 4,
       "value": "15.0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 2059,
       "length": 8,
       "value": "\"RSA1_5\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 2159,
       "length": 10,
       "value": "\"RSA-OAEP\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 2268,
       "length": 14,
       "value": "\"RSA-OAEP-256\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 2687,
       "length": 5,
       "value": "\"dir\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 2955,
       "length": 15,
       "value": "\"A256CBC-HS512\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 3053,
       "length": 15,
       "value": "\"A128CBC-HS256\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 3889,
       "length": 5,
       "value": "\"DEF\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Algorithms.swift",
       "kind": "StringLiteral",
       "offset": 3911,
       "length": 6,
       "value": "\"NONE\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2492,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2527,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2564,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2598,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2638,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2686,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2724,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Deserializer.swift",
       "kind": "IntegerLiteral",
       "offset": 2769,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "StringLiteral",
       "offset": 161,
       "length": 12,
       "value": "\"background\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
       "kind": "BooleanLiteral",
       "offset": 466,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
       "kind": "StringLiteral",
       "offset": 362,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
       "kind": "StringLiteral",
       "offset": 399,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
       "kind": "StringLiteral",
       "offset": 437,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
       "kind": "StringLiteral",
       "offset": 474,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
       "kind": "StringLiteral",
       "offset": 512,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
       "kind": "StringLiteral",
       "offset": 551,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
       "kind": "StringLiteral",
       "offset": 589,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdPresentationStyle.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdPresentationStyle.swift",
       "kind": "IntegerLiteral",
       "offset": 154,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdPresentationStyle.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdPresentationStyle.swift",
       "kind": "IntegerLiteral",
       "offset": 165,
       "length": 5,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/DateHelper.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/DateHelper.swift",
       "kind": "StringLiteral",
       "offset": 143,
       "length": 12,
       "value": "\"yyyy-MM-dd\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/DateHelper.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/DateHelper.swift",
       "kind": "StringLiteral",
       "offset": 195,
       "length": 12,
       "value": "\"dd.MM.yyyy\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/DateHelper.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/DateHelper.swift",
       "kind": "StringLiteral",
       "offset": 244,
       "length": 76,
       "value": "\"^(0[1-9]|1\\d|2\\d|3[0-1])\\.(0\\d|1[0-2])\\.(18\\d\\d|19\\d\\d|20\\d\\d)$\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSA\/Asn1Parser.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSA\/Asn1Parser.swift",
       "kind": "IntegerLiteral",
       "offset": 385,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSA\/RSAKeyFactory.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSA\/RSAKeyFactory.swift",
       "kind": "IntegerLiteral",
       "offset": 216,
       "length": 3,
       "value": "512"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSA\/RSAKeyFactory.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSA\/RSAKeyFactory.swift",
       "kind": "IntegerLiteral",
       "offset": 241,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSA\/RSAKeyFactory.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSA\/RSAKeyFactory.swift",
       "kind": "IntegerLiteral",
       "offset": 267,
       "length": 4,
       "value": "2048"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSA\/RSAKeyFactory.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/RSA\/RSAKeyFactory.swift",
       "kind": "IntegerLiteral",
       "offset": 293,
       "length": 4,
       "value": "4096"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEnvironment.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEnvironment.swift",
       "kind": "IntegerLiteral",
       "offset": 143,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEnvironment.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEnvironment.swift",
       "kind": "IntegerLiteral",
       "offset": 154,
       "length": 10,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Serializer.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/Serializer.swift",
       "kind": "Array",
       "offset": 1595,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 1105,
       "length": 5,
       "value": "\"kty\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 1129,
       "length": 5,
       "value": "\"use\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 1160,
       "length": 9,
       "value": "\"key_ops\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 1191,
       "length": 5,
       "value": "\"alg\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 1222,
       "length": 5,
       "value": "\"kid\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 1247,
       "length": 5,
       "value": "\"x5u\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 1285,
       "length": 5,
       "value": "\"x5c\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 1332,
       "length": 5,
       "value": "\"x5t\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 1381,
       "length": 10,
       "value": "\"x5t#S256\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 1696,
       "length": 3,
       "value": "\"n\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 1720,
       "length": 3,
       "value": "\"e\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 1751,
       "length": 3,
       "value": "\"d\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 1958,
       "length": 3,
       "value": "\"k\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 2146,
       "length": 5,
       "value": "\"crv\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 2165,
       "length": 3,
       "value": "\"x\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 2182,
       "length": 3,
       "value": "\"y\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWKParameters.swift",
       "kind": "StringLiteral",
       "offset": 2208,
       "length": 3,
       "value": "\"d\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
       "offset": 236,
       "length": 12,
       "value": "\"devmyid.uz\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
       "offset": 285,
       "length": 9,
       "value": "\"myid.uz\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
       "offset": 354,
       "length": 25,
       "value": "\"https:\/\/\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
       "offset": 374,
       "length": 1,
       "value": "\"\/api\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
       "offset": 422,
       "length": 32,
       "value": "\"https:\/\/upload.\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
       "kind": "StringLiteral",
       "offset": 449,
       "length": 1,
       "value": "\"\/api\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdLocale.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdLocale.swift",
       "kind": "IntegerLiteral",
       "offset": 133,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdLocale.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdLocale.swift",
       "kind": "IntegerLiteral",
       "offset": 144,
       "length": 7,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdLocale.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdLocale.swift",
       "kind": "IntegerLiteral",
       "offset": 161,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/PassportHelper.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/PassportHelper.swift",
       "kind": "StringLiteral",
       "offset": 152,
       "length": 21,
       "value": "\"[a-zA-Z]{2}[0-9]{7}\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/PassportHelper.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/PassportHelper.swift",
       "kind": "StringLiteral",
       "offset": 203,
       "length": 11,
       "value": "\"[0-9]{14}\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/SymmetricKeys.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/SymmetricKeys.swift",
       "kind": "Dictionary",
       "offset": 2677,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/SymmetricKeys.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/SymmetricKeys.swift",
       "kind": "Dictionary",
       "offset": 3491,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
       "kind": "StringLiteral",
       "offset": 1571,
       "length": 7,
       "value": "\"P-256\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
       "kind": "StringLiteral",
       "offset": 1595,
       "length": 7,
       "value": "\"P-384\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
       "kind": "StringLiteral",
       "offset": 1619,
       "length": 7,
       "value": "\"P-521\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
       "kind": "IntegerLiteral",
       "offset": 3647,
       "length": 4,
       "value": "0x02"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
       "kind": "IntegerLiteral",
       "offset": 3678,
       "length": 4,
       "value": "0x03"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
       "kind": "IntegerLiteral",
       "offset": 3707,
       "length": 4,
       "value": "0x04"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
       "kind": "IntegerLiteral",
       "offset": 3753,
       "length": 4,
       "value": "0x06"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/CryptoImplementation\/EC.swift",
       "kind": "IntegerLiteral",
       "offset": 3780,
       "length": 4,
       "value": "0x07"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 404,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
       "kind": "FloatLiteral",
       "offset": 488,
       "length": 4,
       "value": "0.55"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
       "kind": "FloatLiteral",
       "offset": 532,
       "length": 4,
       "value": "0.60"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 1233,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWK.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWK.swift",
       "kind": "StringLiteral",
       "offset": 1567,
       "length": 5,
       "value": "\"RSA\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWK.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWK.swift",
       "kind": "StringLiteral",
       "offset": 1588,
       "length": 5,
       "value": "\"oct\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWK.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWK.swift",
       "kind": "StringLiteral",
       "offset": 1608,
       "length": 4,
       "value": "\"EC\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/MRZParser.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/MRZParser.swift",
       "kind": "StringLiteral",
       "offset": 191,
       "length": 39,
       "value": "\"(P[A-Z0-9<])([A-Z]{3})([A-Z0-9<]{39})\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/MRZParser.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/MRZ Parser\/MRZParser.swift",
       "kind": "StringLiteral",
       "offset": 276,
       "length": 109,
       "value": "\"([A-Z0-9<]{9})([0-9OI])([A-Z]{3})([0-9]{6})([0-9OIKEC<])([M|F|X|<])([0-9KEC<]{6})([0-9KEC<])([A-Z0-9<]{16})\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdClient.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdClient.swift",
       "kind": "BooleanLiteral",
       "offset": 3865,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Document detection\/DocumentDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Document detection\/DocumentDetectionScreen.swift",
       "kind": "StringLiteral",
       "offset": 655,
       "length": 20,
       "value": "\"Video Output Queue\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Document detection\/DocumentDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Document detection\/DocumentDetectionScreen.swift",
       "kind": "Array",
       "offset": 726,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Document detection\/DocumentDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Document detection\/DocumentDetectionScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 840,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Document detection\/DocumentDetectionScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Document detection\/DocumentDetectionScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 883,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "StringLiteral",
       "offset": 130,
       "length": 9,
       "value": "\"#8F00FF\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "StringLiteral",
       "offset": 181,
       "length": 9,
       "value": "\"#FFFFFF\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "StringLiteral",
       "offset": 228,
       "length": 9,
       "value": "\"#FF6A19\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "StringLiteral",
       "offset": 277,
       "length": 9,
       "value": "\"#FFFFFF\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "StringLiteral",
       "offset": 326,
       "length": 9,
       "value": "\"#7B757F\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "StringLiteral",
       "offset": 375,
       "length": 9,
       "value": "\"#7B757F\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "FloatLiteral",
       "offset": 393,
       "length": 4,
       "value": "0.20"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "StringLiteral",
       "offset": 437,
       "length": 9,
       "value": "\"#65C466\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "StringLiteral",
       "offset": 484,
       "length": 9,
       "value": "\"#FFFFFF\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "StringLiteral",
       "offset": 531,
       "length": 9,
       "value": "\"#000000\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "StringLiteral",
       "offset": 588,
       "length": 9,
       "value": "\"#8F00FF\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "StringLiteral",
       "offset": 653,
       "length": 9,
       "value": "\"#000000\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "FloatLiteral",
       "offset": 671,
       "length": 4,
       "value": "0.10"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "StringLiteral",
       "offset": 721,
       "length": 9,
       "value": "\"#FFFFFF\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "StringLiteral",
       "offset": 784,
       "length": 9,
       "value": "\"#000000\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "FloatLiteral",
       "offset": 802,
       "length": 4,
       "value": "0.35"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Resources\/AppColors.swift",
       "kind": "IntegerLiteral",
       "offset": 890,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Base\/BaseScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Base\/BaseScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 262,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Base\/BaseScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Base\/BaseScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 539,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Presentation\/Base\/BaseScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Base\/BaseScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 722,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraShape.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraShape.swift",
       "kind": "IntegerLiteral",
       "offset": 144,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraShape.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraShape.swift",
       "kind": "IntegerLiteral",
       "offset": 155,
       "length": 7,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdResidency.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdResidency.swift",
       "kind": "IntegerLiteral",
       "offset": 145,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdResidency.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdResidency.swift",
       "kind": "IntegerLiteral",
       "offset": 156,
       "length": 8,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdResidency.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdResidency.swift",
       "kind": "IntegerLiteral",
       "offset": 174,
       "length": 11,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
       "kind": "Dictionary",
       "offset": 210,
       "length": 366,
       "value": "[(\"1\", [\"pass_data\", \"birth_date\", \"photo_from_camera\", \"client_id\", \"image_hash\"]), (\"2\", [\"image_hash\", \"pass_data\", \"photo_from_camera\", \"birth_date\", \"client_id\"]), (\"3\", [\"photo_from_camera\", \"pass_data\", \"image_hash\", \"birth_date\", \"client_id\"]), (\"4\", [\"pass_data\", \"photo_from_camera\", \"image_hash\", \"client_id\", \"birth_date\"])]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
       "kind": "StringLiteral",
       "offset": 634,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
       "kind": "StringLiteral",
       "offset": 667,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
       "kind": "StringLiteral",
       "offset": 706,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
       "kind": "StringLiteral",
       "offset": 738,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
       "kind": "StringLiteral",
       "offset": 771,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWEHeader.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWEHeader.swift",
       "kind": "Array",
       "offset": 1334,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEntryType.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEntryType.swift",
       "kind": "IntegerLiteral",
       "offset": 148,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEntryType.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEntryType.swift",
       "kind": "IntegerLiteral",
       "offset": 159,
       "length": 19,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEntryType.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEntryType.swift",
       "kind": "IntegerLiteral",
       "offset": 188,
       "length": 13,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdDocumentType.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdDocumentType.swift",
       "kind": "IntegerLiteral",
       "offset": 146,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdDocumentType.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdDocumentType.swift",
       "kind": "IntegerLiteral",
       "offset": 157,
       "length": 8,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/Downloads\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdDocumentType.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdDocumentType.swift",
       "kind": "IntegerLiteral",
       "offset": 175,
       "length": 13,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 723,
       "length": 7,
       "value": "\"image\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 881,
       "length": 24,
       "value": "\"myid_icon_advice_first\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1058,
       "length": 25,
       "value": "\"myid_icon_advice_second\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1234,
       "length": 24,
       "value": "\"myid_icon_advice_third\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1407,
       "length": 23,
       "value": "\"myid_icon_eyes_opened\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1585,
       "length": 26,
       "value": "\"myid_icon_multiple_faces\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1754,
       "length": 20,
       "value": "\"myid_icon_not_face\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1908,
       "length": 15,
       "value": "\"myid_icon_one\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2065,
       "length": 19,
       "value": "\"myid_icon_scanner\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2232,
       "length": 22,
       "value": "\"myid_icon_sunglasses\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2388,
       "length": 15,
       "value": "\"myid_icon_two\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2560,
       "length": 27,
       "value": "\"myid_shape_driver_license\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2729,
       "length": 19,
       "value": "\"myid_shape_idcard\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2894,
       "length": 21,
       "value": "\"myid_shape_passport\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3051,
       "length": 16,
       "value": "\"myid_icon_back\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3203,
       "length": 16,
       "value": "\"myid_icon_call\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3359,
       "length": 18,
       "value": "\"myid_icon_cancel\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3515,
       "length": 17,
       "value": "\"myid_icon_check\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3683,
       "length": 24,
       "value": "\"myid_icon_check_circle\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3845,
       "length": 17,
       "value": "\"myid_icon_error\""
     },
     {
-      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-erzqmzctmaarioashauybzjhobco\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphoneos\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3998,
       "length": 16,
