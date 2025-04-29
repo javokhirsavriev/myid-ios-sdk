@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name               = "MyIdSDK"
-  spec.version            = "2.3.8"
+  spec.version            = "2.3.9"
   spec.platform = :ios, '13.0'
   spec.ios.deployment_target = '13.0'
   spec.summary            = "MyID Framework"
