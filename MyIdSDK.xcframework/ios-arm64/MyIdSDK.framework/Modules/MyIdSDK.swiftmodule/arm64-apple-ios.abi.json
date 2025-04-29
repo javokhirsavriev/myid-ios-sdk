@@ -11815,41 +11815,6 @@
       "value": "[(\"1\", [\"pass_data\", \"birth_date\", \"photo_from_camera\", \"client_id\", \"image_hash\"]), (\"2\", [\"image_hash\", \"pass_data\", \"photo_from_camera\", \"birth_date\", \"client_id\"]), (\"3\", [\"photo_from_camera\", \"pass_data\", \"image_hash\", \"birth_date\", \"client_id\"]), (\"4\", [\"pass_data\", \"photo_from_camera\", \"image_hash\", \"client_id\", \"birth_date\"])]"
     },
     {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
-      "kind": "StringLiteral",
-      "offset": 634,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
-      "kind": "StringLiteral",
-      "offset": 667,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
-      "kind": "StringLiteral",
-      "offset": 706,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
-      "kind": "StringLiteral",
-      "offset": 738,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
-      "kind": "StringLiteral",
-      "offset": 771,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWEHeader.swift",
       "kind": "Array",
       "offset": 1334,
