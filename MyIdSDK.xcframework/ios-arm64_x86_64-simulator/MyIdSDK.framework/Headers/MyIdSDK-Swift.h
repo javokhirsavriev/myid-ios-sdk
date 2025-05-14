@@ -360,17 +360,12 @@ enum MyIdPresentationStyle : NSInteger;
 
 SWIFT_CLASS("_TtC7MyIdSDK10MyIdConfig")
 @interface MyIdConfig : NSObject
-@property (nonatomic, copy) NSString * _Nullable clientId;
+@property (nonatomic, copy) NSString * _Nullable sessionId;
 @property (nonatomic, copy) NSString * _Nullable clientHash;
 @property (nonatomic, copy) NSString * _Nullable clientHashId;
-@property (nonatomic, copy) NSString * _Nullable passportData;
-@property (nonatomic, copy) NSString * _Nullable dateOfBirth;
-@property (nonatomic, copy) NSString * _Nullable sdkHash;
-@property (nonatomic) NSInteger minAge;
-@property (nonatomic, copy) NSString * _Nullable externalId;
-@property (nonatomic) float threshold;
-@property (nonatomic) float distance;
 @property (nonatomic) enum MyIdResidency residency;
+@property (nonatomic) NSInteger minAge;
+@property (nonatomic) float distance;
 @property (nonatomic) enum MyIdEnvironment environment;
 @property (nonatomic) enum MyIdEntryType entryType;
 @property (nonatomic) enum MyIdLocale locale;
@@ -391,8 +386,7 @@ typedef SWIFT_ENUM(NSInteger, MyIdDocumentType, open) {
 
 typedef SWIFT_ENUM(NSInteger, MyIdEntryType, open) {
   MyIdEntryTypeIdentification = 0,
-  MyIdEntryTypeVideoIdentification = 1,
-  MyIdEntryTypeFaceDetection = 2,
+  MyIdEntryTypeFaceDetection = 1,
 };
 
 typedef SWIFT_ENUM(NSInteger, MyIdEnvironment, open) {
@@ -408,11 +402,10 @@ SWIFT_CLASS("_TtC7MyIdSDK13MyIdException")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSData;
 
 SWIFT_CLASS("_TtC7MyIdSDK13MyIdGenerator")
 @interface MyIdGenerator : NSObject
-+ (NSString * _Nullable)hashWithPayload:(NSData * _Nonnull)payload clientHash:(NSString * _Nonnull)clientHash clientHashId:(NSString * _Nonnull)clientHashId SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)hashWithPayload:(NSString * _Nonnull)payload clientHash:(NSString * _Nonnull)clientHash clientHashId:(NSString * _Nonnull)clientHashId SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nonnull)device SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nullable)deviceModel SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nullable)deviceName SWIFT_WARN_UNUSED_RESULT;
@@ -455,7 +448,6 @@ SWIFT_CLASS("_TtC7MyIdSDK10MyIdResult")
 @interface MyIdResult : NSObject
 @property (nonatomic, strong) UIImage * _Nullable image;
 @property (nonatomic, copy) NSString * _Nullable code;
-@property (nonatomic, copy) NSString * _Nullable comparisonValue;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -834,17 +826,12 @@ enum MyIdPresentationStyle : NSInteger;
 
 SWIFT_CLASS("_TtC7MyIdSDK10MyIdConfig")
 @interface MyIdConfig : NSObject
-@property (nonatomic, copy) NSString * _Nullable clientId;
+@property (nonatomic, copy) NSString * _Nullable sessionId;
 @property (nonatomic, copy) NSString * _Nullable clientHash;
 @property (nonatomic, copy) NSString * _Nullable clientHashId;
-@property (nonatomic, copy) NSString * _Nullable passportData;
-@property (nonatomic, copy) NSString * _Nullable dateOfBirth;
-@property (nonatomic, copy) NSString * _Nullable sdkHash;
-@property (nonatomic) NSInteger minAge;
-@property (nonatomic, copy) NSString * _Nullable externalId;
-@property (nonatomic) float threshold;
-@property (nonatomic) float distance;
 @property (nonatomic) enum MyIdResidency residency;
+@property (nonatomic) NSInteger minAge;
+@property (nonatomic) float distance;
 @property (nonatomic) enum MyIdEnvironment environment;
 @property (nonatomic) enum MyIdEntryType entryType;
 @property (nonatomic) enum MyIdLocale locale;
@@ -865,8 +852,7 @@ typedef SWIFT_ENUM(NSInteger, MyIdDocumentType, open) {
 
 typedef SWIFT_ENUM(NSInteger, MyIdEntryType, open) {
   MyIdEntryTypeIdentification = 0,
-  MyIdEntryTypeVideoIdentification = 1,
-  MyIdEntryTypeFaceDetection = 2,
+  MyIdEntryTypeFaceDetection = 1,
 };
 
 typedef SWIFT_ENUM(NSInteger, MyIdEnvironment, open) {
@@ -882,11 +868,10 @@ SWIFT_CLASS("_TtC7MyIdSDK13MyIdException")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSData;
 
 SWIFT_CLASS("_TtC7MyIdSDK13MyIdGenerator")
 @interface MyIdGenerator : NSObject
-+ (NSString * _Nullable)hashWithPayload:(NSData * _Nonnull)payload clientHash:(NSString * _Nonnull)clientHash clientHashId:(NSString * _Nonnull)clientHashId SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)hashWithPayload:(NSString * _Nonnull)payload clientHash:(NSString * _Nonnull)clientHash clientHashId:(NSString * _Nonnull)clientHashId SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nonnull)device SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nullable)deviceModel SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nullable)deviceName SWIFT_WARN_UNUSED_RESULT;
@@ -929,7 +914,6 @@ SWIFT_CLASS("_TtC7MyIdSDK10MyIdResult")
 @interface MyIdResult : NSObject
 @property (nonatomic, strong) UIImage * _Nullable image;
 @property (nonatomic, copy) NSString * _Nullable code;
-@property (nonatomic, copy) NSString * _Nullable comparisonValue;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
