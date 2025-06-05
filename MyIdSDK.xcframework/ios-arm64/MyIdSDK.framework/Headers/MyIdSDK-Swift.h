@@ -317,6 +317,7 @@ SWIFT_CLASS("_TtC7MyIdSDK14MyIdAppearance")
 @property (nonatomic, strong) UIColor * _Nullable colorButtonContainerDisabled;
 @property (nonatomic, strong) UIColor * _Nullable colorButtonContent;
 @property (nonatomic, strong) UIColor * _Nullable colorButtonContentDisabled;
+@property (nonatomic, strong) UIColor * _Nullable colorScanButtonContainer;
 @property (nonatomic) float buttonCornerRadius;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -333,10 +334,12 @@ typedef SWIFT_ENUM(NSInteger, MyIdCameraShape, open) {
 
 @class MyIdConfig;
 @protocol MyIdClientDelegate;
+@class UINavigationController;
 
 SWIFT_CLASS("_TtC7MyIdSDK10MyIdClient")
 @interface MyIdClient : NSObject
 + (void)startWithConfig:(MyIdConfig * _Nonnull)config withDelegate:(id <MyIdClientDelegate> _Nonnull)delegate;
++ (UINavigationController * _Nonnull)buildMyIdViewControllerWithConfig:(MyIdConfig * _Nonnull)config withDelegate:(id <MyIdClientDelegate> _Nonnull)delegate showCancelButton:(BOOL)showCancelButton shouldDismiss:(BOOL)shouldDismiss SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -379,7 +382,6 @@ SWIFT_CLASS("_TtC7MyIdSDK10MyIdConfig")
 @property (nonatomic) enum MyIdPresentationStyle presentationStyle;
 @property (nonatomic, strong) MyIdOrganizationDetails * _Nullable organizationDetails;
 @property (nonatomic, strong) MyIdAppearance * _Nullable appearance;
-@property (nonatomic) BOOL withSoundGuides;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
