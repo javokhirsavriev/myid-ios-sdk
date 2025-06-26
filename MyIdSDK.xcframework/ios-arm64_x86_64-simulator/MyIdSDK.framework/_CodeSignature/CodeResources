@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/MyIdSDK-Swift.h</key>
 		<data>
-		8iNzpzGYwhPLMzITiF2aY9awxBI=
+		6DwQUwS1xc4M3C8pXmSLebhX560=
 		</data>
 		<key>Headers/MyIdSDK.h</key>
 		<data>
@@ -18,15 +18,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gavYALQqmMLfK3pHlQ/p8O+aviI=
+		AgO47xDxVhgVoSb0tTppGJFqMyM=
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		k5RiB7+laVCU/pvBET8COtMetL8=
+		dShlPoj71ySVbcsHJRUe+QSjf0k=
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ZMc0PGiQr8Q8MwJi2PuAkJgSWmM=
+		hVAmH5Dyv7RklGbgVb9s6OlPopE=
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,19 +34,19 @@
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ZMc0PGiQr8Q8MwJi2PuAkJgSWmM=
+		hVAmH5Dyv7RklGbgVb9s6OlPopE=
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		7xTTrO5wKDXdRB/8RlMtlTcF6gU=
+		sKjetSjsd37eLNctAxLEGOoDN+E=
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		k5RiB7+laVCU/pvBET8COtMetL8=
+		dShlPoj71ySVbcsHJRUe+QSjf0k=
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		X9Io3sd7TCRjMtR0qiX6D5fZDZs=
+		ZdsaVPC+yji48IxNWt+AkfOHWjo=
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		X9Io3sd7TCRjMtR0qiX6D5fZDZs=
+		ZdsaVPC+yji48IxNWt+AkfOHWjo=
 		</data>
 		<key>Modules/MyIdSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		uySfgzmZW4uV1GkV/ymnv8k1FEY=
+		PHuDiwaJGcBOHSzVsErMG+rO4FI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -82,7 +82,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UUl4EApfa9A1jtor94HpbQE0Ck+K9WEr+Kr77v9xU04=
+			IzW9gfqu6DRXRCpwuuyDALrDJCfujOr1M36v3qu28tU=
 			</data>
 		</dict>
 		<key>Headers/MyIdSDK.h</key>
@@ -96,14 +96,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4uPZpke0fsTgqPlSi3S9uWfUMpEfEEQHKMvy5GmSTA4=
+			tTvXhUqYNdNZH7T9327gLiaoPag1L1DEhcnBNPleJIs=
 			</data>
 		</dict>
 		<key>Modules/MyIdSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SY58zZgd370+VHHV0BlIs2fHX7G1FgtEMZF4fZaVBoE=
+			AhnW+ly/I48mruc/aV5ehnAHlyq8KJmpCjc2NjEenfE=
 			</data>
 		</dict>
 		<key>Modules/MyIdSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -117,28 +117,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SY58zZgd370+VHHV0BlIs2fHX7G1FgtEMZF4fZaVBoE=
+			AhnW+ly/I48mruc/aV5ehnAHlyq8KJmpCjc2NjEenfE=
 			</data>
 		</dict>
 		<key>Modules/MyIdSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lp0f5HfU0ljHcsXgubLmG4bvv9yCBklI73KDRwUESfo=
+			9hC6Tm845vOdDX+37dPqzvtFrvWdePrHKAzvFYCK1EU=
 			</data>
 		</dict>
 		<key>Modules/MyIdSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4uPZpke0fsTgqPlSi3S9uWfUMpEfEEQHKMvy5GmSTA4=
+			tTvXhUqYNdNZH7T9327gLiaoPag1L1DEhcnBNPleJIs=
 			</data>
 		</dict>
 		<key>Modules/MyIdSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IQTsGGQYnbGF7vMXMGKvZnm8cjDAzNKaccp79m0CRe0=
+			gYncizSJ4+yv4Y4szcq80JJZNKHR3mm/q+4YfLR+Foc=
 			</data>
 		</dict>
 		<key>Modules/MyIdSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -152,14 +152,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IQTsGGQYnbGF7vMXMGKvZnm8cjDAzNKaccp79m0CRe0=
+			gYncizSJ4+yv4Y4szcq80JJZNKHR3mm/q+4YfLR+Foc=
 			</data>
 		</dict>
 		<key>Modules/MyIdSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gH2AcpZ7HlkJPugK8azH8OCGSbINFe8LghSPt8yOh5o=
+			jR8LgDe499rU4qJTyw+RRxrwdOUTHJS4d7uv7wcR4Mw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

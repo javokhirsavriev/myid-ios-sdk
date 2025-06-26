@@ -39,6 +39,8 @@ import _SwiftConcurrencyShims
   @objc override dynamic public init()
   @objc deinit
 }
+extension Swift.String : Swift.Error {
+}
 @objc public enum MyIdCameraSelector : Swift.Int {
   case front = 0
   case back
@@ -133,12 +135,17 @@ import _SwiftConcurrencyShims
   @objc func onUserExited()
 }
 @_inheritsConvenienceInitializers @objc public class MyIdConfig : ObjectiveC.NSObject {
-  @objc public var sessionId: Swift.String?
+  @objc public var clientId: Swift.String?
   @objc public var clientHash: Swift.String?
   @objc public var clientHashId: Swift.String?
-  @objc public var residency: MyIdSDK.MyIdResidency
+  @objc public var passportData: Swift.String?
+  @objc public var dateOfBirth: Swift.String?
+  @objc public var sdkHash: Swift.String?
   @objc public var minAge: Swift.Int
+  @objc public var externalId: Swift.String?
+  @objc public var threshold: Swift.Float
   @objc public var distance: Swift.Float
+  @objc public var residency: MyIdSDK.MyIdResidency
   @objc public var environment: MyIdSDK.MyIdEnvironment
   @objc public var entryType: MyIdSDK.MyIdEntryType
   @objc public var locale: MyIdSDK.MyIdLocale
@@ -153,12 +160,11 @@ import _SwiftConcurrencyShims
 @_inheritsConvenienceInitializers @objc public class MyIdException : ObjectiveC.NSObject {
   @objc public var message: Swift.String?
   @objc public var code: Swift.String?
-  @objc public var image: UIKit.UIImage?
   @objc override dynamic public init()
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class MyIdGenerator : ObjectiveC.NSObject {
-  @objc public class func hash(payload: Swift.String, clientHash: Swift.String, clientHashId: Swift.String) -> Swift.String?
+  @objc public class func hash(payload: Foundation.Data, clientHash: Swift.String, clientHashId: Swift.String) -> Swift.String?
   @objc public class func device() -> Swift.String
   @objc public class func deviceModel() -> Swift.String?
   @objc public class func deviceName() -> Swift.String?
@@ -173,6 +179,7 @@ import _SwiftConcurrencyShims
 @_inheritsConvenienceInitializers @objc public class MyIdResult : ObjectiveC.NSObject {
   @objc public var image: UIKit.UIImage?
   @objc public var code: Swift.String?
+  @objc public var comparisonValue: Swift.String?
   @objc override dynamic public init()
   @objc deinit
 }
