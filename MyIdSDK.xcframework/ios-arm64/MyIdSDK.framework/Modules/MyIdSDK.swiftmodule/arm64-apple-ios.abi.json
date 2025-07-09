@@ -10600,7 +10600,7 @@
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 15211,
+      "offset": 15544,
       "length": 4,
       "value": "true"
     },
@@ -10672,7 +10672,7 @@
       "kind": "StringLiteral",
       "offset": 169,
       "length": 14,
-      "value": "\"3.0.0-beta03\""
+      "value": "\"3.0.0-beta04\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/Constants.swift",
