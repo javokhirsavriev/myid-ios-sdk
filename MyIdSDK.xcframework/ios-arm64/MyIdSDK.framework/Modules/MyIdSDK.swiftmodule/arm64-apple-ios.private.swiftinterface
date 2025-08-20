@@ -39,8 +39,6 @@ import _SwiftConcurrencyShims
   @objc override dynamic public init()
   @objc deinit
 }
-extension Swift.String : Swift.Error {
-}
 @objc public enum MyIdCameraSelector : Swift.Int {
   case front = 0
   case back
@@ -133,19 +131,15 @@ extension Swift.String : Swift.Error {
   @objc func onSuccess(result: MyIdSDK.MyIdResult)
   @objc func onError(exception: MyIdSDK.MyIdException)
   @objc func onUserExited()
+  @objc func onEvent(event: MyIdSDK.MyIdEvent)
 }
 @_inheritsConvenienceInitializers @objc public class MyIdConfig : ObjectiveC.NSObject {
-  @objc public var clientId: Swift.String?
+  @objc public var sessionId: Swift.String?
   @objc public var clientHash: Swift.String?
   @objc public var clientHashId: Swift.String?
-  @objc public var passportData: Swift.String?
-  @objc public var dateOfBirth: Swift.String?
-  @objc public var sdkHash: Swift.String?
-  @objc public var minAge: Swift.Int
-  @objc public var externalId: Swift.String?
-  @objc public var threshold: Swift.Float
-  @objc public var distance: Swift.Float
   @objc public var residency: MyIdSDK.MyIdResidency
+  @objc public var minAge: Swift.Int
+  @objc public var distance: Swift.Float
   @objc public var environment: MyIdSDK.MyIdEnvironment
   @objc public var entryType: MyIdSDK.MyIdEntryType
   @objc public var locale: MyIdSDK.MyIdLocale
@@ -158,6 +152,18 @@ extension Swift.String : Swift.Error {
   @objc override dynamic public init()
   @objc deinit
 }
+@objc public enum MyIdEvent : Swift.Int {
+  case cameraOpen = 0
+  case faceInPosition
+  case faceCaptured
+  case backendRequested
+  case backendResponded
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public class MyIdException : ObjectiveC.NSObject {
   @objc public var message: Swift.String
   @objc public var code: Swift.Int
@@ -166,7 +172,7 @@ extension Swift.String : Swift.Error {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class MyIdGenerator : ObjectiveC.NSObject {
-  @objc public class func hash(payload: Foundation.Data, clientHash: Swift.String, clientHashId: Swift.String) -> Swift.String?
+  @objc public class func hash(payload: Swift.String, clientHash: Swift.String, clientHashId: Swift.String) -> Swift.String?
   @objc public class func device() -> Swift.String
   @objc public class func deviceModel() -> Swift.String?
   @objc public class func deviceName() -> Swift.String?
@@ -181,8 +187,7 @@ extension Swift.String : Swift.Error {
 @objc public class MyIdResult : ObjectiveC.NSObject {
   @objc public var image: UIKit.UIImage?
   @objc public var code: Swift.String
-  @objc public var comparisonValue: Swift.Double
-  public init(image: UIKit.UIImage?, code: Swift.String, comparisonValue: Swift.Double)
+  public init(image: UIKit.UIImage?, code: Swift.String)
   @objc deinit
 }
 extension MyIdSDK.MyIdCameraSelector : Swift.Equatable {}
@@ -209,3 +214,6 @@ extension MyIdSDK.MyIdPresentationStyle : Swift.RawRepresentable {}
 extension MyIdSDK.MyIdResidency : Swift.Equatable {}
 extension MyIdSDK.MyIdResidency : Swift.Hashable {}
 extension MyIdSDK.MyIdResidency : Swift.RawRepresentable {}
+extension MyIdSDK.MyIdEvent : Swift.Equatable {}
+extension MyIdSDK.MyIdEvent : Swift.Hashable {}
+extension MyIdSDK.MyIdEvent : Swift.RawRepresentable {}
