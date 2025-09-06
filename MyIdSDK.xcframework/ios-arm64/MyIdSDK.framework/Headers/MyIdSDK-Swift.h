@@ -404,12 +404,14 @@ typedef SWIFT_ENUM(NSInteger, MyIdEnvironment, open) {
 };
 
 @class NSNumber;
+@class UIImage;
 
 SWIFT_CLASS("_TtC7MyIdSDK13MyIdException")
 @interface MyIdException : NSObject
 @property (nonatomic, copy) NSString * _Nonnull message;
 @property (nonatomic) NSInteger code;
 @property (nonatomic, strong) NSNumber * _Nullable ttl;
+@property (nonatomic, strong) UIImage * _Nullable image;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -436,7 +438,6 @@ typedef SWIFT_ENUM(NSInteger, MyIdLocale, open) {
   MyIdLocaleRussian = 2,
 };
 
-@class UIImage;
 
 SWIFT_CLASS("_TtC7MyIdSDK23MyIdOrganizationDetails")
 @interface MyIdOrganizationDetails : NSObject
