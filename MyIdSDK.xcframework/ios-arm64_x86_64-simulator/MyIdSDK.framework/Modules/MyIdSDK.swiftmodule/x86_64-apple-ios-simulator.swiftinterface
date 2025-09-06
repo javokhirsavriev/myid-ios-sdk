@@ -162,8 +162,7 @@ extension Swift.String : Swift.Error {
   @objc public var message: Swift.String
   @objc public var code: Swift.Int
   @objc public var ttl: Foundation.NSNumber?
-  @objc public var image: UIKit.UIImage?
-  public init(message: Swift.String, code: Swift.Int, ttl: Foundation.NSNumber? = nil, image: UIKit.UIImage? = nil)
+  public init(message: Swift.String, code: Swift.Int, ttl: Foundation.NSNumber? = nil)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class MyIdGenerator : ObjectiveC.NSObject {
