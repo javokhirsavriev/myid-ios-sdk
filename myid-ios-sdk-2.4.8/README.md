@@ -1,1 +1,0 @@
-# MyID iOS SDK
