@@ -6,303 +6,6 @@
     "children": [
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "DeviceKit",
-        "printedName": "DeviceKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Vision",
-        "printedName": "Vision",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Vision",
-        "printedName": "Vision",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Vision",
-        "printedName": "Vision",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "CoreVideo",
-        "printedName": "CoreVideo",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "DeviceKit",
-        "printedName": "DeviceKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Vision",
-        "printedName": "Vision",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "CoreVideo",
-        "printedName": "CoreVideo",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "CoreImage.CIFilterBuiltins",
-        "printedName": "CoreImage.CIFilterBuiltins",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Vision",
-        "printedName": "Vision",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -1974,1026 +1677,6 @@
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CryptoKit",
-        "printedName": "CryptoKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Compression",
-        "printedName": "Compression",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CommonCrypto",
-        "printedName": "CommonCrypto",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Security",
-        "printedName": "Security",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "CommonCrypto",
-        "printedName": "CommonCrypto",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "LocalAuthentication",
-        "printedName": "LocalAuthentication",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CommonCrypto",
-        "printedName": "CommonCrypto",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Security",
-        "printedName": "Security",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Security",
-        "printedName": "Security",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Security",
-        "printedName": "Security",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Security",
-        "printedName": "Security",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Security",
-        "printedName": "Security",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CommonCrypto",
-        "printedName": "CommonCrypto",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CommonCrypto",
-        "printedName": "CommonCrypto",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Alamofire",
-        "printedName": "Alamofire",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Alamofire",
-        "printedName": "Alamofire",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "DeviceKit",
-        "printedName": "DeviceKit",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "ZipArchive",
-        "printedName": "ZipArchive",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MyIdSDK",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -4877,6 +3560,480 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CryptoKit",
+        "printedName": "CryptoKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "ZipArchive",
+        "printedName": "ZipArchive",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "DeviceKit",
+        "printedName": "DeviceKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Vision",
+        "printedName": "Vision",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Vision",
+        "printedName": "Vision",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreVideo",
+        "printedName": "CoreVideo",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreImage.CIFilterBuiltins",
+        "printedName": "CoreImage.CIFilterBuiltins",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Vision",
+        "printedName": "Vision",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Vision",
+        "printedName": "Vision",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreVideo",
+        "printedName": "CoreVideo",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreImage.CIFilterBuiltins",
+        "printedName": "CoreImage.CIFilterBuiltins",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Vision",
+        "printedName": "Vision",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "ZipArchive",
+        "printedName": "ZipArchive",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "DeviceKit",
+        "printedName": "DeviceKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Vision",
+        "printedName": "Vision",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreVideo",
+        "printedName": "CoreVideo",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreImage.CIFilterBuiltins",
+        "printedName": "CoreImage.CIFilterBuiltins",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Vision",
+        "printedName": "Vision",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "MyIdPresentationStyle",
         "printedName": "MyIdPresentationStyle",
@@ -5373,13 +4530,20 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "MyIdSDK",
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
       },
       {
         "kind": "TypeDecl",
@@ -5588,6 +4752,918 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CryptoKit",
+        "printedName": "CryptoKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Compression",
+        "printedName": "Compression",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "LocalAuthentication",
+        "printedName": "LocalAuthentication",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "MyIdClientDelegate",
         "printedName": "MyIdClientDelegate",
@@ -5675,6 +5751,36 @@
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onEvent",
+            "printedName": "onEvent(event:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MyIdEvent",
+                "printedName": "MyIdSDK.MyIdEvent",
+                "usr": "c:@M@MyIdSDK@E@MyIdEvent"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MyIdSDK@objc(pl)MyIdClientDelegate(im)onEventWithEvent:",
+            "mangledName": "$s7MyIdSDK0aB14ClientDelegateP7onEvent5eventyAA0abG0O_tF",
+            "moduleName": "MyIdSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : MyIdSDK.MyIdClientDelegate>",
+            "sugared_genericSig": "<Self where Self : MyIdSDK.MyIdClientDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -5721,8 +5827,8 @@
         "children": [
           {
             "kind": "Var",
-            "name": "clientId",
-            "printedName": "clientId",
+            "name": "sessionId",
+            "printedName": "sessionId",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5740,8 +5846,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(py)clientId",
-            "mangledName": "$s7MyIdSDK0aB6ConfigC06clientB0SSSgvp",
+            "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(py)sessionId",
+            "mangledName": "$s7MyIdSDK0aB6ConfigC07sessionB0SSSgvp",
             "moduleName": "MyIdSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -5772,8 +5878,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)clientId",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC06clientB0SSSgvg",
+                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)sessionId",
+                "mangledName": "$s7MyIdSDK0aB6ConfigC07sessionB0SSSgvg",
                 "moduleName": "MyIdSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -5807,8 +5913,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)setClientId:",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC06clientB0SSSgvs",
+                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)setSessionId:",
+                "mangledName": "$s7MyIdSDK0aB6ConfigC07sessionB0SSSgvs",
                 "moduleName": "MyIdSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -5828,8 +5934,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MyIdSDK0aB6ConfigC06clientB0SSSgvM",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC06clientB0SSSgvM",
+                "usr": "s:7MyIdSDK0aB6ConfigC07sessionB0SSSgvM",
+                "mangledName": "$s7MyIdSDK0aB6ConfigC07sessionB0SSSgvM",
                 "moduleName": "MyIdSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -6072,27 +6178,19 @@
           },
           {
             "kind": "Var",
-            "name": "passportData",
-            "printedName": "passportData",
+            "name": "residency",
+            "printedName": "residency",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "MyIdResidency",
+                "printedName": "MyIdSDK.MyIdResidency",
+                "usr": "c:@M@MyIdSDK@E@MyIdResidency"
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(py)passportData",
-            "mangledName": "$s7MyIdSDK0aB6ConfigC12passportDataSSSgvp",
+            "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(py)residency",
+            "mangledName": "$s7MyIdSDK0aB6ConfigC9residencyAA0aB9ResidencyOvp",
             "moduleName": "MyIdSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -6109,22 +6207,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
+                    "name": "MyIdResidency",
+                    "printedName": "MyIdSDK.MyIdResidency",
+                    "usr": "c:@M@MyIdSDK@E@MyIdResidency"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)passportData",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC12passportDataSSSgvg",
+                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)residency",
+                "mangledName": "$s7MyIdSDK0aB6ConfigC9residencyAA0aB9ResidencyOvg",
                 "moduleName": "MyIdSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -6144,22 +6234,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
+                    "name": "MyIdResidency",
+                    "printedName": "MyIdSDK.MyIdResidency",
+                    "usr": "c:@M@MyIdSDK@E@MyIdResidency"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)setPassportData:",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC12passportDataSSSgvs",
+                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)setResidency:",
+                "mangledName": "$s7MyIdSDK0aB6ConfigC9residencyAA0aB9ResidencyOvs",
                 "moduleName": "MyIdSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -6179,242 +6261,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7MyIdSDK0aB6ConfigC12passportDataSSSgvM",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC12passportDataSSSgvM",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "dateOfBirth",
-            "printedName": "dateOfBirth",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(py)dateOfBirth",
-            "mangledName": "$s7MyIdSDK0aB6ConfigC11dateOfBirthSSSgvp",
-            "moduleName": "MyIdSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)dateOfBirth",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC11dateOfBirthSSSgvg",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)setDateOfBirth:",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC11dateOfBirthSSSgvs",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7MyIdSDK0aB6ConfigC11dateOfBirthSSSgvM",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC11dateOfBirthSSSgvM",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "sdkHash",
-            "printedName": "sdkHash",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(py)sdkHash",
-            "mangledName": "$s7MyIdSDK0aB6ConfigC7sdkHashSSSgvp",
-            "moduleName": "MyIdSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)sdkHash",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC7sdkHashSSSgvg",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)setSdkHash:",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC7sdkHashSSSgvs",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7MyIdSDK0aB6ConfigC7sdkHashSSSgvM",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC7sdkHashSSSgvM",
+                "usr": "s:7MyIdSDK0aB6ConfigC9residencyAA0aB9ResidencyOvM",
+                "mangledName": "$s7MyIdSDK0aB6ConfigC9residencyAA0aB9ResidencyOvM",
                 "moduleName": "MyIdSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -6516,216 +6364,6 @@
           },
           {
             "kind": "Var",
-            "name": "externalId",
-            "printedName": "externalId",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(py)externalId",
-            "mangledName": "$s7MyIdSDK0aB6ConfigC08externalB0SSSgvp",
-            "moduleName": "MyIdSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)externalId",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC08externalB0SSSgvg",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)setExternalId:",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC08externalB0SSSgvs",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7MyIdSDK0aB6ConfigC08externalB0SSSgvM",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC08externalB0SSSgvM",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "threshold",
-            "printedName": "threshold",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Float",
-                "printedName": "Swift.Float",
-                "usr": "s:Sf"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(py)threshold",
-            "mangledName": "$s7MyIdSDK0aB6ConfigC9thresholdSfvp",
-            "moduleName": "MyIdSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Float",
-                    "printedName": "Swift.Float",
-                    "usr": "s:Sf"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)threshold",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC9thresholdSfvg",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Float",
-                    "printedName": "Swift.Float",
-                    "usr": "s:Sf"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)setThreshold:",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC9thresholdSfvs",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7MyIdSDK0aB6ConfigC9thresholdSfvM",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC9thresholdSfvM",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "distance",
             "printedName": "distance",
             "children": [
@@ -6811,99 +6449,6 @@
                 "declKind": "Accessor",
                 "usr": "s:7MyIdSDK0aB6ConfigC8distanceSfvM",
                 "mangledName": "$s7MyIdSDK0aB6ConfigC8distanceSfvM",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "residency",
-            "printedName": "residency",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MyIdResidency",
-                "printedName": "MyIdSDK.MyIdResidency",
-                "usr": "c:@M@MyIdSDK@E@MyIdResidency"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(py)residency",
-            "mangledName": "$s7MyIdSDK0aB6ConfigC9residencyAA0aB9ResidencyOvp",
-            "moduleName": "MyIdSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MyIdResidency",
-                    "printedName": "MyIdSDK.MyIdResidency",
-                    "usr": "c:@M@MyIdSDK@E@MyIdResidency"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)residency",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC9residencyAA0aB9ResidencyOvg",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MyIdResidency",
-                    "printedName": "MyIdSDK.MyIdResidency",
-                    "usr": "c:@M@MyIdSDK@E@MyIdResidency"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdConfig(im)setResidency:",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC9residencyAA0aB9ResidencyOvs",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7MyIdSDK0aB6ConfigC9residencyAA0aB9ResidencyOvM",
-                "mangledName": "$s7MyIdSDK0aB6ConfigC9residencyAA0aB9ResidencyOvM",
                 "moduleName": "MyIdSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -7913,6 +7458,361 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "MyIdEvent",
+        "printedName": "MyIdEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "cameraOpen",
+            "printedName": "cameraOpen",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MyIdSDK.MyIdEvent.Type) -> MyIdSDK.MyIdEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MyIdEvent",
+                    "printedName": "MyIdSDK.MyIdEvent",
+                    "usr": "c:@M@MyIdSDK@E@MyIdEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MyIdSDK.MyIdEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MyIdEvent",
+                        "printedName": "MyIdSDK.MyIdEvent",
+                        "usr": "c:@M@MyIdSDK@E@MyIdEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MyIdSDK@E@MyIdEvent@MyIdEventCameraOpen",
+            "mangledName": "$s7MyIdSDK0aB5EventO10cameraOpenyA2CmF",
+            "moduleName": "MyIdSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "faceInPosition",
+            "printedName": "faceInPosition",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MyIdSDK.MyIdEvent.Type) -> MyIdSDK.MyIdEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MyIdEvent",
+                    "printedName": "MyIdSDK.MyIdEvent",
+                    "usr": "c:@M@MyIdSDK@E@MyIdEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MyIdSDK.MyIdEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MyIdEvent",
+                        "printedName": "MyIdSDK.MyIdEvent",
+                        "usr": "c:@M@MyIdSDK@E@MyIdEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MyIdSDK@E@MyIdEvent@MyIdEventFaceInPosition",
+            "mangledName": "$s7MyIdSDK0aB5EventO14faceInPositionyA2CmF",
+            "moduleName": "MyIdSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "faceCaptured",
+            "printedName": "faceCaptured",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MyIdSDK.MyIdEvent.Type) -> MyIdSDK.MyIdEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MyIdEvent",
+                    "printedName": "MyIdSDK.MyIdEvent",
+                    "usr": "c:@M@MyIdSDK@E@MyIdEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MyIdSDK.MyIdEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MyIdEvent",
+                        "printedName": "MyIdSDK.MyIdEvent",
+                        "usr": "c:@M@MyIdSDK@E@MyIdEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MyIdSDK@E@MyIdEvent@MyIdEventFaceCaptured",
+            "mangledName": "$s7MyIdSDK0aB5EventO12faceCapturedyA2CmF",
+            "moduleName": "MyIdSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "backendRequested",
+            "printedName": "backendRequested",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MyIdSDK.MyIdEvent.Type) -> MyIdSDK.MyIdEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MyIdEvent",
+                    "printedName": "MyIdSDK.MyIdEvent",
+                    "usr": "c:@M@MyIdSDK@E@MyIdEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MyIdSDK.MyIdEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MyIdEvent",
+                        "printedName": "MyIdSDK.MyIdEvent",
+                        "usr": "c:@M@MyIdSDK@E@MyIdEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MyIdSDK@E@MyIdEvent@MyIdEventBackendRequested",
+            "mangledName": "$s7MyIdSDK0aB5EventO16backendRequestedyA2CmF",
+            "moduleName": "MyIdSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "backendResponded",
+            "printedName": "backendResponded",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MyIdSDK.MyIdEvent.Type) -> MyIdSDK.MyIdEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MyIdEvent",
+                    "printedName": "MyIdSDK.MyIdEvent",
+                    "usr": "c:@M@MyIdSDK@E@MyIdEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MyIdSDK.MyIdEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MyIdEvent",
+                        "printedName": "MyIdSDK.MyIdEvent",
+                        "usr": "c:@M@MyIdSDK@E@MyIdEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MyIdSDK@E@MyIdEvent@MyIdEventBackendResponded",
+            "mangledName": "$s7MyIdSDK0aB5EventO16backendRespondedyA2CmF",
+            "moduleName": "MyIdSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MyIdSDK.MyIdEvent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MyIdEvent",
+                    "printedName": "MyIdSDK.MyIdEvent",
+                    "usr": "c:@M@MyIdSDK@E@MyIdEvent"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7MyIdSDK0aB5EventO8rawValueACSgSi_tcfc",
+            "mangledName": "$s7MyIdSDK0aB5EventO8rawValueACSgSi_tcfc",
+            "moduleName": "MyIdSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7MyIdSDK0aB5EventO8rawValueSivp",
+            "mangledName": "$s7MyIdSDK0aB5EventO8rawValueSivp",
+            "moduleName": "MyIdSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7MyIdSDK0aB5EventO8rawValueSivg",
+                "mangledName": "$s7MyIdSDK0aB5EventO8rawValueSivg",
+                "moduleName": "MyIdSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@MyIdSDK@E@MyIdEvent",
+        "mangledName": "$s7MyIdSDK0aB5EventO",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIdSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "MyIdException",
         "printedName": "MyIdException",
         "children": [
@@ -8413,9 +8313,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Data",
-                "printedName": "Foundation.Data",
-                "usr": "s:10Foundation4DataV"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -8432,7 +8332,7 @@
             ],
             "declKind": "Func",
             "usr": "c:@M@MyIdSDK@objc(cs)MyIdGenerator(cm)hashWithPayload:clientHash:clientHashId:",
-            "mangledName": "$s7MyIdSDK0aB9GeneratorC4hash7payload10clientHash0ghB0SSSg10Foundation4DataV_S2StFZ",
+            "mangledName": "$s7MyIdSDK0aB9GeneratorC4hash7payload10clientHash0ghB0SSSgSS_S2StFZ",
             "moduleName": "MyIdSDK",
             "static": true,
             "objc_name": "hashWithPayload:clientHash:clientHashId:",
@@ -8989,101 +8889,9 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "comparisonValue",
-            "printedName": "comparisonValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MyIdSDK@objc(cs)MyIdResult(py)comparisonValue",
-            "mangledName": "$s7MyIdSDK0aB6ResultC15comparisonValueSdvp",
-            "moduleName": "MyIdSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Double",
-                    "printedName": "Swift.Double",
-                    "usr": "s:Sd"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdResult(im)comparisonValue",
-                "mangledName": "$s7MyIdSDK0aB6ResultC15comparisonValueSdvg",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Double",
-                    "printedName": "Swift.Double",
-                    "usr": "s:Sd"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MyIdSDK@objc(cs)MyIdResult(im)setComparisonValue:",
-                "mangledName": "$s7MyIdSDK0aB6ResultC15comparisonValueSdvs",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7MyIdSDK0aB6ResultC15comparisonValueSdvM",
-                "mangledName": "$s7MyIdSDK0aB6ResultC15comparisonValueSdvM",
-                "moduleName": "MyIdSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(image:code:comparisonValue:)",
+            "printedName": "init(image:code:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -9110,17 +8918,11 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:7MyIdSDK0aB6ResultC5image4code15comparisonValueACSo7UIImageCSg_SSSdtcfc",
-            "mangledName": "$s7MyIdSDK0aB6ResultC5image4code15comparisonValueACSo7UIImageCSg_SSSdtcfc",
+            "usr": "s:7MyIdSDK0aB6ResultC5image4codeACSo7UIImageCSg_SStcfc",
+            "mangledName": "$s7MyIdSDK0aB6ResultC5image4codeACSo7UIImageCSg_SStcfc",
             "moduleName": "MyIdSDK",
             "declAttributes": [
               "AccessControl"
@@ -9259,598 +9061,6 @@
         "printedName": "DeveloperToolsSupport",
         "declKind": "Import",
         "moduleName": "MyIdSDK"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "String",
-        "printedName": "String",
-        "declKind": "Struct",
-        "usr": "s:SS",
-        "mangledName": "$sSS",
-        "moduleName": "Swift",
-        "declAttributes": [
-          "EagerMove",
-          "Frozen"
-        ],
-        "isExternal": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Error",
-            "printedName": "Error",
-            "usr": "s:s5ErrorP",
-            "mangledName": "$ss5ErrorP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CodingKeyRepresentable",
-            "printedName": "CodingKeyRepresentable",
-            "usr": "s:s22CodingKeyRepresentableP",
-            "mangledName": "$ss22CodingKeyRepresentableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_HasContiguousBytes",
-            "printedName": "_HasContiguousBytes",
-            "usr": "s:s19_HasContiguousBytesP",
-            "mangledName": "$ss19_HasContiguousBytesP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomReflectable",
-            "printedName": "CustomReflectable",
-            "usr": "s:s17CustomReflectableP",
-            "mangledName": "$ss17CustomReflectableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_CustomPlaygroundQuickLookable",
-            "printedName": "_CustomPlaygroundQuickLookable",
-            "usr": "s:s30_CustomPlaygroundQuickLookableP",
-            "mangledName": "$ss30_CustomPlaygroundQuickLookableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "TextOutputStream",
-            "printedName": "TextOutputStream",
-            "usr": "s:s16TextOutputStreamP",
-            "mangledName": "$ss16TextOutputStreamP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "TextOutputStreamable",
-            "printedName": "TextOutputStreamable",
-            "usr": "s:s20TextOutputStreamableP",
-            "mangledName": "$ss20TextOutputStreamableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_ExpressibleByBuiltinUnicodeScalarLiteral",
-            "printedName": "_ExpressibleByBuiltinUnicodeScalarLiteral",
-            "usr": "s:s41_ExpressibleByBuiltinUnicodeScalarLiteralP",
-            "mangledName": "$ss41_ExpressibleByBuiltinUnicodeScalarLiteralP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_ExpressibleByBuiltinExtendedGraphemeClusterLiteral",
-            "printedName": "_ExpressibleByBuiltinExtendedGraphemeClusterLiteral",
-            "usr": "s:s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP",
-            "mangledName": "$ss51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_ExpressibleByBuiltinStringLiteral",
-            "printedName": "_ExpressibleByBuiltinStringLiteral",
-            "usr": "s:s34_ExpressibleByBuiltinStringLiteralP",
-            "mangledName": "$ss34_ExpressibleByBuiltinStringLiteralP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ExpressibleByStringLiteral",
-            "printedName": "ExpressibleByStringLiteral",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "StringLiteralType",
-                "printedName": "StringLiteralType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s26ExpressibleByStringLiteralP",
-            "mangledName": "$ss26ExpressibleByStringLiteralP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ExpressibleByExtendedGraphemeClusterLiteral",
-            "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "ExtendedGraphemeClusterLiteralType",
-                "printedName": "ExtendedGraphemeClusterLiteralType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
-            "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ExpressibleByUnicodeScalarLiteral",
-            "printedName": "ExpressibleByUnicodeScalarLiteral",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "UnicodeScalarLiteralType",
-                "printedName": "UnicodeScalarLiteralType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
-            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "BidirectionalCollection",
-            "printedName": "BidirectionalCollection",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Element",
-                "printedName": "Element",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Character",
-                    "printedName": "Swift.Character",
-                    "usr": "s:SJ"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "Index",
-                "printedName": "Index",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Index",
-                    "printedName": "Swift.String.Index",
-                    "usr": "s:SS5IndexV"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "SubSequence",
-                "printedName": "SubSequence",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Substring",
-                    "printedName": "Swift.Substring",
-                    "usr": "s:Ss"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "Indices",
-                "printedName": "Indices",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DefaultIndices",
-                    "printedName": "Swift.DefaultIndices<Swift.String>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:SI"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:SK",
-            "mangledName": "$sSK"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Collection",
-            "printedName": "Collection",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Element",
-                "printedName": "Element",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Character",
-                    "printedName": "Swift.Character",
-                    "usr": "s:SJ"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "Index",
-                "printedName": "Index",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Index",
-                    "printedName": "Swift.String.Index",
-                    "usr": "s:SS5IndexV"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "Iterator",
-                "printedName": "Iterator",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Iterator",
-                    "printedName": "Swift.String.Iterator",
-                    "usr": "s:SS8IteratorV"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "SubSequence",
-                "printedName": "SubSequence",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Substring",
-                    "printedName": "Swift.Substring",
-                    "usr": "s:Ss"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "Indices",
-                "printedName": "Indices",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DefaultIndices",
-                    "printedName": "Swift.DefaultIndices<Swift.String>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:SI"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:Sl",
-            "mangledName": "$sSl"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sequence",
-            "printedName": "Sequence",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Element",
-                "printedName": "Element",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Character",
-                    "printedName": "Swift.Character",
-                    "usr": "s:SJ"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "Iterator",
-                "printedName": "Iterator",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Iterator",
-                    "printedName": "Swift.String.Iterator",
-                    "usr": "s:SS8IteratorV"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:ST",
-            "mangledName": "$sST"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Comparable",
-            "printedName": "Comparable",
-            "usr": "s:SL",
-            "mangledName": "$sSL"
-          },
-          {
-            "kind": "Conformance",
-            "name": "StringProtocol",
-            "printedName": "StringProtocol",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "UTF8View",
-                "printedName": "UTF8View",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UTF8View",
-                    "printedName": "Swift.String.UTF8View",
-                    "usr": "s:SS8UTF8ViewV"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "UTF16View",
-                "printedName": "UTF16View",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UTF16View",
-                    "printedName": "Swift.String.UTF16View",
-                    "usr": "s:SS9UTF16ViewV"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "UnicodeScalarView",
-                "printedName": "UnicodeScalarView",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UnicodeScalarView",
-                    "printedName": "Swift.String.UnicodeScalarView",
-                    "usr": "s:SS17UnicodeScalarViewV"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "SubSequence",
-                "printedName": "SubSequence",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Substring",
-                    "printedName": "Swift.Substring",
-                    "usr": "s:Ss"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:Sy",
-            "mangledName": "$sSy"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ExpressibleByStringInterpolation",
-            "printedName": "ExpressibleByStringInterpolation",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "StringInterpolation",
-                "printedName": "StringInterpolation",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DefaultStringInterpolation",
-                    "printedName": "Swift.DefaultStringInterpolation",
-                    "usr": "s:s26DefaultStringInterpolationV"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s32ExpressibleByStringInterpolationP",
-            "mangledName": "$ss32ExpressibleByStringInterpolationP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "LosslessStringConvertible",
-            "printedName": "LosslessStringConvertible",
-            "usr": "s:s25LosslessStringConvertibleP",
-            "mangledName": "$ss25LosslessStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "RangeReplaceableCollection",
-            "printedName": "RangeReplaceableCollection",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "SubSequence",
-                "printedName": "SubSequence",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Substring",
-                    "printedName": "Swift.Substring",
-                    "usr": "s:Ss"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:Sm",
-            "mangledName": "$sSm"
-          },
-          {
-            "kind": "Conformance",
-            "name": "MirrorPath",
-            "printedName": "MirrorPath",
-            "usr": "s:s10MirrorPathP",
-            "mangledName": "$ss10MirrorPathP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_ObjectiveCBridgeable",
-            "printedName": "_ObjectiveCBridgeable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "_ObjectiveCType",
-                "printedName": "_ObjectiveCType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSString",
-                    "printedName": "Foundation.NSString",
-                    "usr": "c:objc(cs)NSString"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s21_ObjectiveCBridgeableP",
-            "mangledName": "$ss21_ObjectiveCBridgeableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Transferable",
-            "printedName": "Transferable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Representation",
-                "printedName": "Representation",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "OpaqueTypeArchetype",
-                    "printedName": "some CoreTransferable.TransferRepresentation",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TransferRepresentation",
-                        "printedName": "CoreTransferable.TransferRepresentation",
-                        "usr": "s:16CoreTransferable22TransferRepresentationP"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "usr": "s:16CoreTransferable0B0P",
-            "mangledName": "$s16CoreTransferable0B0P"
-          },
-          {
-            "kind": "Conformance",
-            "name": "URLConvertible",
-            "printedName": "URLConvertible",
-            "usr": "s:9Alamofire14URLConvertibleP",
-            "mangledName": "$s9Alamofire14URLConvertibleP"
-          }
-        ]
       },
       {
         "kind": "TypeDecl",
@@ -10443,6 +9653,447 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
+      "kind": "StringLiteral",
+      "offset": 362,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
+      "kind": "StringLiteral",
+      "offset": 399,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
+      "kind": "StringLiteral",
+      "offset": 437,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
+      "kind": "StringLiteral",
+      "offset": 474,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
+      "kind": "StringLiteral",
+      "offset": 512,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
+      "kind": "StringLiteral",
+      "offset": 551,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
+      "kind": "StringLiteral",
+      "offset": 589,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 175,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 206,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 239,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "kind": "IntegerLiteral",
+      "offset": 321,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "kind": "FloatLiteral",
+      "offset": 357,
+      "length": 4,
+      "value": "0.60"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "kind": "BooleanLiteral",
+      "offset": 827,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "kind": "FloatLiteral",
+      "offset": 862,
+      "length": 4,
+      "value": "15.0"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "kind": "FloatLiteral",
+      "offset": 897,
+      "length": 4,
+      "value": "20.0"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "kind": "FloatLiteral",
+      "offset": 930,
+      "length": 4,
+      "value": "15.0"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdStore.swift",
+      "kind": "StringLiteral",
+      "offset": 161,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdStore.swift",
+      "kind": "BooleanLiteral",
+      "offset": 243,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdAppearance.swift",
+      "kind": "IntegerLiteral",
+      "offset": 763,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraSelector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 149,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraSelector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 160,
+      "length": 4,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraShape.swift",
+      "kind": "IntegerLiteral",
+      "offset": 144,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraShape.swift",
+      "kind": "IntegerLiteral",
+      "offset": 155,
+      "length": 7,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdDocumentType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 146,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdDocumentType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 157,
+      "length": 8,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdDocumentType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 175,
+      "length": 13,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEntryType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 148,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEntryType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 159,
+      "length": 19,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEntryType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 188,
+      "length": 13,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEnvironment.swift",
+      "kind": "IntegerLiteral",
+      "offset": 143,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEnvironment.swift",
+      "kind": "IntegerLiteral",
+      "offset": 154,
+      "length": 10,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdLocale.swift",
+      "kind": "IntegerLiteral",
+      "offset": 133,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdLocale.swift",
+      "kind": "IntegerLiteral",
+      "offset": 144,
+      "length": 7,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdLocale.swift",
+      "kind": "IntegerLiteral",
+      "offset": 161,
+      "length": 7,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpCodes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 124,
+      "length": 3,
+      "value": "202"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpCodes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 161,
+      "length": 3,
+      "value": "429"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
+      "kind": "StringLiteral",
+      "offset": 955,
+      "length": 25,
+      "value": "\"https:\/\/\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
+      "kind": "StringLiteral",
+      "offset": 975,
+      "length": 1,
+      "value": "\"\/api\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
+      "kind": "StringLiteral",
+      "offset": 1023,
+      "length": 30,
+      "value": "\"https:\/\/\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
+      "kind": "StringLiteral",
+      "offset": 1048,
+      "length": 1,
+      "value": "\"\/api\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/MyIdCredentials.swift",
+      "kind": "StringLiteral",
+      "offset": 120,
+      "length": 16,
+      "value": "\"api.devmyid.uz\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/MyIdCredentials.swift",
+      "kind": "StringLiteral",
+      "offset": 167,
+      "length": 13,
+      "value": "\"api.myid.uz\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/MyIdCredentials.swift",
+      "kind": "StringLiteral",
+      "offset": 221,
+      "length": 19,
+      "value": "\"upload.devmyid.uz\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/MyIdCredentials.swift",
+      "kind": "StringLiteral",
+      "offset": 277,
+      "length": 16,
+      "value": "\"upload.myid.uz\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/MyIdCredentials.swift",
+      "kind": "StringLiteral",
+      "offset": 338,
+      "length": 46,
+      "value": "\"1Z4aapW2Uw9siUi7AWCyxwZ5k9ZG8MUVVYRI0wJB2WY=\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/MyIdCredentials.swift",
+      "kind": "StringLiteral",
+      "offset": 423,
+      "length": 46,
+      "value": "\"a9khLOZJxlnJyrxstg\/P+seiDCm+Yf3OsrXyFocBaI0=\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/MyIdCredentials.swift",
+      "kind": "StringLiteral",
+      "offset": 515,
+      "length": 46,
+      "value": "\"9kyUUoBUdiMeQfDH1Cv111s0GQbgp5Anq1M7egaSXXU=\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/MyIdCredentials.swift",
+      "kind": "StringLiteral",
+      "offset": 601,
+      "length": 46,
+      "value": "\"4a6cPehI7OG6cuDZka5NDZ7FR8a60d3auda+sKfg4Ng=\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/JobResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 228,
+      "length": 8,
+      "value": "\"job_id\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/MediaResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 238,
+      "length": 10,
+      "value": "\"media_id\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/ResultResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 284,
+      "length": 6,
+      "value": "\"code\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/ResultResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 313,
+      "length": 8,
+      "value": "\"reason\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/ResultResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 348,
+      "length": 13,
+      "value": "\"reason_code\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/SettingsResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 429,
+      "length": 13,
+      "value": "\"allow_input\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/SettingsResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 466,
+      "length": 10,
+      "value": "\"sign_key\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/SettingsResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 508,
+      "length": 18,
+      "value": "\"server_timestamp\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/SettingsResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 557,
+      "length": 21,
+      "value": "\"client_sdk_settings\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/SettingsResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 697,
+      "length": 16,
+      "value": "\"hide_myid_logo\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
+      "kind": "StringLiteral",
+      "offset": 120,
+      "length": 5,
+      "value": "\"GET\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
+      "kind": "StringLiteral",
+      "offset": 142,
+      "length": 6,
+      "value": "\"POST\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
+      "kind": "StringLiteral",
+      "offset": 271,
+      "length": 13,
+      "value": "\".background\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
+      "kind": "IntegerLiteral",
+      "offset": 506,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiSessionDelegate.swift",
+      "kind": "Array",
+      "offset": 247,
+      "length": 174,
+      "value": "[0x30, 0x82, 0x01, 0x22, 0x30, 0x0D, 0x06, 0x09, 0x2A, 0x86, 0x48, 0x86, 0xF7, 0x0D, 0x01, 0x01, 0x01, 0x05, 0x00, 0x03, 0x82, 0x01, 0x0F, 0x00]"
+    },
+    {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Auth\/AuthScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 438,
@@ -10471,30 +10122,37 @@
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Base\/BaseScreen.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Auth\/AuthViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 262,
+      "offset": 497,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Base\/BaseScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 292,
+      "offset": 296,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Base\/BaseScreen.swift",
+      "kind": "BooleanLiteral",
+      "offset": 326,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Base\/BaseScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 568,
+      "offset": 602,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Base\/BaseScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 751,
+      "offset": 785,
       "length": 4,
       "value": "true"
     },
@@ -10522,196 +10180,161 @@
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionCameraView.swift",
       "kind": "StringLiteral",
-      "offset": 736,
+      "offset": 797,
       "length": 18,
       "value": "\"videoOutputQueue\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionCameraView.swift",
       "kind": "StringLiteral",
-      "offset": 816,
+      "offset": 877,
       "length": 22,
       "value": "\"imageProcessingQueue\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 973,
+      "offset": 1034,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1018,
+      "offset": 1075,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1051,
+      "offset": 1108,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1088,
+      "offset": 1145,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1125,
+      "offset": 1182,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 319,
+      "offset": 397,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 494,
+      "offset": 572,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 670,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/FaceDetectionScreen.swift",
-      "kind": "BooleanLiteral",
-      "offset": 739,
+      "offset": 748,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationCameraView.swift",
       "kind": "StringLiteral",
-      "offset": 976,
+      "offset": 1016,
       "length": 18,
       "value": "\"videoOutputQueue\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationCameraView.swift",
       "kind": "StringLiteral",
-      "offset": 1056,
+      "offset": 1096,
       "length": 22,
       "value": "\"imageProcessingQueue\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationCameraView.swift",
       "kind": "StringLiteral",
-      "offset": 1294,
+      "offset": 1334,
       "length": 22,
       "value": "\"depthDataOutputQueue\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1502,
+      "offset": 1538,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1547,
+      "offset": 1579,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1580,
+      "offset": 1612,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1617,
+      "offset": 1649,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1654,
+      "offset": 1686,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1692,
+      "offset": 1724,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
-      "kind": "StringLiteral",
-      "offset": 182,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
-      "kind": "StringLiteral",
-      "offset": 215,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 245,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
-      "kind": "BooleanLiteral",
-      "offset": 609,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1619,
+      "offset": 568,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 1654,
+      "offset": 1578,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 793,
+      "offset": 593,
       "length": 22,
       "value": "\"depthProcessingQueue\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Identification\/IdentificationViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 875,
+      "offset": 675,
       "length": 20,
       "value": "\"zipProcessingQueue\""
     },
@@ -10851,352 +10474,191 @@
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "StringLiteral",
-      "offset": 1226,
+      "offset": 1270,
       "length": 18,
       "value": "\"videoOutputQueue\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "StringLiteral",
-      "offset": 1306,
+      "offset": 1350,
       "length": 22,
       "value": "\"imageProcessingQueue\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1619,
+      "offset": 1663,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1706,
+      "offset": 1750,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1747,
+      "offset": 1791,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1786,
+      "offset": 1830,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1827,
+      "offset": 1871,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1875,
+      "offset": 1919,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1918,
+      "offset": 1962,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1958,
+      "offset": 2002,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1986,
+      "offset": 2030,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshCameraView.swift",
       "kind": "BooleanLiteral",
-      "offset": 15344,
+      "offset": 15544,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "StringLiteral",
-      "offset": 251,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
-      "kind": "StringLiteral",
-      "offset": 284,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
-      "kind": "BooleanLiteral",
-      "offset": 314,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
-      "kind": "StringLiteral",
-      "offset": 1863,
+      "offset": 1759,
       "length": 22,
       "value": "\"imageProcessingQueue\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 2018,
+      "offset": 1914,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 2058,
+      "offset": 1954,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 2097,
+      "offset": 1993,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 2139,
+      "offset": 2035,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 2181,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2219,
+      "offset": 2077,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Presentation\/Video identification\/FacemeshDetectionScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 2254,
+      "offset": 2117,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
-      "kind": "StringLiteral",
-      "offset": 362,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
-      "kind": "StringLiteral",
-      "offset": 399,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
-      "kind": "StringLiteral",
-      "offset": 437,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
-      "kind": "StringLiteral",
-      "offset": 474,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
-      "kind": "StringLiteral",
-      "offset": 512,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
-      "kind": "StringLiteral",
-      "offset": 551,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdAdviceModel.swift",
-      "kind": "StringLiteral",
-      "offset": 589,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "StringLiteral",
-      "offset": 174,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "StringLiteral",
-      "offset": 205,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "StringLiteral",
-      "offset": 238,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "StringLiteral",
-      "offset": 271,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "StringLiteral",
-      "offset": 303,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "StringLiteral",
-      "offset": 331,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdPresentationStyle.swift",
       "kind": "IntegerLiteral",
-      "offset": 363,
-      "length": 2,
-      "value": "16"
+      "offset": 154,
+      "length": 1,
+      "value": "0"
     },
     {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "StringLiteral",
-      "offset": 394,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "FloatLiteral",
-      "offset": 431,
-      "length": 4,
-      "value": "0.55"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "FloatLiteral",
-      "offset": 469,
-      "length": 4,
-      "value": "0.60"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "BooleanLiteral",
-      "offset": 990,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "StringLiteral",
-      "offset": 1028,
-      "length": 64,
-      "value": "\"myid_mobile_sdk_(dev)-38StMOL1VGK2s1uvlQsfaz93GOrELSXuqhuAgWmr\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "StringLiteral",
-      "offset": 1126,
-      "length": 58,
-      "value": "\"myid_mobile_sdk-92SnsJQhWBmajM3rvsUqmMJxikhTykqOHXN2caHC\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "FloatLiteral",
-      "offset": 1215,
-      "length": 4,
-      "value": "15.0"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "FloatLiteral",
-      "offset": 1250,
-      "length": 4,
-      "value": "20.0"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdDefaults.swift",
-      "kind": "FloatLiteral",
-      "offset": 1283,
-      "length": 4,
-      "value": "15.0"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdStore.swift",
-      "kind": "StringLiteral",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdPresentationStyle.swift",
+      "kind": "IntegerLiteral",
       "offset": 165,
-      "length": 2,
-      "value": "\"\""
+      "length": 5,
+      "value": "1"
     },
     {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Core\/MyIdStore.swift",
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdResidency.swift",
+      "kind": "IntegerLiteral",
+      "offset": 145,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdResidency.swift",
+      "kind": "IntegerLiteral",
+      "offset": 156,
+      "length": 8,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdResidency.swift",
+      "kind": "IntegerLiteral",
+      "offset": 174,
+      "length": 11,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 247,
+      "offset": 844,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdAppearance.swift",
-      "kind": "IntegerLiteral",
-      "offset": 758,
-      "length": 2,
-      "value": "12"
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 880,
+      "length": 5,
+      "value": "false"
     },
     {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Encryption\/SignatureGenerator.swift",
-      "kind": "Dictionary",
-      "offset": 190,
-      "length": 366,
-      "value": "[(\"1\", [\"pass_data\", \"birth_date\", \"photo_from_camera\", \"client_id\", \"image_hash\"]), (\"2\", [\"image_hash\", \"pass_data\", \"photo_from_camera\", \"birth_date\", \"client_id\"]), (\"3\", [\"photo_from_camera\", \"pass_data\", \"image_hash\", \"birth_date\", \"client_id\"]), (\"4\", [\"pass_data\", \"photo_from_camera\", \"image_hash\", \"client_id\", \"birth_date\"])]"
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6239,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/Constants.swift",
@@ -11210,7 +10672,7 @@
       "kind": "StringLiteral",
       "offset": 169,
       "length": 7,
-      "value": "\"2.4.8\""
+      "value": "\"3.0.2\""
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/Constants.swift",
@@ -11225,6 +10687,13 @@
       "offset": 248,
       "length": 12,
       "value": "\"##.##.####\""
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/Constants.swift",
+      "kind": "BooleanLiteral",
+      "offset": 299,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Helpers\/DateHelper.swift",
@@ -11500,181 +10969,6 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpCodes.swift",
-      "kind": "IntegerLiteral",
-      "offset": 124,
-      "length": 3,
-      "value": "202"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpCodes.swift",
-      "kind": "IntegerLiteral",
-      "offset": 163,
-      "length": 3,
-      "value": "307"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpCodes.swift",
-      "kind": "IntegerLiteral",
-      "offset": 200,
-      "length": 3,
-      "value": "429"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
-      "kind": "StringLiteral",
-      "offset": 230,
-      "length": 12,
-      "value": "\"devmyid.uz\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
-      "kind": "StringLiteral",
-      "offset": 281,
-      "length": 9,
-      "value": "\"myid.uz\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
-      "kind": "StringLiteral",
-      "offset": 446,
-      "length": 19,
-      "value": "\"upload.devmyid.uz\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
-      "kind": "StringLiteral",
-      "offset": 504,
-      "length": 16,
-      "value": "\"upload.myid.uz\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
-      "kind": "Array",
-      "offset": 602,
-      "length": 714,
-      "value": "[\"f4RA9GSwCGFkn04d2BrITXB5SngwsbjJGfaH1Zi8UsY=\", \"bdrBhpj38ffhxpubzkINl0rG+UyossdhcBYj+Zx2fcc=\", \"9kyUUoBUdiMeQfDH1Cv111s0GQbgp5Anq1M7egaSXXU=\", \"4a6cPehI7OG6cuDZka5NDZ7FR8a60d3auda+sKfg4Ng=\", \"krsax1e6Kpqj94In4ynwLfUDmyts8CSCMHzhOXmeSB4=\", \"bdrBhpj38ffhxpubzkINl0rG+UyossdhcBYj+Zx2fcc=\", \"9kyUUoBUdiMeQfDH1Cv111s0GQbgp5Anq1M7egaSXXU=\", \"4a6cPehI7OG6cuDZka5NDZ7FR8a60d3auda+sKfg4Ng=\"]"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
-      "kind": "StringLiteral",
-      "offset": 1366,
-      "length": 25,
-      "value": "\"https:\/\/\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
-      "kind": "StringLiteral",
-      "offset": 1386,
-      "length": 1,
-      "value": "\"\/api\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
-      "kind": "StringLiteral",
-      "offset": 1434,
-      "length": 30,
-      "value": "\"https:\/\/\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Core\/HttpRoutes.swift",
-      "kind": "StringLiteral",
-      "offset": 1459,
-      "length": 1,
-      "value": "\"\/api\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/AccessTokenResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 350,
-      "length": 14,
-      "value": "\"access_token\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/AccessTokenResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 391,
-      "length": 13,
-      "value": "\"result_code\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/AccessTokenResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 431,
-      "length": 13,
-      "value": "\"result_note\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/AccessTokenResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 476,
-      "length": 18,
-      "value": "\"comparison_value\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/JobResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 251,
-      "length": 8,
-      "value": "\"job_id\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/JobResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 281,
-      "length": 7,
-      "value": "\"nonce\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/SettingsResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 383,
-      "length": 18,
-      "value": "\"server_timestamp\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/SettingsResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 432,
-      "length": 21,
-      "value": "\"client_sdk_settings\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Response\/SettingsResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 572,
-      "length": 16,
-      "value": "\"hide_myid_logo\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
-      "kind": "StringLiteral",
-      "offset": 215,
-      "length": 13,
-      "value": "\".background\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiCaller.swift",
-      "kind": "BooleanLiteral",
-      "offset": 512,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
-      "kind": "StringLiteral",
-      "offset": 251,
-      "length": 23,
-      "value": "\"JSON Processing Queue\""
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Domain\/Service\/ApiService.swift",
-      "kind": "Array",
-      "offset": 327,
-      "length": 2,
-      "value": "[]"
-    },
-    {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Core\/Jose\/JWEHeader.swift",
       "kind": "Array",
       "offset": 1334,
@@ -11934,193 +11228,60 @@
       "value": "\"([A-Z0-9<]{9})([0-9OI])([A-Z]{3})([0-9]{6})([0-9OIKEC<])([M|F|X|<])([0-9KEC<]{6})([0-9KEC<])([A-Z0-9<]{16})\""
     },
     {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraSelector.swift",
-      "kind": "IntegerLiteral",
-      "offset": 149,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraSelector.swift",
-      "kind": "IntegerLiteral",
-      "offset": 160,
-      "length": 4,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraShape.swift",
-      "kind": "IntegerLiteral",
-      "offset": 144,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdCameraShape.swift",
-      "kind": "IntegerLiteral",
-      "offset": 155,
-      "length": 7,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdDocumentType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 146,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdDocumentType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 157,
-      "length": 8,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdDocumentType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 175,
-      "length": 13,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEntryType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 148,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEntryType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 159,
-      "length": 19,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEntryType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 188,
-      "length": 13,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEnvironment.swift",
-      "kind": "IntegerLiteral",
-      "offset": 143,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdEnvironment.swift",
-      "kind": "IntegerLiteral",
-      "offset": 154,
-      "length": 10,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdLocale.swift",
-      "kind": "IntegerLiteral",
-      "offset": 133,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdLocale.swift",
-      "kind": "IntegerLiteral",
-      "offset": 144,
-      "length": 7,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdLocale.swift",
-      "kind": "IntegerLiteral",
-      "offset": 161,
-      "length": 7,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdPresentationStyle.swift",
-      "kind": "IntegerLiteral",
-      "offset": 154,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdPresentationStyle.swift",
-      "kind": "IntegerLiteral",
-      "offset": 165,
-      "length": 5,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdResidency.swift",
-      "kind": "IntegerLiteral",
-      "offset": 145,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdResidency.swift",
-      "kind": "IntegerLiteral",
-      "offset": 156,
-      "length": 8,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/Model\/MyIdResidency.swift",
-      "kind": "IntegerLiteral",
-      "offset": 174,
-      "length": 11,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdClient.swift",
-      "kind": "BooleanLiteral",
-      "offset": 826,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdClient.swift",
-      "kind": "BooleanLiteral",
-      "offset": 862,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdClient.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6043,
-      "length": 5,
-      "value": "false"
-    },
-    {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 404,
+      "offset": 353,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
       "kind": "FloatLiteral",
-      "offset": 488,
-      "length": 4,
-      "value": "0.55"
-    },
-    {
-      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
-      "kind": "FloatLiteral",
-      "offset": 532,
+      "offset": 395,
       "length": 4,
       "value": "0.60"
     },
     {
       "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 1233,
+      "offset": 1025,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 136,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 147,
+      "length": 14,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 171,
+      "length": 12,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 193,
+      "length": 16,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/javokhir\/MyFiles\/Development\/AIIG\/MyID\/myid-ios-sdk\/MyIdSDK\/Capture\/MyIdEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 219,
+      "length": 16,
+      "value": "4"
     },
     {
       "filePath": "\/Users\/javokhir\/Library\/Developer\/Xcode\/DerivedData\/MyIdSDK-dcqvkbdodbegrcccvbsjgpbpakkf\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MyIdSDK\/IntermediateBuildFilesPath\/MyIdSDK.build\/Release-iphonesimulator\/MyIdSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
